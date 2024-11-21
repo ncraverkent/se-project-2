@@ -1,0 +1,25 @@
+\doxysection{Wedding.\+h}
+\hypertarget{_wedding_8h_source}{}\label{_wedding_8h_source}\index{src/Events/Wedding.h@{src/Events/Wedding.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Event.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_wedding}{Wedding}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_w_e_p_1_1_wedding_a00796c70dd55b9ea74808ba3480a3d6e}{getPartnerAName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>partnerA;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_w_e_p_1_1_wedding_a37ebe8c0071922000fc506ee24bf5564}{getPartnerBName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>partnerB;\ \}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_w_e_p_1_1_wedding_aff5bbd5f9c993ea662fe5a2fcf3de56c}{getDetails}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::string\ partnerA;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::string\ partnerB;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}

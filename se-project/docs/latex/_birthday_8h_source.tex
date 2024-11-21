@@ -1,0 +1,26 @@
+\doxysection{Birthday.\+h}
+\hypertarget{_birthday_8h_source}{}\label{_birthday_8h_source}\index{src/Events/Birthday.h@{src/Events/Birthday.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Event.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_birthday}{Birthday}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_birthday_a1c6bc33385d0df8d53906dad7fae81c4}{Birthday}}(std::string\ name,\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ date,\ std::vector<Activity>\ activities);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_w_e_p_1_1_birthday_a0a7668245c8581cd6d130aa5f67efd7c}{getSubjectName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>subjectName;\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_w_e_p_1_1_birthday_ab37c0a535bb317de1b055881fab7502d}{getSubjectAge}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>subjectAge;\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_w_e_p_1_1_birthday_a3cf7051165161ed364a5cbec2a02e535}{getDetails}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ std::string\ subjectName;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ subjectAge;}
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,60 @@
+\doxysection{WEP\+::Schedule Class Reference}
+\hypertarget{class_w_e_p_1_1_schedule}{}\label{class_w_e_p_1_1_schedule}\index{WEP::Schedule@{WEP::Schedule}}
+
+
+{\ttfamily \#include $<$Schedule.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_schedule_abb77510a08702561d76a5a35e668127e}{Schedule}} (\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} date, std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}} $>$ events)
+\item 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& \mbox{\hyperlink{class_w_e_p_1_1_schedule_a70943899e9e830a43e318a418633a2f1}{get\+Date}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}} $>$ \mbox{\hyperlink{class_w_e_p_1_1_schedule_a3c82b7645d60cbc031beabddd5a66a35}{get\+Events}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Events that are to take place on a given day 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_w_e_p_1_1_schedule_abb77510a08702561d76a5a35e668127e}\index{WEP::Schedule@{WEP::Schedule}!Schedule@{Schedule}}
+\index{Schedule@{Schedule}!WEP::Schedule@{WEP::Schedule}}
+\doxysubsubsection{\texorpdfstring{Schedule()}{Schedule()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_schedule_abb77510a08702561d76a5a35e668127e} 
+WEP\+::\+Schedule\+::\+Schedule (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}}]{date}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}} $>$}]{events}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a instance of the \doxylink{class_w_e_p_1_1_schedule}{Schedule} class 
+\begin{DoxyParams}{Parameters}
+{\em date} & The date that the events are Scheduled to take place \\
+\hline
+{\em events} & the Events that are schedueld to take place \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_w_e_p_1_1_schedule_a70943899e9e830a43e318a418633a2f1}\index{WEP::Schedule@{WEP::Schedule}!getDate@{getDate}}
+\index{getDate@{getDate}!WEP::Schedule@{WEP::Schedule}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_schedule_a70943899e9e830a43e318a418633a2f1} 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& WEP\+::\+Schedule\+::get\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_w_e_p_1_1_date}{Date} of this schedule 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_schedule_a3c82b7645d60cbc031beabddd5a66a35}\index{WEP::Schedule@{WEP::Schedule}!getEvents@{getEvents}}
+\index{getEvents@{getEvents}!WEP::Schedule@{WEP::Schedule}}
+\doxysubsubsection{\texorpdfstring{getEvents()}{getEvents()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_schedule_a3c82b7645d60cbc031beabddd5a66a35} 
+const std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}} $>$ WEP\+::\+Schedule\+::get\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The evebts if this schedule 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Schedule.\+h\end{DoxyCompactItemize}

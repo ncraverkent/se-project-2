@@ -1,0 +1,23 @@
+\doxysection{File\+Logger.\+h}
+\hypertarget{_file_logger_8h_source}{}\label{_file_logger_8h_source}\index{src/FileLogger.h@{src/FileLogger.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Events/Event.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Problem.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_data_logger}{DataLogger}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_w_e_p_1_1_data_logger_aef4c27cc1c8f568bdce1a613ac25168b}{logEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_w_e_p_1_1_event}{Event}}\&\ event);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_w_e_p_1_1_data_logger_a24f01d130b697b0112175b959bc06a94}{logProblem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_w_e_p_1_1_problem}{Problem}}\&\ problem);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ BASE\_FILE\_PATH;}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

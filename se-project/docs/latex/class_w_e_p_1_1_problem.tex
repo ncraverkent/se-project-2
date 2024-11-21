@@ -1,0 +1,97 @@
+\doxysection{WEP\+::Problem Class Reference}
+\hypertarget{class_w_e_p_1_1_problem}{}\label{class_w_e_p_1_1_problem}\index{WEP::Problem@{WEP::Problem}}
+
+
+{\ttfamily \#include $<$Problem.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_problem_a5b4f907a4c54e98d7c4d3f4ba190f41a}{Problem}} (std\+::string desc, std\+::string name, Problem\+Status status, \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} timestamp)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_problem_ad3671470a96b16efb0549f5896f26484}{get\+Description}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_problem_a0841718f1c1e1fcd784d4cac5539785d}{get\+Personel\+Name}} () const
+\item 
+Problem\+Status \mbox{\hyperlink{class_w_e_p_1_1_problem_af400726dd9497dca5aae3bbe1b506a50}{get\+Status}} () const
+\item 
+void \mbox{\hyperlink{class_w_e_p_1_1_problem_a30666ee244860b8559196fe66c418ba2}{set\+Status}} (Problem\+Status status)
+\item 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& \mbox{\hyperlink{class_w_e_p_1_1_problem_a824f6ea43e4ec2fdb5aae9bd4b6b8a38}{get\+Timestamp}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@breif A problem that has arizen during an activity of an event These are typically Logged by personel who oversee an activity, and will be logged to the Problems section of the logs 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_w_e_p_1_1_problem_a5b4f907a4c54e98d7c4d3f4ba190f41a}\index{WEP::Problem@{WEP::Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{Problem()}{Problem()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_a5b4f907a4c54e98d7c4d3f4ba190f41a} 
+WEP\+::\+Problem\+::\+Problem (\begin{DoxyParamCaption}\item[{std\+::string}]{desc}{, }\item[{std\+::string}]{name}{, }\item[{Problem\+Status}]{status}{, }\item[{\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}}]{timestamp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & The description of the problem \\
+\hline
+{\em name} & The name of personel who logged this problem \\
+\hline
+{\em status} & The current status of the problem \\
+\hline
+{\em timestamp} & The date that this problem took place \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_w_e_p_1_1_problem_ad3671470a96b16efb0549f5896f26484}\index{WEP::Problem@{WEP::Problem}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_ad3671470a96b16efb0549f5896f26484} 
+const std\+::string \& WEP\+::\+Problem\+::get\+Description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The description of this problem 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_problem_a0841718f1c1e1fcd784d4cac5539785d}\index{WEP::Problem@{WEP::Problem}!getPersonelName@{getPersonelName}}
+\index{getPersonelName@{getPersonelName}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{getPersonelName()}{getPersonelName()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_a0841718f1c1e1fcd784d4cac5539785d} 
+const std\+::string \& WEP\+::\+Problem\+::get\+Personel\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The name of the personel who logged this problem 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_problem_af400726dd9497dca5aae3bbe1b506a50}\index{WEP::Problem@{WEP::Problem}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_af400726dd9497dca5aae3bbe1b506a50} 
+Problem\+Status WEP\+::\+Problem\+::get\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The status of this problem 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_problem_a824f6ea43e4ec2fdb5aae9bd4b6b8a38}\index{WEP::Problem@{WEP::Problem}!getTimestamp@{getTimestamp}}
+\index{getTimestamp@{getTimestamp}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{getTimestamp()}{getTimestamp()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_a824f6ea43e4ec2fdb5aae9bd4b6b8a38} 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& WEP\+::\+Problem\+::get\+Timestamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The date that this problem occured 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_problem_a30666ee244860b8559196fe66c418ba2}\index{WEP::Problem@{WEP::Problem}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!WEP::Problem@{WEP::Problem}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_problem_a30666ee244860b8559196fe66c418ba2} 
+void WEP\+::\+Problem\+::set\+Status (\begin{DoxyParamCaption}\item[{Problem\+Status}]{status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Updates the status of this problem 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Problem.\+h\end{DoxyCompactItemize}

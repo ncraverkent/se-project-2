@@ -1,0 +1,37 @@
+\doxysection{Problem.\+h}
+\hypertarget{_problem_8h_source}{}\label{_problem_8h_source}\index{src/Problem.h@{src/Problem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Utils/Date.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum\ class}\ ProblemStatus}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ Unknown,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ InProgress,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Resolved,}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_problem}{Problem}}}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_problem_a5b4f907a4c54e98d7c4d3f4ba190f41a}{Problem}}(std::string\ desc,\ std::string\ name,\ ProblemStatus\ status,\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ timestamp)\ :}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ description(desc),\ personelReportedName(name),\ status(status),\ timestamp(timestamp)\ \{\}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_w_e_p_1_1_problem_ad3671470a96b16efb0549f5896f26484}{getDescription}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>description;\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_w_e_p_1_1_problem_a0841718f1c1e1fcd784d4cac5539785d}{getPersonelName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>personelReportedName;\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ ProblemStatus\ \mbox{\hyperlink{class_w_e_p_1_1_problem_af400726dd9497dca5aae3bbe1b506a50}{getStatus}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>status;\ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_w_e_p_1_1_problem_a30666ee244860b8559196fe66c418ba2}{setStatus}}(ProblemStatus\ status)\ \{\ this-\/>status\ =\ status;\ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\&\ \mbox{\hyperlink{class_w_e_p_1_1_problem_a824f6ea43e4ec2fdb5aae9bd4b6b8a38}{getTimestamp}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>timestamp;\ \}}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ description;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::string\ personelReportedName;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ ProblemStatus\ status;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ timestamp;}
+\DoxyCodeLine{00059\ \ \ \ \ \};}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}

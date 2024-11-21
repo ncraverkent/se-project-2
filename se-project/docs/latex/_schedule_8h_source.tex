@@ -1,0 +1,26 @@
+\doxysection{Schedule.\+h}
+\hypertarget{_schedule_8h_source}{}\label{_schedule_8h_source}\index{src/Schedule.h@{src/Schedule.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Utils/Date.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Events/Event.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_schedule}{Schedule}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_schedule_abb77510a08702561d76a5a35e668127e}{Schedule}}(\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ date,\ std::vector<Event>\ events)\ :}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ date(date),\ events(events)\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\&\ \mbox{\hyperlink{class_w_e_p_1_1_schedule_a70943899e9e830a43e318a418633a2f1}{getDate}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>date;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<Event>\ \mbox{\hyperlink{class_w_e_p_1_1_schedule_a3c82b7645d60cbc031beabddd5a66a35}{getEvents}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>events;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ date;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::vector<Event>\ events;}
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}

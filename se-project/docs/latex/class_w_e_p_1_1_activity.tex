@@ -1,0 +1,56 @@
+\doxysection{WEP\+::Activity Class Reference}
+\hypertarget{class_w_e_p_1_1_activity}{}\label{class_w_e_p_1_1_activity}\index{WEP::Activity@{WEP::Activity}}
+
+
+{\ttfamily \#include $<$Activity.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_activity_af82f0e0ab5358298956d48fc448192be}{Activity}} (std\+::string name, \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} time, \mbox{\hyperlink{struct_w_e_p_1_1_room}{Room}} \texorpdfstring{$\ast$}{*}room, float registration\+Cost, std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_equipment}{Equipment}} $>$ equipment)
+\item 
+\Hypertarget{class_w_e_p_1_1_activity_abb8b7c09850e51319470a8a39344b909}\label{class_w_e_p_1_1_activity_abb8b7c09850e51319470a8a39344b909} 
+const std\+::string \& {\bfseries get\+Name} () const
+\item 
+\Hypertarget{class_w_e_p_1_1_activity_a7a2de3e03d5e809657770a4e3d6d7f8a}\label{class_w_e_p_1_1_activity_a7a2de3e03d5e809657770a4e3d6d7f8a} 
+const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \& {\bfseries get\+Time} () const
+\item 
+\Hypertarget{class_w_e_p_1_1_activity_a5ca84e905a7bedf6182da544fac495f6}\label{class_w_e_p_1_1_activity_a5ca84e905a7bedf6182da544fac495f6} 
+const \mbox{\hyperlink{struct_w_e_p_1_1_room}{Room}} \& {\bfseries get\+Room} () const
+\item 
+\Hypertarget{class_w_e_p_1_1_activity_aec2413bf71b6cb6b04664c37626ae2a2}\label{class_w_e_p_1_1_activity_aec2413bf71b6cb6b04664c37626ae2a2} 
+float {\bfseries get\+Registration\+Cost} () const
+\item 
+\Hypertarget{class_w_e_p_1_1_activity_afabb36e891a000e95b7788da8a331c75}\label{class_w_e_p_1_1_activity_afabb36e891a000e95b7788da8a331c75} 
+const std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_equipment}{Equipment}} $>$ \& {\bfseries get\+Equipment} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@breif An activity for an event 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_w_e_p_1_1_activity_af82f0e0ab5358298956d48fc448192be}\index{WEP::Activity@{WEP::Activity}!Activity@{Activity}}
+\index{Activity@{Activity}!WEP::Activity@{WEP::Activity}}
+\doxysubsubsection{\texorpdfstring{Activity()}{Activity()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_activity_af82f0e0ab5358298956d48fc448192be} 
+WEP\+::\+Activity\+::\+Activity (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{\mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}}}]{time}{, }\item[{\mbox{\hyperlink{struct_w_e_p_1_1_room}{Room}} \texorpdfstring{$\ast$}{*}}]{room}{, }\item[{float}]{registration\+Cost}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_equipment}{Equipment}} $>$}]{equipment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an activity 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the activity \\
+\hline
+{\em time} & the range of time that the activity covers \\
+\hline
+{\em room} & The room that the activity is held in. It MUST live as long as this \doxylink{class_w_e_p_1_1_activity}{Activity} \\
+\hline
+{\em registration\+Cost} & the cost of registration for this activity \\
+\hline
+{\em equipment} & All of the different equipment required for the activity \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Activity.\+h\end{DoxyCompactItemize}

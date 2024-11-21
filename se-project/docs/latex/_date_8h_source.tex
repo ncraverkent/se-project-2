@@ -1,0 +1,43 @@
+\doxysection{Date.\+h}
+\hypertarget{_date_8h_source}{}\label{_date_8h_source}\index{src/Utils/Date.h@{src/Utils/Date.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Month}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ Jan,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ Feb,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Mar,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ Apr,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ May,}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ Jun,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ Jul,}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Aug,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Sep,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Oct,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Nov,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Dec,}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}{day}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ Month\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}{month}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}{year}};\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_w_e_p_1_1_date_adbd79ca9b499b1db5790f3644dd92bf2}{Date}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}{day}},\ Month\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}{month}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}{year}})\ :}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}{day}}(\mbox{\hyperlink{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}{day}}),\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}{month}}(\mbox{\hyperlink{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}{month}}),\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}{year}}(\mbox{\hyperlink{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}{year}})\ \{\}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_aa59735fa1775e6947bea70a96932ee6e}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a51cfca9d37008438d5c30a141e61bf39}{operator!=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\&)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ \mbox{\hyperlink{struct_w_e_p_1_1_date_a49e4eb0bd414b46f6cfabd681f53242b}{fromString}}(\textcolor{keyword}{const}\ std::string\&\ str);}
+\DoxyCodeLine{00061\ \ \ \ \ \};}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+
+\end{DoxyCode}

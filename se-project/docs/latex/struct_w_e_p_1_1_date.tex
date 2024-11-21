@@ -1,0 +1,91 @@
+\doxysection{WEP\+::Date Struct Reference}
+\hypertarget{struct_w_e_p_1_1_date}{}\label{struct_w_e_p_1_1_date}\index{WEP::Date@{WEP::Date}}
+
+
+{\ttfamily \#include $<$Date.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_w_e_p_1_1_date_adbd79ca9b499b1db5790f3644dd92bf2}{Date}} (int \mbox{\hyperlink{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}{day}}, Month \mbox{\hyperlink{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}{month}}, int \mbox{\hyperlink{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}{year}})
+\item 
+bool \mbox{\hyperlink{struct_w_e_p_1_1_date_aa59735fa1775e6947bea70a96932ee6e}{operator==}} (const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \&) const
+\item 
+bool \mbox{\hyperlink{struct_w_e_p_1_1_date_a51cfca9d37008438d5c30a141e61bf39}{operator!=}} (const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \&) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \mbox{\hyperlink{struct_w_e_p_1_1_date_a49e4eb0bd414b46f6cfabd681f53242b}{from\+String}} (const std\+::string \&str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516}\label{struct_w_e_p_1_1_date_ae0b442a351fe31cfdc5cb37048ac6516} 
+int {\bfseries day}
+\begin{DoxyCompactList}\small\item\em The current month (based on month) \end{DoxyCompactList}\item 
+\Hypertarget{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068}\label{struct_w_e_p_1_1_date_a5d8ce1801f2f49ed2338246abdcdb068} 
+Month {\bfseries month}
+\begin{DoxyCompactList}\small\item\em The current month. \end{DoxyCompactList}\item 
+\Hypertarget{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb}\label{struct_w_e_p_1_1_date_a8dda98a306d773b2b61a66d4392d10bb} 
+int {\bfseries year}
+\begin{DoxyCompactList}\small\item\em The current year. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a date in time 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_w_e_p_1_1_date_adbd79ca9b499b1db5790f3644dd92bf2}\index{WEP::Date@{WEP::Date}!Date@{Date}}
+\index{Date@{Date}!WEP::Date@{WEP::Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_date_adbd79ca9b499b1db5790f3644dd92bf2} 
+WEP\+::\+Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{day}{, }\item[{Month}]{month}{, }\item[{int}]{year}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs the \doxylink{struct_w_e_p_1_1_date}{Date} class with a month day and year \begin{DoxyWarning}{Warning}
+this is unchecked, so a day could be set that is over the number of days in a given month 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000012}{Todo}}]make this check days, and account for leap years \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_w_e_p_1_1_date_a49e4eb0bd414b46f6cfabd681f53242b}\index{WEP::Date@{WEP::Date}!fromString@{fromString}}
+\index{fromString@{fromString}!WEP::Date@{WEP::Date}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_date_a49e4eb0bd414b46f6cfabd681f53242b} 
+static \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} WEP\+::\+Date\+::from\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parses a string into a date 
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed date 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000013}{Todo}}]this does not have any error checking for date formating, so we may need to fix \end{DoxyRefDesc}
+\Hypertarget{struct_w_e_p_1_1_date_a51cfca9d37008438d5c30a141e61bf39}\index{WEP::Date@{WEP::Date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!WEP::Date@{WEP::Date}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_date_a51cfca9d37008438d5c30a141e61bf39} 
+bool WEP\+::\+Date\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \&}]{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Ffalse if two dates are equal 
+\end{DoxyReturn}
+\Hypertarget{struct_w_e_p_1_1_date_aa59735fa1775e6947bea70a96932ee6e}\index{WEP::Date@{WEP::Date}!operator==@{operator==}}
+\index{operator==@{operator==}!WEP::Date@{WEP::Date}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_date_aa59735fa1775e6947bea70a96932ee6e} 
+bool WEP\+::\+Date\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \&}]{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if two dates are equal 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils/Date.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e2616a47-5909-40b3-954b-8ab8933470d2}</ProjectGuid>
+    <RootNamespace>seproject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>doxygen $(ProjectDir)\Doxyfile</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Rooms\Room.cpp" />
+    <ClCompile Include="src\Utils\Date.cpp" />
+    <ClCompile Include="src\Business.cpp" />
+    <ClCompile Include="se-project.cpp" />
+    <ClCompile Include="src\Utils\TimeRange.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\CateringRequest.h" />
+    <ClInclude Include="src\DisplayMannager.h" />
+    <ClInclude Include="src\FileLogger.h" />
+    <ClInclude Include="src\Guest.h" />
+    <ClInclude Include="src\Activity.h" />
+    <ClInclude Include="src\Personel.h" />
+    <ClInclude Include="src\Problem.h" />
+    <ClInclude Include="src\Registration.h" />
+    <ClInclude Include="src\Rooms\Room.h" />
+    <ClInclude Include="src\Events\Birthday.h" />
+    <ClInclude Include="src\Events\EventType.h" />
+    <ClInclude Include="src\Events\Funeral.h" />
+    <ClInclude Include="src\Events\Wedding.h" />
+    <ClInclude Include="src\Schedule.h" />
+    <ClInclude Include="src\Utils\Date.h" />
+    <ClInclude Include="src\Business.h" />
+    <ClInclude Include="src\Equipment.h" />
+    <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\WeddingEventCenter.h" />
+    <ClInclude Include="src\Utils\TimeRange.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\html\annotated.html" />
+    <None Include="docs\html\classes.html" />
+    <None Include="docs\html\class_room.html" />
+    <None Include="docs\html\class_w_e_p_1_1_activity-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_activity.html" />
+    <None Include="docs\html\class_w_e_p_1_1_birthday-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_birthday.html" />
+    <None Include="docs\html\class_w_e_p_1_1_business-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_business.html" />
+    <None Include="docs\html\class_w_e_p_1_1_catering_request-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_catering_request.html" />
+    <None Include="docs\html\class_w_e_p_1_1_equipment-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_equipment.html" />
+    <None Include="docs\html\class_w_e_p_1_1_event-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_event.html" />
+    <None Include="docs\html\class_w_e_p_1_1_funeral-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_funeral.html" />
+    <None Include="docs\html\class_w_e_p_1_1_guest-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_guest.html" />
+    <None Include="docs\html\class_w_e_p_1_1_personel-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_personel.html" />
+    <None Include="docs\html\class_w_e_p_1_1_problem-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_problem.html" />
+    <None Include="docs\html\class_w_e_p_1_1_registration-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_registration.html" />
+    <None Include="docs\html\class_w_e_p_1_1_schedule-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_schedule.html" />
+    <None Include="docs\html\class_w_e_p_1_1_wedding-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_wedding.html" />
+    <None Include="docs\html\class_w_e_p_1_1_wedding_event_center-members.html" />
+    <None Include="docs\html\class_w_e_p_1_1_wedding_event_center.html" />
+    <None Include="docs\html\clipboard.js" />
+    <None Include="docs\html\cookie.js" />
+    <None Include="docs\html\dir_1ff81008302cb45769f1dab653ab23f8.html" />
+    <None Include="docs\html\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <None Include="docs\html\dir_a7363e98f9e0bdd87618633653859815.html" />
+    <None Include="docs\html\dir_f92e3af3d9bab829be3b77f132675359.html" />
+    <None Include="docs\html\doc.svg" />
+    <None Include="docs\html\docd.svg" />
+    <None Include="docs\html\doxygen.css" />
+    <None Include="docs\html\doxygen.svg" />
+    <None Include="docs\html\doxygen_crawl.html" />
+    <None Include="docs\html\dynsections.js" />
+    <None Include="docs\html\files.html" />
+    <None Include="docs\html\folderclosed.svg" />
+    <None Include="docs\html\folderclosedd.svg" />
+    <None Include="docs\html\folderopen.svg" />
+    <None Include="docs\html\folderopend.svg" />
+    <None Include="docs\html\functions.html" />
+    <None Include="docs\html\functions_func.html" />
+    <None Include="docs\html\hierarchy.html" />
+    <None Include="docs\html\index.html" />
+    <None Include="docs\html\jquery.js" />
+    <None Include="docs\html\menu.js" />
+    <None Include="docs\html\menudata.js" />
+    <None Include="docs\html\minus.svg" />
+    <None Include="docs\html\minusd.svg" />
+    <None Include="docs\html\navtree.css" />
+    <None Include="docs\html\pages.html" />
+    <None Include="docs\html\plus.svg" />
+    <None Include="docs\html\plusd.svg" />
+    <None Include="docs\html\resize.js" />
+    <None Include="docs\html\search\close.svg" />
+    <None Include="docs\html\search\mag.svg" />
+    <None Include="docs\html\search\mag_d.svg" />
+    <None Include="docs\html\search\mag_sel.svg" />
+    <None Include="docs\html\search\mag_seld.svg" />
+    <None Include="docs\html\search\search.css" />
+    <None Include="docs\html\search\search.js" />
+    <None Include="docs\html\search\searchdata.js" />
+    <None Include="docs\html\struct_w_e_p_1_1_date-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_date.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_las_vegas_room-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_las_vegas_room.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_paris_room-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_paris_room.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_rome_rom-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_rome_rom.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_room-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_room.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_time_range-members.html" />
+    <None Include="docs\html\struct_w_e_p_1_1_time_range.html" />
+    <None Include="docs\html\tabs.css" />
+    <None Include="docs\html\todo.html" />
+    <None Include="docs\html\_activity_8h_source.html" />
+    <None Include="docs\html\_birthday_8h_source.html" />
+    <None Include="docs\html\_business_8h_source.html" />
+    <None Include="docs\html\_catering_request_8h_source.html" />
+    <None Include="docs\html\_date_8h_source.html" />
+    <None Include="docs\html\_equipment_8h_source.html" />
+    <None Include="docs\html\_event_8h_source.html" />
+    <None Include="docs\html\_event_type_8h_source.html" />
+    <None Include="docs\html\_funeral_8h_source.html" />
+    <None Include="docs\html\_guest_8h_source.html" />
+    <None Include="docs\html\_personel_8h_source.html" />
+    <None Include="docs\html\_problem_8h_source.html" />
+    <None Include="docs\html\_registration_8h_source.html" />
+    <None Include="docs\html\_room_8h_source.html" />
+    <None Include="docs\html\_schedule_8h_source.html" />
+    <None Include="docs\html\_time_range_8h_source.html" />
+    <None Include="docs\html\_wedding_8h_source.html" />
+    <None Include="docs\html\_wedding_event_center_8h_source.html" />
+    <None Include="docs\latex\annotated.tex" />
+    <None Include="docs\latex\class_room.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_activity.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_birthday.eps" />
+    <None Include="docs\latex\class_w_e_p_1_1_birthday.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_business.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_catering_request.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_equipment.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_event.eps" />
+    <None Include="docs\latex\class_w_e_p_1_1_event.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_funeral.eps" />
+    <None Include="docs\latex\class_w_e_p_1_1_funeral.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_guest.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_personel.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_problem.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_registration.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_schedule.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_wedding.eps" />
+    <None Include="docs\latex\class_w_e_p_1_1_wedding.tex" />
+    <None Include="docs\latex\class_w_e_p_1_1_wedding_event_center.tex" />
+    <None Include="docs\latex\doxygen.sty" />
+    <None Include="docs\latex\etoc_doxygen.sty" />
+    <None Include="docs\latex\files.tex" />
+    <None Include="docs\latex\hierarchy.tex" />
+    <None Include="docs\latex\longtable_doxygen.sty" />
+    <None Include="docs\latex\make.bat" />
+    <None Include="docs\latex\Makefile" />
+    <None Include="docs\latex\refman.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_date.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_las_vegas_room.eps" />
+    <None Include="docs\latex\struct_w_e_p_1_1_las_vegas_room.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_paris_room.eps" />
+    <None Include="docs\latex\struct_w_e_p_1_1_paris_room.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_rome_rom.eps" />
+    <None Include="docs\latex\struct_w_e_p_1_1_rome_rom.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_room.eps" />
+    <None Include="docs\latex\struct_w_e_p_1_1_room.tex" />
+    <None Include="docs\latex\struct_w_e_p_1_1_time_range.tex" />
+    <None Include="docs\latex\tabu_doxygen.sty" />
+    <None Include="docs\latex\todo.tex" />
+    <None Include="docs\latex\_activity_8h_source.tex" />
+    <None Include="docs\latex\_birthday_8h_source.tex" />
+    <None Include="docs\latex\_business_8h_source.tex" />
+    <None Include="docs\latex\_catering_request_8h_source.tex" />
+    <None Include="docs\latex\_date_8h_source.tex" />
+    <None Include="docs\latex\_equipment_8h_source.tex" />
+    <None Include="docs\latex\_event_8h_source.tex" />
+    <None Include="docs\latex\_event_type_8h_source.tex" />
+    <None Include="docs\latex\_funeral_8h_source.tex" />
+    <None Include="docs\latex\_guest_8h_source.tex" />
+    <None Include="docs\latex\_personel_8h_source.tex" />
+    <None Include="docs\latex\_problem_8h_source.tex" />
+    <None Include="docs\latex\_registration_8h_source.tex" />
+    <None Include="docs\latex\_room_8h_source.tex" />
+    <None Include="docs\latex\_schedule_8h_source.tex" />
+    <None Include="docs\latex\_time_range_8h_source.tex" />
+    <None Include="docs\latex\_wedding_8h_source.tex" />
+    <None Include="docs\latex\_wedding_event_center_8h_source.tex" />
+    <None Include="Doxyfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="docs\html\bc_s.png" />
+    <Image Include="docs\html\bc_sd.png" />
+    <Image Include="docs\html\class_w_e_p_1_1_birthday.png" />
+    <Image Include="docs\html\class_w_e_p_1_1_event.png" />
+    <Image Include="docs\html\class_w_e_p_1_1_funeral.png" />
+    <Image Include="docs\html\class_w_e_p_1_1_wedding.png" />
+    <Image Include="docs\html\closed.png" />
+    <Image Include="docs\html\nav_f.png" />
+    <Image Include="docs\html\nav_fd.png" />
+    <Image Include="docs\html\nav_g.png" />
+    <Image Include="docs\html\nav_h.png" />
+    <Image Include="docs\html\nav_hd.png" />
+    <Image Include="docs\html\open.png" />
+    <Image Include="docs\html\splitbar.png" />
+    <Image Include="docs\html\splitbard.png" />
+    <Image Include="docs\html\struct_w_e_p_1_1_las_vegas_room.png" />
+    <Image Include="docs\html\struct_w_e_p_1_1_paris_room.png" />
+    <Image Include="docs\html\struct_w_e_p_1_1_rome_rom.png" />
+    <Image Include="docs\html\struct_w_e_p_1_1_room.png" />
+    <Image Include="docs\html\sync_off.png" />
+    <Image Include="docs\html\sync_on.png" />
+    <Image Include="docs\html\tab_a.png" />
+    <Image Include="docs\html\tab_ad.png" />
+    <Image Include="docs\html\tab_b.png" />
+    <Image Include="docs\html\tab_bd.png" />
+    <Image Include="docs\html\tab_h.png" />
+    <Image Include="docs\html\tab_hd.png" />
+    <Image Include="docs\html\tab_s.png" />
+    <Image Include="docs\html\tab_sd.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

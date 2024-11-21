@@ -1,0 +1,96 @@
+\doxysection{WEP\+::Birthday Class Reference}
+\hypertarget{class_w_e_p_1_1_birthday}{}\label{class_w_e_p_1_1_birthday}\index{WEP::Birthday@{WEP::Birthday}}
+
+
+{\ttfamily \#include $<$Birthday.\+h$>$}
+
+Inheritance diagram for WEP\+::Birthday\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_e_p_1_1_birthday}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_birthday_a1c6bc33385d0df8d53906dad7fae81c4}{Birthday}} (std\+::string name, \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} date, std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$ activities)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_birthday_a0a7668245c8581cd6d130aa5f67efd7c}{get\+Subject\+Name}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_w_e_p_1_1_birthday_ab37c0a535bb317de1b055881fab7502d}{get\+Subject\+Age}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_w_e_p_1_1_birthday_a3cf7051165161ed364a5cbec2a02e535}{get\+Details}} () const override
+\begin{DoxyCompactList}\small\item\em Implements the get\+Details function from the \doxylink{class_w_e_p_1_1_event}{Event} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_w_e_p_1_1_event}{WEP\+::\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_event_af90a42dc5799d67f6e436fe6a692f8ea}{Event}} (std\+::string name, \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} date, std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$ activities)
+\item 
+bool \mbox{\hyperlink{class_w_e_p_1_1_event_ad8ac61c5a7d4a6e98dc54d9f46521bef}{add\+Activity}} (\mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} activity)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_event_a7e69bc4864f5f78c255fb0232b8597b4}{get\+Name}} () const
+\item 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& \mbox{\hyperlink{class_w_e_p_1_1_event_a7a3a28d607856595f88e267eeada72fc}{get\+Date}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$ \mbox{\hyperlink{class_w_e_p_1_1_event_a9b5a433a1e286ffb3f7edfbe23de024c}{get\+Activities}} () const
+\item 
+float \mbox{\hyperlink{class_w_e_p_1_1_event_a344d7d33e47d929662ae189c914f9f03}{get\+Cost}} () const
+\item 
+void \mbox{\hyperlink{class_w_e_p_1_1_event_a4b99faa4a41515ac748ec7d92c9eb379}{confirm\+Booking}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@breif A birthday party event
+
+A class that represents a birthday party, with all its associated details. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_w_e_p_1_1_birthday_a1c6bc33385d0df8d53906dad7fae81c4}\index{WEP::Birthday@{WEP::Birthday}!Birthday@{Birthday}}
+\index{Birthday@{Birthday}!WEP::Birthday@{WEP::Birthday}}
+\doxysubsubsection{\texorpdfstring{Birthday()}{Birthday()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_birthday_a1c6bc33385d0df8d53906dad7fae81c4} 
+WEP\+::\+Birthday\+::\+Birthday (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{\mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}}]{date}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$}]{activities}{}\end{DoxyParamCaption})}
+
+Constructs the birthday class \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Implement \end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_w_e_p_1_1_birthday_a3cf7051165161ed364a5cbec2a02e535}\index{WEP::Birthday@{WEP::Birthday}!getDetails@{getDetails}}
+\index{getDetails@{getDetails}!WEP::Birthday@{WEP::Birthday}}
+\doxysubsubsection{\texorpdfstring{getDetails()}{getDetails()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_birthday_a3cf7051165161ed364a5cbec2a02e535} 
+std\+::string WEP\+::\+Birthday\+::get\+Details (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements the get\+Details function from the \doxylink{class_w_e_p_1_1_event}{Event} class. 
+
+
+
+Implements \mbox{\hyperlink{class_w_e_p_1_1_event_af25bc31f512e919621191902c30a124a}{WEP\+::\+Event}}.
+
+\Hypertarget{class_w_e_p_1_1_birthday_ab37c0a535bb317de1b055881fab7502d}\index{WEP::Birthday@{WEP::Birthday}!getSubjectAge@{getSubjectAge}}
+\index{getSubjectAge@{getSubjectAge}!WEP::Birthday@{WEP::Birthday}}
+\doxysubsubsection{\texorpdfstring{getSubjectAge()}{getSubjectAge()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_birthday_ab37c0a535bb317de1b055881fab7502d} 
+unsigned int WEP\+::\+Birthday\+::get\+Subject\+Age (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The subjects age 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_birthday_a0a7668245c8581cd6d130aa5f67efd7c}\index{WEP::Birthday@{WEP::Birthday}!getSubjectName@{getSubjectName}}
+\index{getSubjectName@{getSubjectName}!WEP::Birthday@{WEP::Birthday}}
+\doxysubsubsection{\texorpdfstring{getSubjectName()}{getSubjectName()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_birthday_a0a7668245c8581cd6d130aa5f67efd7c} 
+const std\+::string \& WEP\+::\+Birthday\+::get\+Subject\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The subjects name 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Events/Birthday.\+h\end{DoxyCompactItemize}

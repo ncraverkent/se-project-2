@@ -1,0 +1,83 @@
+\doxysection{WEP\+::Wedding Class Reference}
+\hypertarget{class_w_e_p_1_1_wedding}{}\label{class_w_e_p_1_1_wedding}\index{WEP::Wedding@{WEP::Wedding}}
+
+
+{\ttfamily \#include $<$Wedding.\+h$>$}
+
+Inheritance diagram for WEP\+::Wedding\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_w_e_p_1_1_wedding}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_wedding_a00796c70dd55b9ea74808ba3480a3d6e}{get\+Partner\+AName}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_wedding_a37ebe8c0071922000fc506ee24bf5564}{get\+Partner\+BName}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_w_e_p_1_1_wedding_aff5bbd5f9c993ea662fe5a2fcf3de56c}{get\+Details}} () const override
+\begin{DoxyCompactList}\small\item\em Implements the get\+Details function from the \doxylink{class_w_e_p_1_1_event}{Event} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_w_e_p_1_1_event}{WEP\+::\+Event}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_event_af90a42dc5799d67f6e436fe6a692f8ea}{Event}} (std\+::string name, \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} date, std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$ activities)
+\item 
+bool \mbox{\hyperlink{class_w_e_p_1_1_event_ad8ac61c5a7d4a6e98dc54d9f46521bef}{add\+Activity}} (\mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} activity)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_event_a7e69bc4864f5f78c255fb0232b8597b4}{get\+Name}} () const
+\item 
+const \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}} \& \mbox{\hyperlink{class_w_e_p_1_1_event_a7a3a28d607856595f88e267eeada72fc}{get\+Date}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} $>$ \mbox{\hyperlink{class_w_e_p_1_1_event_a9b5a433a1e286ffb3f7edfbe23de024c}{get\+Activities}} () const
+\item 
+float \mbox{\hyperlink{class_w_e_p_1_1_event_a344d7d33e47d929662ae189c914f9f03}{get\+Cost}} () const
+\item 
+void \mbox{\hyperlink{class_w_e_p_1_1_event_a4b99faa4a41515ac748ec7d92c9eb379}{confirm\+Booking}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@breif A \doxylink{class_w_e_p_1_1_wedding}{Wedding} event
+
+A class that represents a \doxylink{class_w_e_p_1_1_wedding}{Wedding}, with all its associated details. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_w_e_p_1_1_wedding_aff5bbd5f9c993ea662fe5a2fcf3de56c}\index{WEP::Wedding@{WEP::Wedding}!getDetails@{getDetails}}
+\index{getDetails@{getDetails}!WEP::Wedding@{WEP::Wedding}}
+\doxysubsubsection{\texorpdfstring{getDetails()}{getDetails()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_wedding_aff5bbd5f9c993ea662fe5a2fcf3de56c} 
+std\+::string WEP\+::\+Wedding\+::get\+Details (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements the get\+Details function from the \doxylink{class_w_e_p_1_1_event}{Event} class. 
+
+
+
+Implements \mbox{\hyperlink{class_w_e_p_1_1_event_af25bc31f512e919621191902c30a124a}{WEP\+::\+Event}}.
+
+\Hypertarget{class_w_e_p_1_1_wedding_a00796c70dd55b9ea74808ba3480a3d6e}\index{WEP::Wedding@{WEP::Wedding}!getPartnerAName@{getPartnerAName}}
+\index{getPartnerAName@{getPartnerAName}!WEP::Wedding@{WEP::Wedding}}
+\doxysubsubsection{\texorpdfstring{getPartnerAName()}{getPartnerAName()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_wedding_a00796c70dd55b9ea74808ba3480a3d6e} 
+const std\+::string \& WEP\+::\+Wedding\+::get\+Partner\+AName (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the first partners name 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_wedding_a37ebe8c0071922000fc506ee24bf5564}\index{WEP::Wedding@{WEP::Wedding}!getPartnerBName@{getPartnerBName}}
+\index{getPartnerBName@{getPartnerBName}!WEP::Wedding@{WEP::Wedding}}
+\doxysubsubsection{\texorpdfstring{getPartnerBName()}{getPartnerBName()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_wedding_a37ebe8c0071922000fc506ee24bf5564} 
+const std\+::string \& WEP\+::\+Wedding\+::get\+Partner\+BName (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the second partners name 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Events/Wedding.\+h\end{DoxyCompactItemize}

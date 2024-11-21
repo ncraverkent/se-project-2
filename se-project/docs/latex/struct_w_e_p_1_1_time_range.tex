@@ -1,0 +1,106 @@
+\doxysection{WEP\+::Time\+Range Struct Reference}
+\hypertarget{struct_w_e_p_1_1_time_range}{}\label{struct_w_e_p_1_1_time_range}\index{WEP::TimeRange@{WEP::TimeRange}}
+
+
+{\ttfamily \#include $<$Time\+Range.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_w_e_p_1_1_time_range_aa8ef30f3934a98ffd08bb310d25f8223}{Time\+Range}} (\mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}} start, \mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}} end)
+\item 
+bool \mbox{\hyperlink{struct_w_e_p_1_1_time_range_ad554282998a74009bc31e41f77c5498d}{overlaps}} (const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_w_e_p_1_1_time_range_a673163ddc06ae4cb105f954d98be961e}{operator==}} (const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&other) const
+\item 
+bool \mbox{\hyperlink{struct_w_e_p_1_1_time_range_a5a542a76705ea41d7e1b9113075fd9c5}{operator!=}} (const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&other) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \mbox{\hyperlink{struct_w_e_p_1_1_time_range_ae43b5e8a6376c804ba2fd5d3f73de1dd}{from\+String}} (const std\+::string \&str)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_w_e_p_1_1_time_range_acfe845bb6e717bef7831634ea6bd5541}\label{struct_w_e_p_1_1_time_range_acfe845bb6e717bef7831634ea6bd5541} 
+\mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}} {\bfseries start}
+\item 
+\Hypertarget{struct_w_e_p_1_1_time_range_a04f1e3ec29deb47114160a95b936f68e}\label{struct_w_e_p_1_1_time_range_a04f1e3ec29deb47114160a95b936f68e} 
+\mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}} {\bfseries end}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a range in time \begin{DoxyWarning}{Warning}
+The start and end time ranges are unchecked, and may be swapped around 
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Make the time ranges swappable, and automatically sorted into their minimum and maximum values \end{DoxyRefDesc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_w_e_p_1_1_time_range_aa8ef30f3934a98ffd08bb310d25f8223}\index{WEP::TimeRange@{WEP::TimeRange}!TimeRange@{TimeRange}}
+\index{TimeRange@{TimeRange}!WEP::TimeRange@{WEP::TimeRange}}
+\doxysubsubsection{\texorpdfstring{TimeRange()}{TimeRange()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_time_range_aa8ef30f3934a98ffd08bb310d25f8223} 
+WEP\+::\+Time\+Range\+::\+Time\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}}}]{start}{, }\item[{\mbox{\hyperlink{struct_w_e_p_1_1_time}{Time}}}]{end}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a time range from a start and end values 
+\begin{DoxyParams}{Parameters}
+{\em start} & The starting time point, must be less than end \\
+\hline
+{\em end} & The ending time point, must be greater than start \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_w_e_p_1_1_time_range_ae43b5e8a6376c804ba2fd5d3f73de1dd}\index{WEP::TimeRange@{WEP::TimeRange}!fromString@{fromString}}
+\index{fromString@{fromString}!WEP::TimeRange@{WEP::TimeRange}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_time_range_ae43b5e8a6376c804ba2fd5d3f73de1dd} 
+static \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} WEP\+::\+Time\+Range\+::from\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Parses a string into a \doxylink{struct_w_e_p_1_1_time_range}{Time\+Range} 
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to parse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parsed \doxylink{struct_w_e_p_1_1_time_range}{Time\+Range} 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]this does not have any error checking for time formating, so we may need to fix \end{DoxyRefDesc}
+\Hypertarget{struct_w_e_p_1_1_time_range_a5a542a76705ea41d7e1b9113075fd9c5}\index{WEP::TimeRange@{WEP::TimeRange}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!WEP::TimeRange@{WEP::TimeRange}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_time_range_a5a542a76705ea41d7e1b9113075fd9c5} 
+bool WEP\+::\+Time\+Range\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+False if the time ranges are equal 
+\end{DoxyReturn}
+\Hypertarget{struct_w_e_p_1_1_time_range_a673163ddc06ae4cb105f954d98be961e}\index{WEP::TimeRange@{WEP::TimeRange}!operator==@{operator==}}
+\index{operator==@{operator==}!WEP::TimeRange@{WEP::TimeRange}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_time_range_a673163ddc06ae4cb105f954d98be961e} 
+bool WEP\+::\+Time\+Range\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if the time ranges are equal 
+\end{DoxyReturn}
+\Hypertarget{struct_w_e_p_1_1_time_range_ad554282998a74009bc31e41f77c5498d}\index{WEP::TimeRange@{WEP::TimeRange}!overlaps@{overlaps}}
+\index{overlaps@{overlaps}!WEP::TimeRange@{WEP::TimeRange}}
+\doxysubsubsection{\texorpdfstring{overlaps()}{overlaps()}}
+{\footnotesize\ttfamily \label{struct_w_e_p_1_1_time_range_ad554282998a74009bc31e41f77c5498d} 
+bool WEP\+::\+Time\+Range\+::overlaps (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_w_e_p_1_1_time_range}{Time\+Range}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+True if this time range overlaps with a different one 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils/Time\+Range.\+h\end{DoxyCompactItemize}

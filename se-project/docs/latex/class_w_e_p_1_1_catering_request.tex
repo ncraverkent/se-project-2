@@ -1,0 +1,98 @@
+\doxysection{WEP\+::Catering\+Request Class Reference}
+\hypertarget{class_w_e_p_1_1_catering_request}{}\label{class_w_e_p_1_1_catering_request}\index{WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_w_e_p_1_1_catering_request_ac5bd8df046d7836b41c67b09be2dbd27}{Catering\+Request}} (std\+::string id, \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} \texorpdfstring{$\ast$}{*}activity, std\+::string company, unsigned int guest\+Count, float catering\+Cost)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_catering_request_a4a6bd077c16d5f7276466eb6a8de2371}{get\+Id}} () const
+\item 
+const \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} \& \mbox{\hyperlink{class_w_e_p_1_1_catering_request_a5c252d18bac6163964f73ae39262df53}{get\+Activity}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_w_e_p_1_1_catering_request_a209a36f1a292c4c82d03130fc99200e4}{get\+Company}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_w_e_p_1_1_catering_request_ab25eb9920df16fd778e86c73811578ee}{get\+Guest\+Count}} () const
+\item 
+float \mbox{\hyperlink{class_w_e_p_1_1_catering_request_a63b85a299bf22e46e1f54e61578b4672}{get\+Cost}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_w_e_p_1_1_catering_request_ac5bd8df046d7836b41c67b09be2dbd27}\index{WEP::CateringRequest@{WEP::CateringRequest}!CateringRequest@{CateringRequest}}
+\index{CateringRequest@{CateringRequest}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{CateringRequest()}{CateringRequest()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_ac5bd8df046d7836b41c67b09be2dbd27} 
+WEP\+::\+Catering\+Request\+::\+Catering\+Request (\begin{DoxyParamCaption}\item[{std\+::string}]{id}{, }\item[{\mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} \texorpdfstring{$\ast$}{*}}]{activity}{, }\item[{std\+::string}]{company}{, }\item[{unsigned int}]{guest\+Count}{, }\item[{float}]{catering\+Cost}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an instance of the catering request 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the catering request \\
+\hline
+{\em activity} & The activity of the catering request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+is a reference, so the activity cannot go out of scope before this request does 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em company} & The name of the catering company \\
+\hline
+{\em guest\+Count} & the number of guests that is being requested to cater to \\
+\hline
+{\em catering\+Cost} & the available funds for catering \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_w_e_p_1_1_catering_request_a5c252d18bac6163964f73ae39262df53}\index{WEP::CateringRequest@{WEP::CateringRequest}!getActivity@{getActivity}}
+\index{getActivity@{getActivity}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{getActivity()}{getActivity()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_a5c252d18bac6163964f73ae39262df53} 
+const \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}} \& WEP\+::\+Catering\+Request\+::get\+Activity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The activity of this catering request 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_catering_request_a209a36f1a292c4c82d03130fc99200e4}\index{WEP::CateringRequest@{WEP::CateringRequest}!getCompany@{getCompany}}
+\index{getCompany@{getCompany}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{getCompany()}{getCompany()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_a209a36f1a292c4c82d03130fc99200e4} 
+const std\+::string \& WEP\+::\+Catering\+Request\+::get\+Company (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The company name for this catering request 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_catering_request_a63b85a299bf22e46e1f54e61578b4672}\index{WEP::CateringRequest@{WEP::CateringRequest}!getCost@{getCost}}
+\index{getCost@{getCost}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_a63b85a299bf22e46e1f54e61578b4672} 
+float WEP\+::\+Catering\+Request\+::get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The cost this the catering request 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_catering_request_ab25eb9920df16fd778e86c73811578ee}\index{WEP::CateringRequest@{WEP::CateringRequest}!getGuestCount@{getGuestCount}}
+\index{getGuestCount@{getGuestCount}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{getGuestCount()}{getGuestCount()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_ab25eb9920df16fd778e86c73811578ee} 
+unsigned int WEP\+::\+Catering\+Request\+::get\+Guest\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The guest count required for catering 
+\end{DoxyReturn}
+\Hypertarget{class_w_e_p_1_1_catering_request_a4a6bd077c16d5f7276466eb6a8de2371}\index{WEP::CateringRequest@{WEP::CateringRequest}!getId@{getId}}
+\index{getId@{getId}!WEP::CateringRequest@{WEP::CateringRequest}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{class_w_e_p_1_1_catering_request_a4a6bd077c16d5f7276466eb6a8de2371} 
+const std\+::string \& WEP\+::\+Catering\+Request\+::get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The id of this catering request 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/Catering\+Request.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,29 @@
+\doxysection{Registration.\+h}
+\hypertarget{_registration_8h_source}{}\label{_registration_8h_source}\index{src/Registration.h@{src/Registration.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Guest.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Activity.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Utils/Date.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }WEP}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_w_e_p_1_1_registration}{Registration}}}
+\DoxyCodeLine{00013\ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_registration_ad8ac43b6b54931c868f531e0a3f9e684}{Registration}}(\mbox{\hyperlink{class_w_e_p_1_1_guest}{Guest}}*\ guest,\ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}}*\ activity,\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ date)\ :}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ guest(guest),\ activity(activity),\ date(date)\ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_w_e_p_1_1_guest}{Guest}}\&\ \mbox{\hyperlink{class_w_e_p_1_1_registration_a182b260d8cb1c7faf725b67765176fbb}{getGuest}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *this-\/>guest;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}}\&\ \mbox{\hyperlink{class_w_e_p_1_1_registration_a78056418d8f33248b237280cf8b7dffe}{getActivity}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ *this-\/>activity;\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\&\ \mbox{\hyperlink{class_w_e_p_1_1_registration_af54c19abba994f5f612b124d26f03bdd}{getDate}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>date;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_guest}{Guest}}*\ guest;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_w_e_p_1_1_activity}{Activity}}*\ activity;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_w_e_p_1_1_date}{Date}}\ date;}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
