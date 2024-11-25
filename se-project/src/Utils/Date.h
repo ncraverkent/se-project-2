@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <optional>
+#include "Defs.h"
 
 namespace WEP
 {
@@ -24,6 +26,12 @@ namespace WEP
 		Nov,
 		Dec,
 	};
+
+	/**
+	* @breif Converts the number to a Month
+	* @returns The month, will be an invalid option if the given number is not between 1 and 12
+	*/
+	Option<Month> getMonthFromNumber(size_t n);
 
 	/**
 	* Represents a date in time
@@ -53,11 +61,11 @@ namespace WEP
 
 		/**
 		* Parses a string into a date
-		* @param str the string to parse
+		* @param str the string to parse, must be in the format MM-DD-YYYY
 		* @returns The parsed date
-		* @todo this does not have any error checking for date formating, so we may need to fix
 		*/
-		static Date fromString(const std::string& str);
+		static Option<Date> fromString(const String& str);
+		String toString();
 	};
 }
 

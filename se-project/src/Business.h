@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include "Guest.h"
+#include "Defs.h"
 
 namespace WEP
 {
@@ -11,14 +12,20 @@ namespace WEP
 	class Business
 	{
 	public:
+		Business(const String& name) : name(name), guestList({}) {}
+
 		/**
 		* @returns The name of the Business
 		*/
 		const std::string& getName() const { return this->name; }
 		/**
-		* @returns The guess list of this Business
+		* @returns The guest list of this Business
 		*/
 		const std::vector<Guest>& getGuestList() const { return this->guestList; }
+
+		static Option<Business> promptUserNew();
+
+
 
 	private:
 		std::string name;
