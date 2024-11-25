@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)/src</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,14 +132,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Events\Birthday.cpp" />
+    <ClCompile Include="src\Events\Event.cpp" />
+    <ClCompile Include="src\Events\Funeral.cpp" />
+    <ClCompile Include="src\Events\Wedding.cpp" />
     <ClCompile Include="src\Rooms\Room.cpp" />
     <ClCompile Include="src\Utils\Date.cpp" />
     <ClCompile Include="src\Business.cpp" />
     <ClCompile Include="se-project.cpp" />
+    <ClCompile Include="src\Utils\Prompts.cpp" />
     <ClCompile Include="src\Utils\TimeRange.cpp" />
+    <ClCompile Include="src\Utils\UUID.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CateringRequest.h" />
+    <ClInclude Include="src\Defs.h" />
     <ClInclude Include="src\DisplayMannager.h" />
     <ClInclude Include="src\FileLogger.h" />
     <ClInclude Include="src\Guest.h" />
@@ -156,6 +164,8 @@
     <ClInclude Include="src\Business.h" />
     <ClInclude Include="src\Equipment.h" />
     <ClInclude Include="src\Events\Event.h" />
+    <ClInclude Include="src\Utils\Prompts.h" />
+    <ClInclude Include="src\Utils\UUID.h" />
     <ClInclude Include="src\WeddingEventCenter.h" />
     <ClInclude Include="src\Utils\TimeRange.h" />
   </ItemGroup>

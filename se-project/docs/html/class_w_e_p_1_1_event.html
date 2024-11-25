@@ -90,6 +90,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_w_e_p_1_1_event-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WEP::Event Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -110,29 +111,39 @@ Inheritance diagram for WEP::Event:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af90a42dc5799d67f6e436fe6a692f8ea" id="r_af90a42dc5799d67f6e436fe6a692f8ea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af90a42dc5799d67f6e436fe6a692f8ea">Event</a> (std::string name, <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> date, std::vector&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; activities)</td></tr>
-<tr class="separator:af90a42dc5799d67f6e436fe6a692f8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abddbdbaea0cb8f9c027df955a445ee7d" id="r_abddbdbaea0cb8f9c027df955a445ee7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abddbdbaea0cb8f9c027df955a445ee7d">Event</a> (String name, <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> date, List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; activities, UUID businessId)</td></tr>
+<tr class="separator:abddbdbaea0cb8f9c027df955a445ee7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ac61c5a7d4a6e98dc54d9f46521bef" id="r_ad8ac61c5a7d4a6e98dc54d9f46521bef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ac61c5a7d4a6e98dc54d9f46521bef">addActivity</a> (<a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> activity)</td></tr>
 <tr class="separator:ad8ac61c5a7d4a6e98dc54d9f46521bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e69bc4864f5f78c255fb0232b8597b4" id="r_a7e69bc4864f5f78c255fb0232b8597b4"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e69bc4864f5f78c255fb0232b8597b4">getName</a> () const</td></tr>
-<tr class="separator:a7e69bc4864f5f78c255fb0232b8597b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c32dbc7c321d4e45554f1679c770f6b" id="r_a9c32dbc7c321d4e45554f1679c770f6b"><td class="memItemLeft" align="right" valign="top">const String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c32dbc7c321d4e45554f1679c770f6b">getName</a> () const</td></tr>
+<tr class="separator:a9c32dbc7c321d4e45554f1679c770f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3a28d607856595f88e267eeada72fc" id="r_a7a3a28d607856595f88e267eeada72fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a3a28d607856595f88e267eeada72fc">getDate</a> () const</td></tr>
 <tr class="separator:a7a3a28d607856595f88e267eeada72fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b5a433a1e286ffb3f7edfbe23de024c" id="r_a9b5a433a1e286ffb3f7edfbe23de024c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5a433a1e286ffb3f7edfbe23de024c">getActivities</a> () const</td></tr>
-<tr class="separator:a9b5a433a1e286ffb3f7edfbe23de024c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d27026da01627489b3af941d65d02cc" id="r_a7d27026da01627489b3af941d65d02cc"><td class="memItemLeft" align="right" valign="top">const List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d27026da01627489b3af941d65d02cc">getActivities</a> () const</td></tr>
+<tr class="separator:a7d27026da01627489b3af941d65d02cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ba1d2457abb728158ec2b51d362a34f" id="r_a7ba1d2457abb728158ec2b51d362a34f"><td class="memItemLeft" align="right" valign="top">const UUID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba1d2457abb728158ec2b51d362a34f">getBusinessId</a> () const</td></tr>
+<tr class="separator:a7ba1d2457abb728158ec2b51d362a34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b256a98df66729806d36bac6d6dc43" id="r_a77b256a98df66729806d36bac6d6dc43"><td class="memItemLeft" align="right" valign="top">const UUID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77b256a98df66729806d36bac6d6dc43">getId</a> () const</td></tr>
+<tr class="separator:a77b256a98df66729806d36bac6d6dc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a344d7d33e47d929662ae189c914f9f03" id="r_a344d7d33e47d929662ae189c914f9f03"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a344d7d33e47d929662ae189c914f9f03">getCost</a> () const</td></tr>
 <tr class="separator:a344d7d33e47d929662ae189c914f9f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b99faa4a41515ac748ec7d92c9eb379" id="r_a4b99faa4a41515ac748ec7d92c9eb379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b99faa4a41515ac748ec7d92c9eb379">confirmBooking</a> () const</td></tr>
 <tr class="separator:a4b99faa4a41515ac748ec7d92c9eb379"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af25bc31f512e919621191902c30a124a" id="r_af25bc31f512e919621191902c30a124a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af25bc31f512e919621191902c30a124a">getDetails</a> () const =0</td></tr>
-<tr class="separator:af25bc31f512e919621191902c30a124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2c2496361b3dd35b68e37361d825ce" id="r_a4a2c2496361b3dd35b68e37361d825ce"><td class="memItemLeft" align="right" valign="top">virtual String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a2c2496361b3dd35b68e37361d825ce">getDetails</a> () const =0</td></tr>
+<tr class="separator:a4a2c2496361b3dd35b68e37361d825ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1bdae6b2f057e29e416007e820ac0898" id="r_a1bdae6b2f057e29e416007e820ac0898"><td class="memItemLeft" align="right" valign="top"><a id="a1bdae6b2f057e29e416007e820ac0898" name="a1bdae6b2f057e29e416007e820ac0898"></a>
+static Option&lt; Arc&lt; <a class="el" href="class_w_e_p_1_1_event.html">Event</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>promptCreateEvent</b> (UUID businessId)</td></tr>
+<tr class="separator:a1bdae6b2f057e29e416007e820ac0898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>@breif The base class for all of the different types of Events</p>
 <p>Is an abstract class which can be overriden by different derived classes to add extra information about the event </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af90a42dc5799d67f6e436fe6a692f8ea" name="af90a42dc5799d67f6e436fe6a692f8ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af90a42dc5799d67f6e436fe6a692f8ea">&#9670;&#160;</a></span>Event()</h2>
+<a id="abddbdbaea0cb8f9c027df955a445ee7d" name="abddbdbaea0cb8f9c027df955a445ee7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abddbdbaea0cb8f9c027df955a445ee7d">&#9670;&#160;</a></span>Event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +154,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">WEP::Event::Event </td>
           <td>(</td>
-          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -153,7 +164,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>activities</em></span>&#160;)</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>activities</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UUID</td>          <td class="paramname"><span class="paramname"><em>businessId</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -209,8 +225,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b5a433a1e286ffb3f7edfbe23de024c" name="a9b5a433a1e286ffb3f7edfbe23de024c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b5a433a1e286ffb3f7edfbe23de024c">&#9670;&#160;</a></span>getActivities()</h2>
+<a id="a7d27026da01627489b3af941d65d02cc" name="a7d27026da01627489b3af941d65d02cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d27026da01627489b3af941d65d02cc">&#9670;&#160;</a></span>getActivities()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +235,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; WEP::Event::getActivities </td>
+          <td class="memname">const List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; WEP::Event::getActivities </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -232,6 +248,32 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The activities of the event </dd></dl>
+
+</div>
+</div>
+<a id="a7ba1d2457abb728158ec2b51d362a34f" name="a7ba1d2457abb728158ec2b51d362a34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba1d2457abb728158ec2b51d362a34f">&#9670;&#160;</a></span>getBusinessId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UUID &amp; WEP::Event::getBusinessId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The id of the business that this event is organized by </dd></dl>
 
 </div>
 </div>
@@ -279,8 +321,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af25bc31f512e919621191902c30a124a" name="af25bc31f512e919621191902c30a124a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af25bc31f512e919621191902c30a124a">&#9670;&#160;</a></span>getDetails()</h2>
+<a id="a4a2c2496361b3dd35b68e37361d825ce" name="a4a2c2496361b3dd35b68e37361d825ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a2c2496361b3dd35b68e37361d825ce">&#9670;&#160;</a></span>getDetails()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +331,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::string WEP::Event::getDetails </td>
+          <td class="memname">virtual String WEP::Event::getDetails </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -307,8 +349,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e69bc4864f5f78c255fb0232b8597b4" name="a7e69bc4864f5f78c255fb0232b8597b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e69bc4864f5f78c255fb0232b8597b4">&#9670;&#160;</a></span>getName()</h2>
+<a id="a77b256a98df66729806d36bac6d6dc43" name="a77b256a98df66729806d36bac6d6dc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b256a98df66729806d36bac6d6dc43">&#9670;&#160;</a></span>getId()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +359,33 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; WEP::Event::getName </td>
+          <td class="memname">const UUID &amp; WEP::Event::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The id of this event </dd></dl>
+
+</div>
+</div>
+<a id="a9c32dbc7c321d4e45554f1679c770f6b" name="a9c32dbc7c321d4e45554f1679c770f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c32dbc7c321d4e45554f1679c770f6b">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const String &amp; WEP::Event::getName </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -333,8 +401,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Events/<a class="el" href="_event_8h_source.html">Event.h</a></li>
+<li>src/Events/<b>Event.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

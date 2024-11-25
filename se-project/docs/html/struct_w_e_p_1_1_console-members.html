@@ -83,28 +83,23 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>WEP</b></li><li class="navelem"><a class="el" href="class_w_e_p_1_1_event.html">Event</a></li>  </ul>
+<li class="navelem"><b>WEP</b></li><li class="navelem"><a class="el" href="struct_w_e_p_1_1_console.html">Console</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">WEP::Event Member List</div></div>
+  <div class="headertitle"><div class="title">WEP::Console Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#ad8ac61c5a7d4a6e98dc54d9f46521bef">addActivity</a>(Activity activity)</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a4b99faa4a41515ac748ec7d92c9eb379">confirmBooking</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#abddbdbaea0cb8f9c027df955a445ee7d">Event</a>(String name, Date date, List&lt; Activity &gt; activities, UUID businessId)</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a7d27026da01627489b3af941d65d02cc">getActivities</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a7ba1d2457abb728158ec2b51d362a34f">getBusinessId</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a344d7d33e47d929662ae189c914f9f03">getCost</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">getDate</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a4a2c2496361b3dd35b68e37361d825ce">getDetails</a>() const =0</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a77b256a98df66729806d36bac6d6dc43">getId</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html#a9c32dbc7c321d4e45554f1679c770f6b">getName</a>() const</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>promptCreateEvent</b>(UUID businessId) (defined in <a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a>)</td><td class="entry"><a class="el" href="class_w_e_p_1_1_event.html">WEP::Event</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#a02f458eae141e64504f5bea87e7ac3cb">prompt</a>(const String &amp;msg, const String &amp;err, std::function&lt; Option&lt; T &gt;()&gt; getInput)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#ad60e0bab528a714c888aeb5758788267">promptConfirm</a>(String message)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#a3bd384953f938be0d0249fcd15fca52a">promptDate</a>(const String &amp;msg)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#af8c4652b4cde28a5d07096b51433c621">promptLine</a>(const String &amp;msg)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#a5148ca880d05bf3b5a769800eb2a582b">promptName</a>(const String &amp;msg)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html#ab50332645428898ae57d1cfdf88a77b4">promptNumber</a>(const String &amp;msg)</td><td class="entry"><a class="el" href="struct_w_e_p_1_1_console.html">WEP::Console</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

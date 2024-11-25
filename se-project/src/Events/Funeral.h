@@ -1,5 +1,6 @@
 #pragma once
 #include "Event.h"
+#include "Defs.h"
 
 namespace WEP
 {	/**
@@ -10,6 +11,11 @@ namespace WEP
 	class Funeral : public Event
 	{
 	public:
+		Funeral(String name, Date birth, Date death, Date date, List<Activity> activites, UUID businessId): 
+			deceasedName(name), birthDate(birth), deathDate(death), 
+			Event(("Funeral for " + name + ": " + birth.toString() + " - " + death.toString()), date, activites, businessId)
+		{}
+
 		/**
 		*	@returns The deceased persons name
 		*/
@@ -29,6 +35,8 @@ namespace WEP
 		* @brief Implements the getDetails function from the Event class
 		*/
 		std::string getDetails() const override;
+
+		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 	private:
 		std::string deceasedName;
 		Date birthDate;
