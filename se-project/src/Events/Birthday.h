@@ -1,5 +1,6 @@
 #pragma once
 #include "Event.h"
+#include "Defs.h"
 
 namespace WEP
 {
@@ -15,7 +16,10 @@ namespace WEP
 		* Constructs the birthday class
 		* @todo Implement
 		*/
-		Birthday(std::string name, Date date, std::vector<Activity> activities);
+		Birthday(std::string name, unsigned int age, Date date, std::vector<Activity> activities, UUID businessId) :
+			subjectName(name), subjectAge(age), 
+			Event("Birthday for " + name, date, activities, businessId)
+		{}
 
 		/**
 		* @returns The subjects name
@@ -30,6 +34,8 @@ namespace WEP
 		* @brief Implements the getDetails function from the Event class
 		*/
 		std::string getDetails() const override;
+
+		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 
 	private:
 		std::string subjectName;

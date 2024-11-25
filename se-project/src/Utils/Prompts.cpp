@@ -19,6 +19,7 @@ namespace WEP
     {
         std::cout << msg << '\n';
         String line = "";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, line);
         return line;
     }
@@ -27,6 +28,11 @@ namespace WEP
     {
         return Console::prompt<String>(msg, "That is an invalid name, please try again.", []() {
             String line;
+
+            if (std::cin.peek() == '\n') {
+                std::cin.ignore();
+            }
+
             std::getline(std::cin, line);
             if (isName(line))
             {
@@ -41,7 +47,7 @@ namespace WEP
 
     Date Console::promptDate(const String& msg)
     {
-        return Console::prompt<Date>(msg + " (MM-DD-YYYY)", "Invalid date, please try again.", []() {
+        return Console::prompt<Date>(msg + " (MM-DD-YYYY): ", "Invalid date, please try again.", []() {
             String text;
             std::cin >> text;
             return Date::fromString(text);
@@ -55,17 +61,15 @@ namespace WEP
         std::cin >> c;
         return c == 'y' || c == 'n';
     }
+
     bool isName(const String& str)
     {
-
+        for (auto c : str)
         {
-            for (auto c : str)
-            {
-                if (!(std::isalpha(c) || std::isdigit(c) || std::isspace(c) || c == '\''))
-                    return false;
-            }
-
-            return true;
+            if (!(std::isalpha(c) || std::isdigit(c) || std::isspace(c) || c == '\'' || c == '.'))
+                return false;
         }
+
+        return true;
     }
 }

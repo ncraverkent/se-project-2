@@ -4,6 +4,8 @@
 #include <memory>
 #include "Utils/Date.h"
 #include "Activity.h"
+#include "Defs.h"
+#include "Utils/UUID.h"
 
 namespace WEP
 {
@@ -18,8 +20,10 @@ namespace WEP
 		/**
 		*	Constructs an instance of the event class
 		*/
-		Event(std::string name, Date date, std::vector<Activity> activities) : 
-			name(name), date(date), activities(activities) {}
+		Event(String name, Date date, List<Activity> activities, UUID businessId) : 
+			name(name), date(date), activities(activities), businessId(businessId) ,
+			eventId(generateUUID())
+		{}
 
 		/**
 		*	Adds an activity to the event
@@ -31,7 +35,7 @@ namespace WEP
 		/**
 		*	@Returns the name of the Event
 		*/
-		const std::string& getName() const { return this->name; }
+		const String& getName() const { return this->name; }
 
 		/**
 		* @returns The date of the event
@@ -41,7 +45,17 @@ namespace WEP
 		/**
 		* @returns The activities of the event
 		*/
-		const std::vector<Activity> getActivities() const { return this->activities; }
+		const List<Activity> getActivities() const { return this->activities; }
+
+		/**
+		* @returns The id of the business that this event is organized by
+		*/
+		const UUID& getBusinessId() const { return this->businessId; }
+
+		/**
+		* @returns The id of this event
+		*/
+		const UUID& getId() const { return this->eventId; }
 
 		/**
 		* Calculates the cost of the event
@@ -58,12 +72,15 @@ namespace WEP
 		/**
 		* @returns The formatted data of the event, which can be logged
 		*/
-		virtual std::string getDetails() const = 0;
+		virtual String getDetails() const = 0;
+
+		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 
 	private:
-		std::string name;
+		String name;
 		Date date;
-		std::vector<Activity> activities;
-
+		List<Activity> activities;
+		UUID businessId;
+		UUID eventId;
 	};
 }

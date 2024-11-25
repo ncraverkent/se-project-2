@@ -35,7 +35,7 @@ namespace WEP
         return {};
 	}
 
-	String Date::toString()
+	String Date::toString() const
 	{
         std::stringstream ss = {};
         ss << static_cast<size_t>(this->month) << "-" << this->day << "-" << this->year;

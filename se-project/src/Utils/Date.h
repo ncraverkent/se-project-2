@@ -65,7 +65,7 @@ namespace WEP
 		* @returns The parsed date
 		*/
 		static Option<Date> fromString(const String& str);
-		String toString();
+		String toString() const;
 	};
 }
 

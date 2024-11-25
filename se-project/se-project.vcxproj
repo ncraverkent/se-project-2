@@ -132,7 +132,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Events\Birthday.cpp" />
     <ClCompile Include="src\Events\Event.cpp" />
+    <ClCompile Include="src\Events\Funeral.cpp" />
+    <ClCompile Include="src\Events\Wedding.cpp" />
     <ClCompile Include="src\Rooms\Room.cpp" />
     <ClCompile Include="src\Utils\Date.cpp" />
     <ClCompile Include="src\Business.cpp" />

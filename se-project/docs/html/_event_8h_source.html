@@ -97,50 +97,63 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Utils/Date.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Activity.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>WEP</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_event.html">Event</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#af90a42dc5799d67f6e436fe6a692f8ea">   21</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_event.html#af90a42dc5799d67f6e436fe6a692f8ea">Event</a>(std::string name, <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a> date, std::vector&lt;Activity&gt; activities) : </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            name(name), date(date), activities(activities) {}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Defs.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;Utils/UUID.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>WEP</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_event.html">Event</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#abddbdbaea0cb8f9c027df955a445ee7d">   23</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_event.html#abddbdbaea0cb8f9c027df955a445ee7d">Event</a>(String name, <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a> date, List&lt;Activity&gt; activities, UUID businessId) : </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            name(name), date(date), activities(activities), businessId(businessId) ,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            eventId(generateUUID())</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {}</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#ad8ac61c5a7d4a6e98dc54d9f46521bef">addActivity</a>(<a class="code hl_class" href="class_w_e_p_1_1_activity.html">Activity</a> activity);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a7e69bc4864f5f78c255fb0232b8597b4">   34</a></span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a7e69bc4864f5f78c255fb0232b8597b4">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;name; }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">   39</a></span>        <span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a>&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">getDate</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;date; }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a9b5a433a1e286ffb3f7edfbe23de024c">   44</a></span>        <span class="keyword">const</span> std::vector&lt;Activity&gt; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a9b5a433a1e286ffb3f7edfbe23de024c">getActivities</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;activities; }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#a344d7d33e47d929662ae189c914f9f03">getCost</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#a4b99faa4a41515ac748ec7d92c9eb379">confirmBooking</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#af25bc31f512e919621191902c30a124a">   61</a></span>        <span class="keyword">virtual</span> std::string <a class="code hl_function" href="class_w_e_p_1_1_event.html#af25bc31f512e919621191902c30a124a">getDetails</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::string name;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a> date;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::vector&lt;Activity&gt; activities;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#ad8ac61c5a7d4a6e98dc54d9f46521bef">addActivity</a>(<a class="code hl_class" href="class_w_e_p_1_1_activity.html">Activity</a> activity);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a9c32dbc7c321d4e45554f1679c770f6b">   38</a></span>        <span class="keyword">const</span> String&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a9c32dbc7c321d4e45554f1679c770f6b">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;name; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">   43</a></span>        <span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a>&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">getDate</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;date; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a7d27026da01627489b3af941d65d02cc">   48</a></span>        <span class="keyword">const</span> List&lt;Activity&gt; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a7d27026da01627489b3af941d65d02cc">getActivities</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;activities; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a7ba1d2457abb728158ec2b51d362a34f">   53</a></span>        <span class="keyword">const</span> UUID&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a7ba1d2457abb728158ec2b51d362a34f">getBusinessId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;businessId; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a77b256a98df66729806d36bac6d6dc43">   58</a></span>        <span class="keyword">const</span> UUID&amp; <a class="code hl_function" href="class_w_e_p_1_1_event.html#a77b256a98df66729806d36bac6d6dc43">getId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;eventId; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordtype">float</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#a344d7d33e47d929662ae189c914f9f03">getCost</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_w_e_p_1_1_event.html#a4b99faa4a41515ac748ec7d92c9eb379">confirmBooking</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_event.html#a4a2c2496361b3dd35b68e37361d825ce">   75</a></span>        <span class="keyword">virtual</span> String <a class="code hl_function" href="class_w_e_p_1_1_event.html#a4a2c2496361b3dd35b68e37361d825ce">getDetails</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">static</span> Option&lt;Arc&lt;Event&gt;&gt; promptCreateEvent(UUID businessId);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        String name;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_date.html">Date</a> date;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        List&lt;Activity&gt; activities;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        UUID businessId;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        UUID eventId;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
 </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 <div class="ttc" id="aclass_w_e_p_1_1_activity_html"><div class="ttname"><a href="class_w_e_p_1_1_activity.html">WEP::Activity</a></div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html"><div class="ttname"><a href="class_w_e_p_1_1_event.html">WEP::Event</a></div><div class="ttdef"><b>Definition</b> Event.h:16</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_a344d7d33e47d929662ae189c914f9f03"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a344d7d33e47d929662ae189c914f9f03">WEP::Event::getCost</a></div><div class="ttdeci">float getCost() const</div><div class="ttdef"><b>Definition</b> Event.cpp:10</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_a4b99faa4a41515ac748ec7d92c9eb379"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a4b99faa4a41515ac748ec7d92c9eb379">WEP::Event::confirmBooking</a></div><div class="ttdeci">void confirmBooking() const</div><div class="ttdef"><b>Definition</b> Event.cpp:15</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_a7a3a28d607856595f88e267eeada72fc"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">WEP::Event::getDate</a></div><div class="ttdeci">const Date &amp; getDate() const</div><div class="ttdef"><b>Definition</b> Event.h:39</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_a7e69bc4864f5f78c255fb0232b8597b4"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a7e69bc4864f5f78c255fb0232b8597b4">WEP::Event::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> Event.h:34</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_a9b5a433a1e286ffb3f7edfbe23de024c"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a9b5a433a1e286ffb3f7edfbe23de024c">WEP::Event::getActivities</a></div><div class="ttdeci">const std::vector&lt; Activity &gt; getActivities() const</div><div class="ttdef"><b>Definition</b> Event.h:44</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_ad8ac61c5a7d4a6e98dc54d9f46521bef"><div class="ttname"><a href="class_w_e_p_1_1_event.html#ad8ac61c5a7d4a6e98dc54d9f46521bef">WEP::Event::addActivity</a></div><div class="ttdeci">bool addActivity(Activity activity)</div><div class="ttdef"><b>Definition</b> Event.cpp:5</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_af25bc31f512e919621191902c30a124a"><div class="ttname"><a href="class_w_e_p_1_1_event.html#af25bc31f512e919621191902c30a124a">WEP::Event::getDetails</a></div><div class="ttdeci">virtual std::string getDetails() const =0</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_event_html_af90a42dc5799d67f6e436fe6a692f8ea"><div class="ttname"><a href="class_w_e_p_1_1_event.html#af90a42dc5799d67f6e436fe6a692f8ea">WEP::Event::Event</a></div><div class="ttdeci">Event(std::string name, Date date, std::vector&lt; Activity &gt; activities)</div><div class="ttdef"><b>Definition</b> Event.h:21</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html"><div class="ttname"><a href="class_w_e_p_1_1_event.html">WEP::Event</a></div><div class="ttdef"><b>Definition</b> Event.h:18</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a344d7d33e47d929662ae189c914f9f03"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a344d7d33e47d929662ae189c914f9f03">WEP::Event::getCost</a></div><div class="ttdeci">float getCost() const</div><div class="ttdef"><b>Definition</b> Event.cpp:15</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a4a2c2496361b3dd35b68e37361d825ce"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a4a2c2496361b3dd35b68e37361d825ce">WEP::Event::getDetails</a></div><div class="ttdeci">virtual String getDetails() const =0</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a4b99faa4a41515ac748ec7d92c9eb379"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a4b99faa4a41515ac748ec7d92c9eb379">WEP::Event::confirmBooking</a></div><div class="ttdeci">void confirmBooking() const</div><div class="ttdef"><b>Definition</b> Event.cpp:20</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a77b256a98df66729806d36bac6d6dc43"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a77b256a98df66729806d36bac6d6dc43">WEP::Event::getId</a></div><div class="ttdeci">const UUID &amp; getId() const</div><div class="ttdef"><b>Definition</b> Event.h:58</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a7a3a28d607856595f88e267eeada72fc"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a7a3a28d607856595f88e267eeada72fc">WEP::Event::getDate</a></div><div class="ttdeci">const Date &amp; getDate() const</div><div class="ttdef"><b>Definition</b> Event.h:43</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a7ba1d2457abb728158ec2b51d362a34f"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a7ba1d2457abb728158ec2b51d362a34f">WEP::Event::getBusinessId</a></div><div class="ttdeci">const UUID &amp; getBusinessId() const</div><div class="ttdef"><b>Definition</b> Event.h:53</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a7d27026da01627489b3af941d65d02cc"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a7d27026da01627489b3af941d65d02cc">WEP::Event::getActivities</a></div><div class="ttdeci">const List&lt; Activity &gt; getActivities() const</div><div class="ttdef"><b>Definition</b> Event.h:48</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_a9c32dbc7c321d4e45554f1679c770f6b"><div class="ttname"><a href="class_w_e_p_1_1_event.html#a9c32dbc7c321d4e45554f1679c770f6b">WEP::Event::getName</a></div><div class="ttdeci">const String &amp; getName() const</div><div class="ttdef"><b>Definition</b> Event.h:38</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_abddbdbaea0cb8f9c027df955a445ee7d"><div class="ttname"><a href="class_w_e_p_1_1_event.html#abddbdbaea0cb8f9c027df955a445ee7d">WEP::Event::Event</a></div><div class="ttdeci">Event(String name, Date date, List&lt; Activity &gt; activities, UUID businessId)</div><div class="ttdef"><b>Definition</b> Event.h:23</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_event_html_ad8ac61c5a7d4a6e98dc54d9f46521bef"><div class="ttname"><a href="class_w_e_p_1_1_event.html#ad8ac61c5a7d4a6e98dc54d9f46521bef">WEP::Event::addActivity</a></div><div class="ttdeci">bool addActivity(Activity activity)</div><div class="ttdef"><b>Definition</b> Event.cpp:10</div></div>
 <div class="ttc" id="astruct_w_e_p_1_1_date_html"><div class="ttname"><a href="struct_w_e_p_1_1_date.html">WEP::Date</a></div><div class="ttdef"><b>Definition</b> Date.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
