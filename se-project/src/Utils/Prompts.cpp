@@ -8,7 +8,7 @@ namespace WEP
             std::string num = {};
             std::cin >> num;
             size_t number = 0;
-            if (1 == sscanf(num.c_str(), "%zu", &number))
+            if (1 == scanf_s(num.c_str(), "%zu", &number))
                 return Option<size_t> {number};
 
             return Option<size_t> {};
@@ -20,6 +20,7 @@ namespace WEP
         std::cout << msg << '\n';
         String line = "";
         std::getline(std::cin, line);
+        return line;
     }
 
     std::string Console::promptName(const String& msg)
@@ -40,7 +41,7 @@ namespace WEP
 
     Date Console::promptDate(const String& msg)
     {
-        Console::prompt<Date>(msg + " (MM-DD-YYYY)", "Invalid date, please try again.", []() {
+        return Console::prompt<Date>(msg + " (MM-DD-YYYY)", "Invalid date, please try again.", []() {
             String text;
             std::cin >> text;
             return Date::fromString(text);
@@ -53,5 +54,18 @@ namespace WEP
         char c;
         std::cin >> c;
         return c == 'y' || c == 'n';
+    }
+    bool isName(const String& str)
+    {
+
+        {
+            for (auto c : str)
+            {
+                if (!(std::isalpha(c) || std::isdigit(c) || std::isspace(c) || c == '\''))
+                    return false;
+            }
+
+            return true;
+        }
     }
 }

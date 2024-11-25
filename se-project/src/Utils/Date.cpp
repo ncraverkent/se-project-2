@@ -4,6 +4,11 @@
 #include <sstream>
 #include <iomanip>
 
+
+static bool isLeapYear(size_t year);
+static bool parseDate(const std::string& dateStr, size_t& year, size_t& month, size_t& day);
+static bool isValidDate(size_t year, size_t month, size_t day);
+
 namespace WEP
 {
 	bool Date::operator==(const Date& other) const
@@ -34,6 +39,7 @@ namespace WEP
 	{
         std::stringstream ss = {};
         ss << static_cast<size_t>(this->month) << "-" << this->day << "-" << this->year;
+        return ss.str();
 	}
 
     Option<Month> getMonthFromNumber(size_t n)

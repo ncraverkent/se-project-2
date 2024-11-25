@@ -139,6 +139,7 @@
     <ClCompile Include="se-project.cpp" />
     <ClCompile Include="src\Utils\Prompts.cpp" />
     <ClCompile Include="src\Utils\TimeRange.cpp" />
+    <ClCompile Include="src\Utils\UUID.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CateringRequest.h" />
@@ -161,6 +162,7 @@
     <ClInclude Include="src\Equipment.h" />
     <ClInclude Include="src\Events\Event.h" />
     <ClInclude Include="src\Utils\Prompts.h" />
+    <ClInclude Include="src\Utils\UUID.h" />
     <ClInclude Include="src\WeddingEventCenter.h" />
     <ClInclude Include="src\Utils\TimeRange.h" />
   </ItemGroup>
