@@ -90,6 +90,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_w_e_p_1_1_guest-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WEP::Guest Class Reference</div></div>
 </div><!--header-->
@@ -99,49 +100,215 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a50c1f5ffb8e192783a45adafc2b433c7" id="r_a50c1f5ffb8e192783a45adafc2b433c7"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50c1f5ffb8e192783a45adafc2b433c7">getName</a> ()</td></tr>
-<tr class="separator:a50c1f5ffb8e192783a45adafc2b433c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acebd6247e0b8d0dfb19564e1a156e6dd" id="r_acebd6247e0b8d0dfb19564e1a156e6dd"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acebd6247e0b8d0dfb19564e1a156e6dd">getId</a> ()</td></tr>
-<tr class="separator:acebd6247e0b8d0dfb19564e1a156e6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7702270bd4c771f8e09d797cf51143" id="r_abc7702270bd4c771f8e09d797cf51143"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc7702270bd4c771f8e09d797cf51143">Guest</a> (String name, UUID id=generateUUID())</td></tr>
+<tr class="separator:abc7702270bd4c771f8e09d797cf51143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7fa61060a255a5716b1d426b434606" id="r_a2f7fa61060a255a5716b1d426b434606"><td class="memItemLeft" align="right" valign="top">const String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7fa61060a255a5716b1d426b434606">getName</a> ()</td></tr>
+<tr class="separator:a2f7fa61060a255a5716b1d426b434606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b397c54395b55157ff33b55c640161e" id="r_a0b397c54395b55157ff33b55c640161e"><td class="memItemLeft" align="right" valign="top">const UUID &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b397c54395b55157ff33b55c640161e">getId</a> ()</td></tr>
+<tr class="separator:a0b397c54395b55157ff33b55c640161e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51bbbf3fbbdcfda2395836ada1e3d05" id="r_ad51bbbf3fbbdcfda2395836ada1e3d05"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad51bbbf3fbbdcfda2395836ada1e3d05">registerForActivity</a> (<a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> activity)</td></tr>
 <tr class="separator:ad51bbbf3fbbdcfda2395836ada1e3d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd727be84c08d4ed4d7c4be9a9cc484e" id="r_abd727be84c08d4ed4d7c4be9a9cc484e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd727be84c08d4ed4d7c4be9a9cc484e">getDetails</a> () const</td></tr>
+<tr class="separator:abd727be84c08d4ed4d7c4be9a9cc484e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6cc3424faf6053015d65b34dd5ddb65f" id="r_a6cc3424faf6053015d65b34dd5ddb65f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc3424faf6053015d65b34dd5ddb65f">promptCreateGuest</a> ()</td></tr>
+<tr class="separator:a6cc3424faf6053015d65b34dd5ddb65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee14c8a0732dbcee58341316ef127194" id="r_aee14c8a0732dbcee58341316ef127194"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee14c8a0732dbcee58341316ef127194">promptCreateGuestList</a> ()</td></tr>
+<tr class="separator:aee14c8a0732dbcee58341316ef127194"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091123377188d38a87bedd7dc9be1fda" id="r_a091123377188d38a87bedd7dc9be1fda"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a091123377188d38a87bedd7dc9be1fda">formatGuestList</a> (const List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; &amp;guests)</td></tr>
+<tr class="separator:a091123377188d38a87bedd7dc9be1fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A guest to an event </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acebd6247e0b8d0dfb19564e1a156e6dd" name="acebd6247e0b8d0dfb19564e1a156e6dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acebd6247e0b8d0dfb19564e1a156e6dd">&#9670;&#160;</a></span>getId()</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abc7702270bd4c771f8e09d797cf51143" name="abc7702270bd4c771f8e09d797cf51143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7702270bd4c771f8e09d797cf51143">&#9670;&#160;</a></span>Guest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WEP::Guest::Guest </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UUID</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">generateUUID()</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of the guest </td></tr>
+    <tr><td class="paramname">id</td><td>The id of the guest </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a091123377188d38a87bedd7dc9be1fda" name="a091123377188d38a87bedd7dc9be1fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091123377188d38a87bedd7dc9be1fda">&#9670;&#160;</a></span>formatGuestList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WEP::Guest::formatGuestList </td>
+          <td>(</td>
+          <td class="paramtype">const List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>guests</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Formats the guest list </p><dl class="section return"><dt>Returns</dt><dd>the given guest list in a printable string formatted like: "
+- Guest List:
+   - Guest Name: [Guest Id]
+  ...
+" </dd></dl>
+
+</div>
+</div>
+<a id="abd727be84c08d4ed4d7c4be9a9cc484e" name="abd727be84c08d4ed4d7c4be9a9cc484e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd727be84c08d4ed4d7c4be9a9cc484e">&#9670;&#160;</a></span>getDetails()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; WEP::Guest::getId </td>
+          <td class="memname">String WEP::Guest::getDetails </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Formats the guest information into a string </p><dl class="section return"><dt>Returns</dt><dd>The formatted guest information </dd></dl>
+
+</div>
+</div>
+<a id="a0b397c54395b55157ff33b55c640161e" name="a0b397c54395b55157ff33b55c640161e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b397c54395b55157ff33b55c640161e">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UUID &amp; WEP::Guest::getId </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The id of this <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> </dd></dl>
 
 </div>
 </div>
-<a id="a50c1f5ffb8e192783a45adafc2b433c7" name="a50c1f5ffb8e192783a45adafc2b433c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50c1f5ffb8e192783a45adafc2b433c7">&#9670;&#160;</a></span>getName()</h2>
+<a id="a2f7fa61060a255a5716b1d426b434606" name="a2f7fa61060a255a5716b1d426b434606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7fa61060a255a5716b1d426b434606">&#9670;&#160;</a></span>getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string &amp; WEP::Guest::getName </td>
+          <td class="memname">const String &amp; WEP::Guest::getName </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The name of this <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6cc3424faf6053015d65b34dd5ddb65f" name="a6cc3424faf6053015d65b34dd5ddb65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cc3424faf6053015d65b34dd5ddb65f">&#9670;&#160;</a></span>promptCreateGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> WEP::Guest::promptCreateGuest </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prompts the user to create a guest </p>
+
+</div>
+</div>
+<a id="aee14c8a0732dbcee58341316ef127194" name="aee14c8a0732dbcee58341316ef127194"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee14c8a0732dbcee58341316ef127194">&#9670;&#160;</a></span>promptCreateGuestList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; WEP::Guest::promptCreateGuestList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prompts the user to create a guest list </p>
 
 </div>
 </div>
@@ -159,12 +326,14 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Attempts to register a guest for an activity </p><dl class="section return"><dt>Returns</dt><dd>True if was successfully registered </dd></dl>
+<p>Attempts to register a guest for an activity </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo</a></b></dt><dd>implement </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if was successfully registered </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="_guest_8h_source.html">Guest.h</a></li>
+<li>src/<b>Guest.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

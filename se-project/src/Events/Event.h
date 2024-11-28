@@ -6,6 +6,7 @@
 #include "Activity.h"
 #include "Defs.h"
 #include "Utils/UUID.h"
+#include "Guest.h"
 
 namespace WEP
 {
@@ -20,9 +21,9 @@ namespace WEP
 		/**
 		*	Constructs an instance of the event class
 		*/
-		Event(String name, Date date, List<Activity> activities, UUID businessId) : 
-			name(name), date(date), activities(activities), businessId(businessId) ,
-			eventId(generateUUID())
+		Event(String name, Date date, List<Activity> activities, List<Guest> guests, UUID businessId) : 
+			name(name), date(date), activities(activities), businessId(businessId),
+			eventId(generateUUID()), guests(guests)
 		{}
 
 		/**
@@ -33,7 +34,12 @@ namespace WEP
 		bool addActivity(Activity activity);
 
 		/**
-		*	@Returns the name of the Event
+		* @returns the list of guests for this event
+		*/
+		const List<Guest>& getGuests() const { return this->guests; }
+
+		/**
+		*	@returns the name of the Event
 		*/
 		const String& getName() const { return this->name; }
 
@@ -74,12 +80,18 @@ namespace WEP
 		*/
 		virtual String getDetails() const = 0;
 
+		/*
+		* Promps the user to create an event, and fill out all the data for it
+		* @param businessId The id for the owning business
+		* @returns An invalid option if the creation was cancled, or a valid one if the creation was not
+		*/
 		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 
 	private:
 		String name;
 		Date date;
 		List<Activity> activities;
+		List<Guest> guests;
 		UUID businessId;
 		UUID eventId;
 	};

@@ -37,6 +37,7 @@ namespace WEP
 		else
 		{
 			this->events.insert({ event->getId(), event });
+			return true;
 		}
 	}
 

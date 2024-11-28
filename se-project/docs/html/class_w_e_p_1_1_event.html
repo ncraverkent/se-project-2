@@ -111,10 +111,12 @@ Inheritance diagram for WEP::Event:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abddbdbaea0cb8f9c027df955a445ee7d" id="r_abddbdbaea0cb8f9c027df955a445ee7d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abddbdbaea0cb8f9c027df955a445ee7d">Event</a> (String name, <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> date, List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; activities, UUID businessId)</td></tr>
-<tr class="separator:abddbdbaea0cb8f9c027df955a445ee7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99826792a4ccaf5f352c4d106ef8e9df" id="r_a99826792a4ccaf5f352c4d106ef8e9df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99826792a4ccaf5f352c4d106ef8e9df">Event</a> (String name, <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> date, List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; activities, List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; guests, UUID businessId)</td></tr>
+<tr class="separator:a99826792a4ccaf5f352c4d106ef8e9df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ac61c5a7d4a6e98dc54d9f46521bef" id="r_ad8ac61c5a7d4a6e98dc54d9f46521bef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ac61c5a7d4a6e98dc54d9f46521bef">addActivity</a> (<a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> activity)</td></tr>
 <tr class="separator:ad8ac61c5a7d4a6e98dc54d9f46521bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2c8ea5c03b8303deb25fb00c9ff177" id="r_aec2c8ea5c03b8303deb25fb00c9ff177"><td class="memItemLeft" align="right" valign="top">const List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec2c8ea5c03b8303deb25fb00c9ff177">getGuests</a> () const</td></tr>
+<tr class="separator:aec2c8ea5c03b8303deb25fb00c9ff177"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c32dbc7c321d4e45554f1679c770f6b" id="r_a9c32dbc7c321d4e45554f1679c770f6b"><td class="memItemLeft" align="right" valign="top">const String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c32dbc7c321d4e45554f1679c770f6b">getName</a> () const</td></tr>
 <tr class="separator:a9c32dbc7c321d4e45554f1679c770f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a3a28d607856595f88e267eeada72fc" id="r_a7a3a28d607856595f88e267eeada72fc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_w_e_p_1_1_date.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a3a28d607856595f88e267eeada72fc">getDate</a> () const</td></tr>
@@ -142,8 +144,8 @@ static Option&lt; Arc&lt; <a class="el" href="class_w_e_p_1_1_event.html">Event<
 <div class="textblock"><p>@breif The base class for all of the different types of Events</p>
 <p>Is an abstract class which can be overriden by different derived classes to add extra information about the event </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="abddbdbaea0cb8f9c027df955a445ee7d" name="abddbdbaea0cb8f9c027df955a445ee7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abddbdbaea0cb8f9c027df955a445ee7d">&#9670;&#160;</a></span>Event()</h2>
+<a id="a99826792a4ccaf5f352c4d106ef8e9df" name="a99826792a4ccaf5f352c4d106ef8e9df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99826792a4ccaf5f352c4d106ef8e9df">&#9670;&#160;</a></span>Event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,6 +167,11 @@ static Option&lt; Arc&lt; <a class="el" href="class_w_e_p_1_1_event.html">Event<
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>activities</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>guests</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -349,6 +356,32 @@ static Option&lt; Arc&lt; <a class="el" href="class_w_e_p_1_1_event.html">Event<
 
 </div>
 </div>
+<a id="aec2c8ea5c03b8303deb25fb00c9ff177" name="aec2c8ea5c03b8303deb25fb00c9ff177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2c8ea5c03b8303deb25fb00c9ff177">&#9670;&#160;</a></span>getGuests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const List&lt; <a class="el" href="class_w_e_p_1_1_guest.html">Guest</a> &gt; &amp; WEP::Event::getGuests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the list of guests for this event </dd></dl>
+
+</div>
+</div>
 <a id="a77b256a98df66729806d36bac6d6dc43" name="a77b256a98df66729806d36bac6d6dc43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a77b256a98df66729806d36bac6d6dc43">&#9670;&#160;</a></span>getId()</h2>
 
@@ -397,7 +430,7 @@ static Option&lt; Arc&lt; <a class="el" href="class_w_e_p_1_1_event.html">Event<
   </tr>
 </table>
 </div><div class="memdoc">
-<p>@Returns the name of the <a class="el" href="class_w_e_p_1_1_event.html">Event</a> </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the <a class="el" href="class_w_e_p_1_1_event.html">Event</a> </dd></dl>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 #include "Prompts.h"
+#include <sstream>
 
 namespace WEP
 {
@@ -74,6 +75,28 @@ namespace WEP
         return c == 'y' || c == 'n';
     }
 
+    List<String> Console::promptCommands(String message)
+    {
+        String text = Console::promptLine(message);
+        std::istringstream iss(text);
+        List<String> commands;
+
+        String word;
+        while (iss >> word)
+            commands.push_back(word);
+
+        return commands;
+    }
+
+    void Console::printHelpCommands(const String& message, const List<Pair<String, String>>& commands)
+    {
+        std::cout << message << "\n";
+        for (const auto& [command, desc] : commands)
+        {
+            std::cout << " - `" << command << "` --> " << desc << "\n";
+        }
+    }
+
     bool isName(const String& str)
     {
         for (auto c : str)
@@ -85,3 +108,4 @@ namespace WEP
         return true;
     }
 }
+
