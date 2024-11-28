@@ -11,9 +11,9 @@ namespace WEP
 	class Funeral : public Event
 	{
 	public:
-		Funeral(String name, Date birth, Date death, Date date, List<Activity> activites, UUID businessId): 
+		Funeral(String name, Date birth, Date death, Date date, List<Activity> activites, List<Guest> guests, UUID businessId): 
 			deceasedName(name), birthDate(birth), deathDate(death), 
-			Event(("Funeral for " + name + ": " + birth.toString() + " - " + death.toString()), date, activites, businessId)
+			Event(("Funeral for " + name + ": " + birth.toString() + " - " + death.toString()), date, activites, guests, businessId)
 		{}
 
 		/**
@@ -36,6 +36,11 @@ namespace WEP
 		*/
 		std::string getDetails() const override;
 
+		/*
+		* Promps the user to create a Funeral event, and fill out all the data for it
+		* @param businessId The id for the owning business
+		* @returns An invalid option if the creation was cancled, or a valid one if the creation was not
+		*/
 		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 	private:
 		std::string deceasedName;

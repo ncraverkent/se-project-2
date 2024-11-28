@@ -156,7 +156,7 @@ int main()
                 auto events = eventCenter.getEvents();
                 for (const auto& event : events)
                 {
-                    std::cout << " - " << event->getDetails() << "\n";
+                    std::cout << event->getDetails() << "\n";
                 }
             }
             else if (commands[1] == PRINT_BUSINESSES_ARG)
