@@ -8,10 +8,20 @@ namespace WEP
             std::string num = {};
             std::cin >> num;
             size_t number = 0;
-            if (1 == scanf_s(num.c_str(), "%zu", &number))
-                return Option<size_t> {number};
-
-            return Option<size_t> {};
+            
+            try {
+                // Try converting the string to size_t
+                size_t number = std::stoul(num); // Converts string to unsigned long
+                return Option<size_t>{number};  // Return the number wrapped in Option
+            }
+            catch (const std::invalid_argument&) {
+                // Conversion failed due to invalid input
+                std::cerr << "Invalid input: not a number." << std::endl;
+            }
+            catch (const std::out_of_range&) {
+                // Conversion failed due to overflow
+                std::cerr << "Invalid input: number out of range." << std::endl;
+            }
         });
     }
 
@@ -19,7 +29,9 @@ namespace WEP
     {
         std::cout << msg << '\n';
         String line = "";
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if (std::cin.peek() == '\n') {
+            std::cin.ignore();
+        }
         std::getline(std::cin, line);
         return line;
     }
