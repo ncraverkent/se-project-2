@@ -143,6 +143,7 @@
     <ClCompile Include="src\Utils\Prompts.cpp" />
     <ClCompile Include="src\Utils\TimeRange.cpp" />
     <ClCompile Include="src\Utils\UUID.cpp" />
+    <ClCompile Include="src\WeddingEventCenter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\CateringRequest.h" />
