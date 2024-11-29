@@ -63,5 +63,12 @@ namespace WEP
 		* Runs a basic confirmation prompt with a message
 		*/
 		static bool promptConfirm(String message);
+
+		/**
+		* Prompts the user for a list of commands
+		*/
+		static List<String> promptCommands(String message);
+
+		static void printHelpCommands(const String& message, const List<Pair<String, String>>&);
 	};
 }

@@ -49,3 +49,10 @@ namespace WEP
 	template<typename TKey, typename TVal>
 	using Map = std::map<TKey, TVal>;
 }
+
+#define INIT_CTORS(TypeName)							\
+public:													\
+TypeName(const TypeName& other) = default;				\
+TypeName& operator=(const TypeName& other) = default;	\
+TypeName(TypeName&& other) = default;					\
+TypeName& operator=(TypeName&& other) = default;

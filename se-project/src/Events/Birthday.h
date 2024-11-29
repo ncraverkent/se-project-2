@@ -16,9 +16,9 @@ namespace WEP
 		* Constructs the birthday class
 		* @todo Implement
 		*/
-		Birthday(std::string name, unsigned int age, Date date, std::vector<Activity> activities, UUID businessId) :
+		Birthday(std::string name, unsigned int age, Date date, std::vector<Activity> activities, List<Guest> guests, UUID businessId) :
 			subjectName(name), subjectAge(age), 
-			Event("Birthday for " + name, date, activities, businessId)
+			Event("Birthday for " + name, date, activities, guests, businessId)
 		{}
 
 		/**
@@ -35,6 +35,11 @@ namespace WEP
 		*/
 		std::string getDetails() const override;
 
+		/*
+		* Promps the user to create a Birthday event, and fill out all the data for it
+		* @param businessId The id for the owning business
+		* @returns An invalid option if the creation was cancled, or a valid one if the creation was not
+		*/
 		static Option<Arc<Event>> promptCreateEvent(UUID businessId);
 
 	private:
