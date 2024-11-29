@@ -60,6 +60,9 @@ namespace WEP
 		static String formatGuestList(const List<Guest>& guests);
 
 	private:
+		/*
+		* Prompts the user to register a guest for a list of activites
+		*/
 		static List<UUID> registerGuestForActivities(const List<Activity> activites);
 
 	private:

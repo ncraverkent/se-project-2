@@ -62,6 +62,9 @@ namespace WEP
 		*/
 		static List<Activity> promptCreateActivityList();
 
+		/*
+		* Formats an activity list
+		*/
 		static String formatActivityList(const List<Activity>& activites);
 
 	private:
