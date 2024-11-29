@@ -93,28 +93,48 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Activity.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Problem.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>WEP</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_personel.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_personel.html">Personel</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_personel.html#a3590568bf77eb126ced526e72eebdea6">   17</a></span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_w_e_p_1_1_personel.html#a3590568bf77eb126ced526e72eebdea6">getName</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;name; }</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_personel.html#a457c807345a818bf11179654d619c1a0">   22</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_w_e_p_1_1_personel.html#a457c807345a818bf11179654d619c1a0">reportIssue</a>(<a class="code hl_class" href="class_w_e_p_1_1_problem.html">Problem</a> issue);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::string name;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="class_w_e_p_1_1_activity.html">Activity</a>* assignedActivity;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    };</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Activity.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Problem.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>WEP</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_personel.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_personel.html">Personel</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="comment">// Constructor</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">explicit</span> <a class="code hl_class" href="class_w_e_p_1_1_personel.html">Personel</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="comment">// Getters</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">const</span> std::string&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> name; }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Option&lt;const Activity*&gt; getAssignedActivity()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">return</span> assignedActivity.has_value() ? assignedActivity-&gt;get() : Option&lt;const Activity*&gt; {};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// Core functionality</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> reportIssue(<a class="code hl_class" href="class_w_e_p_1_1_problem.html">Problem</a> issue);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        std::string getDetails() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">// Static </span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">static</span> <a class="code hl_class" href="class_w_e_p_1_1_personel.html">Personel</a> promptCreatePersonel();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// Activity assignment</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> promptAssignActivity(List&lt;Arc&lt;Activity&gt;&gt;&amp; availableActivities);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> assignActivity(Arc&lt;Activity&gt; activity);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        String name;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Option&lt;Arc&lt;Activity&gt;&gt; assignedActivity;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::vector&lt;Problem&gt; reportedIssues;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
-<div class="ttc" id="aclass_w_e_p_1_1_activity_html"><div class="ttname"><a href="class_w_e_p_1_1_activity.html">WEP::Activity</a></div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_personel_html"><div class="ttname"><a href="class_w_e_p_1_1_personel.html">WEP::Personel</a></div><div class="ttdef"><b>Definition</b> Personel.h:12</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_personel_html_a3590568bf77eb126ced526e72eebdea6"><div class="ttname"><a href="class_w_e_p_1_1_personel.html#a3590568bf77eb126ced526e72eebdea6">WEP::Personel::getName</a></div><div class="ttdeci">const std::string &amp; getName() const</div><div class="ttdef"><b>Definition</b> Personel.h:17</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_personel_html_a457c807345a818bf11179654d619c1a0"><div class="ttname"><a href="class_w_e_p_1_1_personel.html#a457c807345a818bf11179654d619c1a0">WEP::Personel::reportIssue</a></div><div class="ttdeci">void reportIssue(Problem issue)</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="ttc" id="aclass_w_e_p_1_1_personel_html"><div class="ttname"><a href="class_w_e_p_1_1_personel.html">WEP::Personel</a></div><div class="ttdoc">The Personel class A class that represents the WEP's personel who oversee activites.</div><div class="ttdef"><b>Definition</b> Personel.h:15</div></div>
 <div class="ttc" id="aclass_w_e_p_1_1_problem_html"><div class="ttname"><a href="class_w_e_p_1_1_problem.html">WEP::Problem</a></div><div class="ttdef"><b>Definition</b> Problem.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

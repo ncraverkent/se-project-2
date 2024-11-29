@@ -104,12 +104,16 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a02f458eae141e64504f5bea87e7ac3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab50332645428898ae57d1cfdf88a77b4" id="r_ab50332645428898ae57d1cfdf88a77b4"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50332645428898ae57d1cfdf88a77b4">promptNumber</a> (const String &amp;msg)</td></tr>
 <tr class="separator:ab50332645428898ae57d1cfdf88a77b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbeac03d1327d4404289afdea9b5d46e" id="r_abbeac03d1327d4404289afdea9b5d46e"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbeac03d1327d4404289afdea9b5d46e">promptFloat</a> (const String &amp;msg)</td></tr>
+<tr class="separator:abbeac03d1327d4404289afdea9b5d46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8c4652b4cde28a5d07096b51433c621" id="r_af8c4652b4cde28a5d07096b51433c621"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8c4652b4cde28a5d07096b51433c621">promptLine</a> (const String &amp;msg)</td></tr>
 <tr class="separator:af8c4652b4cde28a5d07096b51433c621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5148ca880d05bf3b5a769800eb2a582b" id="r_a5148ca880d05bf3b5a769800eb2a582b"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5148ca880d05bf3b5a769800eb2a582b">promptName</a> (const String &amp;msg)</td></tr>
 <tr class="separator:a5148ca880d05bf3b5a769800eb2a582b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd384953f938be0d0249fcd15fca52a" id="r_a3bd384953f938be0d0249fcd15fca52a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_w_e_p_1_1_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bd384953f938be0d0249fcd15fca52a">promptDate</a> (const String &amp;msg)</td></tr>
 <tr class="separator:a3bd384953f938be0d0249fcd15fca52a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa3de9cc1c842844a1e8b231fb9e690" id="r_acaa3de9cc1c842844a1e8b231fb9e690"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa3de9cc1c842844a1e8b231fb9e690">promptTimeRange</a> (const String &amp;msg)</td></tr>
+<tr class="separator:acaa3de9cc1c842844a1e8b231fb9e690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad60e0bab528a714c888aeb5758788267" id="r_ad60e0bab528a714c888aeb5758788267"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad60e0bab528a714c888aeb5758788267">promptConfirm</a> (String message)</td></tr>
 <tr class="separator:ad60e0bab528a714c888aeb5758788267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0f18e273999726bec95c474cf3477ed" id="r_aa0f18e273999726bec95c474cf3477ed"><td class="memItemLeft" align="right" valign="top">static List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0f18e273999726bec95c474cf3477ed">promptCommands</a> (String message)</td></tr>
@@ -236,6 +240,32 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="abbeac03d1327d4404289afdea9b5d46e" name="abbeac03d1327d4404289afdea9b5d46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbeac03d1327d4404289afdea9b5d46e">&#9670;&#160;</a></span>promptFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float WEP::Console::promptFloat </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Runs a basic prompt for a floating point number with a message </p>
+
+</div>
+</div>
 <a id="af8c4652b4cde28a5d07096b51433c621" name="af8c4652b4cde28a5d07096b51433c621"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8c4652b4cde28a5d07096b51433c621">&#9670;&#160;</a></span>promptLine()</h2>
 
@@ -311,6 +341,32 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Runs a basic prompt for a number with a message </p>
+
+</div>
+</div>
+<a id="acaa3de9cc1c842844a1e8b231fb9e690" name="acaa3de9cc1c842844a1e8b231fb9e690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa3de9cc1c842844a1e8b231fb9e690">&#9670;&#160;</a></span>promptTimeRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> WEP::Console::promptTimeRange </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Runs a prompt for a date in the format HH:MM-HH:MM </p>
 
 </div>
 </div>

@@ -90,6 +90,7 @@ namespace WEP
         if (commands.size() < 2)
         {
             std::cout << "`" << CREATE_COMMAND << "` must have a creation type argument\n";
+            return;
         }
 
         if (commands[1] == CREATE_BUSINESS_ARG)
@@ -128,6 +129,7 @@ namespace WEP
         if (commands.size() < 2)
         {
             std::cout << "`" << SIGN_IN_COMMAND << "` must have a business name argument\n";
+            return;
         }
 
         const String& name = commands[1];

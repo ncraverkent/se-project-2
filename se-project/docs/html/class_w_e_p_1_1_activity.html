@@ -90,6 +90,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_w_e_p_1_1_activity-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WEP::Activity Class Reference</div></div>
 </div><!--header-->
@@ -99,8 +100,8 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af82f0e0ab5358298956d48fc448192be" id="r_af82f0e0ab5358298956d48fc448192be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af82f0e0ab5358298956d48fc448192be">Activity</a> (std::string name, <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, <a class="el" href="class_room.html">Room</a> *room, float registrationCost, std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipment</a> &gt; equipment)</td></tr>
-<tr class="separator:af82f0e0ab5358298956d48fc448192be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7a7b8fdb13aab6704f1d8e2a9aacc1" id="r_acc7a7b8fdb13aab6704f1d8e2a9aacc1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc7a7b8fdb13aab6704f1d8e2a9aacc1">Activity</a> (std::string name, <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, Arc&lt; <a class="el" href="class_w_e_p_1_1_room.html">Room</a> &gt; room, float registrationCost, std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipment</a> &gt; equipment)</td></tr>
+<tr class="separator:acc7a7b8fdb13aab6704f1d8e2a9aacc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb8b7c09850e51319470a8a39344b909" id="r_abb8b7c09850e51319470a8a39344b909"><td class="memItemLeft" align="right" valign="top"><a id="abb8b7c09850e51319470a8a39344b909" name="abb8b7c09850e51319470a8a39344b909"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const</td></tr>
 <tr class="separator:abb8b7c09850e51319470a8a39344b909"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,20 +109,33 @@ const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>ge
 const <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getTime</b> () const</td></tr>
 <tr class="separator:a7a2de3e03d5e809657770a4e3d6d7f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ca84e905a7bedf6182da544fac495f6" id="r_a5ca84e905a7bedf6182da544fac495f6"><td class="memItemLeft" align="right" valign="top"><a id="a5ca84e905a7bedf6182da544fac495f6" name="a5ca84e905a7bedf6182da544fac495f6"></a>
-const <a class="el" href="class_room.html">Room</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRoom</b> () const</td></tr>
+const <a class="el" href="class_w_e_p_1_1_room.html">Room</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getRoom</b> () const</td></tr>
 <tr class="separator:a5ca84e905a7bedf6182da544fac495f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0d457be7a9ab8874f590c4e08d5179" id="r_a1e0d457be7a9ab8874f590c4e08d5179"><td class="memItemLeft" align="right" valign="top"><a id="a1e0d457be7a9ab8874f590c4e08d5179" name="a1e0d457be7a9ab8874f590c4e08d5179"></a>
+const UUID &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getId</b> () const</td></tr>
+<tr class="separator:a1e0d457be7a9ab8874f590c4e08d5179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec2413bf71b6cb6b04664c37626ae2a2" id="r_aec2413bf71b6cb6b04664c37626ae2a2"><td class="memItemLeft" align="right" valign="top"><a id="aec2413bf71b6cb6b04664c37626ae2a2" name="aec2413bf71b6cb6b04664c37626ae2a2"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getRegistrationCost</b> () const</td></tr>
 <tr class="separator:aec2413bf71b6cb6b04664c37626ae2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afabb36e891a000e95b7788da8a331c75" id="r_afabb36e891a000e95b7788da8a331c75"><td class="memItemLeft" align="right" valign="top"><a id="afabb36e891a000e95b7788da8a331c75" name="afabb36e891a000e95b7788da8a331c75"></a>
-const std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipment</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEquipment</b> ()</td></tr>
-<tr class="separator:afabb36e891a000e95b7788da8a331c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acf0597004b4f6aa1f0a304cbd7f606" id="r_a5acf0597004b4f6aa1f0a304cbd7f606"><td class="memItemLeft" align="right" valign="top"><a id="a5acf0597004b4f6aa1f0a304cbd7f606" name="a5acf0597004b4f6aa1f0a304cbd7f606"></a>
+const std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipment</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getEquipment</b> () const</td></tr>
+<tr class="separator:a5acf0597004b4f6aa1f0a304cbd7f606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5cee97bb5a8849158e91e1c416fb07da" id="r_a5cee97bb5a8849158e91e1c416fb07da"><td class="memItemLeft" align="right" valign="top">static Option&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cee97bb5a8849158e91e1c416fb07da">promptCreateActivity</a> ()</td></tr>
+<tr class="separator:a5cee97bb5a8849158e91e1c416fb07da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d708e8d776b086ff190975e808379e" id="r_ae5d708e8d776b086ff190975e808379e"><td class="memItemLeft" align="right" valign="top">static List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5d708e8d776b086ff190975e808379e">promptCreateActivityList</a> ()</td></tr>
+<tr class="separator:ae5d708e8d776b086ff190975e808379e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d897f46d32aa1af63034bc62842c7b" id="r_a72d897f46d32aa1af63034bc62842c7b"><td class="memItemLeft" align="right" valign="top"><a id="a72d897f46d32aa1af63034bc62842c7b" name="a72d897f46d32aa1af63034bc62842c7b"></a>
+static String&#160;</td><td class="memItemRight" valign="bottom"><b>formatActivityList</b> (const List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; &amp;activites)</td></tr>
+<tr class="separator:a72d897f46d32aa1af63034bc62842c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>@breif An activity for an event </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af82f0e0ab5358298956d48fc448192be" name="af82f0e0ab5358298956d48fc448192be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af82f0e0ab5358298956d48fc448192be">&#9670;&#160;</a></span>Activity()</h2>
+<a id="acc7a7b8fdb13aab6704f1d8e2a9aacc1" name="acc7a7b8fdb13aab6704f1d8e2a9aacc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7a7b8fdb13aab6704f1d8e2a9aacc1">&#9670;&#160;</a></span>Activity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +156,7 @@ const std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipm
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_room.html">Room</a> *</td>          <td class="paramname"><span class="paramname"><em>room</em></span>, </td>
+          <td class="paramtype">Arc&lt; <a class="el" href="class_w_e_p_1_1_room.html">Room</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>room</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -174,8 +188,62 @@ const std::vector&lt; <a class="el" href="class_w_e_p_1_1_equipment.html">Equipm
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5cee97bb5a8849158e91e1c416fb07da" name="a5cee97bb5a8849158e91e1c416fb07da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cee97bb5a8849158e91e1c416fb07da">&#9670;&#160;</a></span>promptCreateActivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Option&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; WEP::Activity::promptCreateActivity </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prompts the user to create an activity </p>
+
+</div>
+</div>
+<a id="ae5d708e8d776b086ff190975e808379e" name="ae5d708e8d776b086ff190975e808379e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d708e8d776b086ff190975e808379e">&#9670;&#160;</a></span>promptCreateActivityList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt; <a class="el" href="class_w_e_p_1_1_activity.html">Activity</a> &gt; WEP::Activity::promptCreateActivityList </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prompts the user to create a list of activities </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="_activity_8h_source.html">Activity.h</a></li>
+<li>src/<b>Activity.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

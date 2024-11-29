@@ -8,7 +8,6 @@ namespace WEP
         return Console::prompt<size_t>(msg, "Error: not a number, please enter again.", []() {
             std::string num = {};
             std::cin >> num;
-            size_t number = 0;
             
             try {
                 // Try converting the string to size_t
@@ -17,11 +16,32 @@ namespace WEP
             }
             catch (const std::invalid_argument&) {
                 // Conversion failed due to invalid input
-                std::cerr << "Invalid input: not a number." << std::endl;
+                return Option<size_t> {};
             }
             catch (const std::out_of_range&) {
                 // Conversion failed due to overflow
-                std::cerr << "Invalid input: number out of range." << std::endl;
+                Option<size_t> {};
+            }
+        });
+    }
+
+    float Console::promptFloat(const String& msg)
+    {
+        return Console::prompt<size_t>(msg, "Error: not a number, please enter again.", []() {
+            std::string num = {};
+            std::cin >> num;
+
+            try {
+                // Try converting the string to size_t
+                float number = std::stof(num); // Converts string to unsigned long
+                return Option<float>{number};  // Return the number wrapped in Option
+            }
+            catch (const std::invalid_argument&) {
+                return Option<float> {};
+            }
+            catch (const std::out_of_range&) {
+                // Conversion failed due to overflow
+                return Option<float> {};
             }
         });
     }
@@ -64,6 +84,15 @@ namespace WEP
             String text;
             std::cin >> text;
             return Date::fromString(text);
+        });
+    }
+
+    TimeRange Console::promptTimeRange(const String& msg)
+    {
+        return Console::prompt<TimeRange>(msg + " (HH:MM-HH:MM military time): ", "Invalid time format, please try again.", []() {
+            String text;
+            std::cin >> text;
+            return TimeRange::fromString(text);
         });
     }
 

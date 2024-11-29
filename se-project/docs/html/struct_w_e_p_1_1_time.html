@@ -89,6 +89,8 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="struct_w_e_p_1_1_time-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">WEP::Time Struct Reference</div></div>
@@ -97,20 +99,48 @@ $(function(){ initResizable(false); });
 
 <p><code>#include &lt;<a class="el" href="_time_range_8h_source.html">TimeRange.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1dc76759d78dc8bd5957055607329607" id="r_a1dc76759d78dc8bd5957055607329607"><td class="memItemLeft" align="right" valign="top"><a id="a1dc76759d78dc8bd5957055607329607" name="a1dc76759d78dc8bd5957055607329607"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Time</b> (u32 hour, u32 minute)</td></tr>
+<tr class="separator:a1dc76759d78dc8bd5957055607329607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfaf695a27bd2d2a310e0b3788410e1" id="r_a5cfaf695a27bd2d2a310e0b3788410e1"><td class="memItemLeft" align="right" valign="top"><a id="a5cfaf695a27bd2d2a310e0b3788410e1" name="a5cfaf695a27bd2d2a310e0b3788410e1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEarlierThan</b> (const <a class="el" href="struct_w_e_p_1_1_time.html">Time</a> &amp;other) const</td></tr>
+<tr class="separator:a5cfaf695a27bd2d2a310e0b3788410e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35163dfb316030e084c212a67c46e4b1" id="r_a35163dfb316030e084c212a67c46e4b1"><td class="memItemLeft" align="right" valign="top"><a id="a35163dfb316030e084c212a67c46e4b1" name="a35163dfb316030e084c212a67c46e4b1"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isLaterThan</b> (const <a class="el" href="struct_w_e_p_1_1_time.html">Time</a> &amp;other) const</td></tr>
+<tr class="separator:a35163dfb316030e084c212a67c46e4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d01e500760e9c50dbfecc7e6ffd3d3b" id="r_a2d01e500760e9c50dbfecc7e6ffd3d3b"><td class="memItemLeft" align="right" valign="top"><a id="a2d01e500760e9c50dbfecc7e6ffd3d3b" name="a2d01e500760e9c50dbfecc7e6ffd3d3b"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> () const</td></tr>
+<tr class="separator:a2d01e500760e9c50dbfecc7e6ffd3d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3ea5ecad983a577b907b1073dbff04" id="r_a3b3ea5ecad983a577b907b1073dbff04"><td class="memItemLeft" align="right" valign="top"><a id="a3b3ea5ecad983a577b907b1073dbff04" name="a3b3ea5ecad983a577b907b1073dbff04"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="struct_w_e_p_1_1_time.html">Time</a> &amp;other) const</td></tr>
+<tr class="separator:a3b3ea5ecad983a577b907b1073dbff04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1899efc6c9cad4f9fa325908d21bb5c" id="r_af1899efc6c9cad4f9fa325908d21bb5c"><td class="memItemLeft" align="right" valign="top"><a id="af1899efc6c9cad4f9fa325908d21bb5c" name="af1899efc6c9cad4f9fa325908d21bb5c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="struct_w_e_p_1_1_time.html">Time</a> &amp;other) const</td></tr>
+<tr class="separator:af1899efc6c9cad4f9fa325908d21bb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abdfdb34242d861cdfb6fcd6e1499000f" id="r_abdfdb34242d861cdfb6fcd6e1499000f"><td class="memItemLeft" align="right" valign="top"><a id="abdfdb34242d861cdfb6fcd6e1499000f" name="abdfdb34242d861cdfb6fcd6e1499000f"></a>
+static Option&lt; <a class="el" href="struct_w_e_p_1_1_time.html">Time</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fromString</b> (const String &amp;str)</td></tr>
+<tr class="separator:abdfdb34242d861cdfb6fcd6e1499000f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a51dc26ec5632eb2d057601b3a0082f76" id="r_a51dc26ec5632eb2d057601b3a0082f76"><td class="memItemLeft" align="right" valign="top"><a id="a51dc26ec5632eb2d057601b3a0082f76" name="a51dc26ec5632eb2d057601b3a0082f76"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>hour</b></td></tr>
-<tr class="separator:a51dc26ec5632eb2d057601b3a0082f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac505eb212e4327898f46ec38ed914dc2" id="r_ac505eb212e4327898f46ec38ed914dc2"><td class="memItemLeft" align="right" valign="top"><a id="ac505eb212e4327898f46ec38ed914dc2" name="ac505eb212e4327898f46ec38ed914dc2"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>minute</b></td></tr>
-<tr class="separator:ac505eb212e4327898f46ec38ed914dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c487fa39798abedd76bff6e87f24c6" id="r_a40c487fa39798abedd76bff6e87f24c6"><td class="memItemLeft" align="right" valign="top"><a id="a40c487fa39798abedd76bff6e87f24c6" name="a40c487fa39798abedd76bff6e87f24c6"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>hour</b></td></tr>
+<tr class="separator:a40c487fa39798abedd76bff6e87f24c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902edaf6cf3a38c4ba28cc0e7d5bbf96" id="r_a902edaf6cf3a38c4ba28cc0e7d5bbf96"><td class="memItemLeft" align="right" valign="top"><a id="a902edaf6cf3a38c4ba28cc0e7d5bbf96" name="a902edaf6cf3a38c4ba28cc0e7d5bbf96"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>minute</b></td></tr>
+<tr class="separator:a902edaf6cf3a38c4ba28cc0e7d5bbf96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>@breif Represents a point in time Can be any particular day </p><dl class="section warning"><dt>Warning</dt><dd>Both hour and minute are currently unchecked </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>Make both the hour and minute clamped to their highest value </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo</a></b></dt><dd>Make both the hour and minute clamped to their highest value </dd></dl>
+</div><hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/Utils/<a class="el" href="_time_range_8h_source.html">TimeRange.h</a></li>
+<li>src/Utils/<b>TimeRange.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

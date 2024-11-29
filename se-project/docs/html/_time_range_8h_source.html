@@ -93,46 +93,61 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Defs.h&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>WEP</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time.html">   13</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hour;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> minute;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    };</div>
-</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>WEP</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time.html">   14</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        u32 hour;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        u32 minute;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> start;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> end;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">   34</a></span>        <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">TimeRange</a>(<a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> start, <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> end) :</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            start(start), end(end) {}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>() : hour(0), minute(0) {}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>(u32 hour, u32 minute) : hour(hour), minute(minute) {}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">static</span> Option&lt;Time&gt; fromString(<span class="keyword">const</span> String&amp; str);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">bool</span> isEarlierThan(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordtype">bool</span> isLaterThan(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        String toString() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d">   40</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d">overlaps</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e">   44</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5">   48</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5">operator!=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#ae43b5e8a6376c804ba2fd5d3f73de1dd">   56</a></span>        <span class="keyword">static</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#ae43b5e8a6376c804ba2fd5d3f73de1dd">fromString</a>(<span class="keyword">const</span> std::string&amp; str);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html">   36</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> start;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> end;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">   46</a></span>        <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">TimeRange</a>(<a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> start, <a class="code hl_struct" href="struct_w_e_p_1_1_time.html">Time</a> end) :</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            start(start), end(end) {}</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_html"><div class="ttname"><a href="struct_w_e_p_1_1_time.html">WEP::Time</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:14</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html">WEP::TimeRange</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:25</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_a5a542a76705ea41d7e1b9113075fd9c5"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5">WEP::TimeRange::operator!=</a></div><div class="ttdeci">bool operator!=(const TimeRange &amp;other) const</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_a673163ddc06ae4cb105f954d98be961e"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e">WEP::TimeRange::operator==</a></div><div class="ttdeci">bool operator==(const TimeRange &amp;other) const</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_aa8ef30f3934a98ffd08bb310d25f8223"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">WEP::TimeRange::TimeRange</a></div><div class="ttdeci">TimeRange(Time start, Time end)</div><div class="ttdef"><b>Definition</b> TimeRange.h:34</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_ad554282998a74009bc31e41f77c5498d"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d">WEP::TimeRange::overlaps</a></div><div class="ttdeci">bool overlaps(const TimeRange &amp;other) const</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_ae43b5e8a6376c804ba2fd5d3f73de1dd"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#ae43b5e8a6376c804ba2fd5d3f73de1dd">WEP::TimeRange::fromString</a></div><div class="ttdeci">static TimeRange fromString(const std::string &amp;str)</div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d">overlaps</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e">operator==</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5">operator!=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        String <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#ae0727d66fdaa03f5880dcf5bde88e054">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">static</span> Option&lt;TimeRange&gt; <a class="code hl_function" href="struct_w_e_p_1_1_time_range.html#ad6248978d77b962b5e4378253b7c0707">fromString</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_html"><div class="ttname"><a href="struct_w_e_p_1_1_time.html">WEP::Time</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:15</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html">WEP::TimeRange</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:37</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_a5a542a76705ea41d7e1b9113075fd9c5"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5">WEP::TimeRange::operator!=</a></div><div class="ttdeci">bool operator!=(const TimeRange &amp;other) const</div><div class="ttdef"><b>Definition</b> TimeRange.cpp:58</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_a673163ddc06ae4cb105f954d98be961e"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e">WEP::TimeRange::operator==</a></div><div class="ttdeci">bool operator==(const TimeRange &amp;other) const</div><div class="ttdef"><b>Definition</b> TimeRange.cpp:53</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_aa8ef30f3934a98ffd08bb310d25f8223"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#aa8ef30f3934a98ffd08bb310d25f8223">WEP::TimeRange::TimeRange</a></div><div class="ttdeci">TimeRange(Time start, Time end)</div><div class="ttdef"><b>Definition</b> TimeRange.h:46</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_ad554282998a74009bc31e41f77c5498d"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d">WEP::TimeRange::overlaps</a></div><div class="ttdeci">bool overlaps(const TimeRange &amp;other) const</div><div class="ttdef"><b>Definition</b> TimeRange.cpp:48</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_ad6248978d77b962b5e4378253b7c0707"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#ad6248978d77b962b5e4378253b7c0707">WEP::TimeRange::fromString</a></div><div class="ttdeci">static Option&lt; TimeRange &gt; fromString(const std::string &amp;str)</div><div class="ttdef"><b>Definition</b> TimeRange.cpp:68</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html_ae0727d66fdaa03f5880dcf5bde88e054"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html#ae0727d66fdaa03f5880dcf5bde88e054">WEP::TimeRange::toString</a></div><div class="ttdeci">String toString() const</div><div class="ttdef"><b>Definition</b> TimeRange.cpp:63</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

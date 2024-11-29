@@ -13,6 +13,9 @@ using namespace WEP;
 int main()
 {
     WeddingEventCenter eventCenter = {};
+
+    eventCenter.addBusiness(Business("Walmart"));
+
     DisplayMannager display = DisplayMannager(eventCenter);
     display.run();
 }
