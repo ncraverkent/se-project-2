@@ -5,6 +5,7 @@
 #include <cctype>
 #include <iostream>
 #include "Date.h"
+#include "TimeRange.h"
 #include <utility>
 
 namespace WEP
@@ -43,6 +44,11 @@ namespace WEP
 		* Runs a basic prompt for a number with a message
 		*/
 		static size_t promptNumber(const String& msg);
+		
+		/**
+		* Runs a basic prompt for a floating point number with a message
+		*/
+		static float promptFloat(const String& msg);
 
 		/**
 		* Runs a basic prompt for a line of text with a message
@@ -58,6 +64,11 @@ namespace WEP
 		* Runs a basic prompt for a date, with a message
 		*/
 		static Date promptDate(const String& msg);
+
+		/**
+		* Runs a prompt for a date in the format HH:MM-HH:MM
+		*/
+		static TimeRange promptTimeRange(const String& msg);
 
 		/**
 		* Runs a basic confirmation prompt with a message

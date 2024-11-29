@@ -109,11 +109,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a673163ddc06ae4cb105f954d98be961e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a542a76705ea41d7e1b9113075fd9c5" id="r_a5a542a76705ea41d7e1b9113075fd9c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a542a76705ea41d7e1b9113075fd9c5">operator!=</a> (const <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> &amp;other) const</td></tr>
 <tr class="separator:a5a542a76705ea41d7e1b9113075fd9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0727d66fdaa03f5880dcf5bde88e054" id="r_ae0727d66fdaa03f5880dcf5bde88e054"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0727d66fdaa03f5880dcf5bde88e054">toString</a> () const</td></tr>
+<tr class="separator:ae0727d66fdaa03f5880dcf5bde88e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae43b5e8a6376c804ba2fd5d3f73de1dd" id="r_ae43b5e8a6376c804ba2fd5d3f73de1dd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae43b5e8a6376c804ba2fd5d3f73de1dd">fromString</a> (const std::string &amp;str)</td></tr>
-<tr class="separator:ae43b5e8a6376c804ba2fd5d3f73de1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6248978d77b962b5e4378253b7c0707" id="r_ad6248978d77b962b5e4378253b7c0707"><td class="memItemLeft" align="right" valign="top">static Option&lt; <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6248978d77b962b5e4378253b7c0707">fromString</a> (const std::string &amp;str)</td></tr>
+<tr class="separator:ad6248978d77b962b5e4378253b7c0707"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -126,7 +128,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A class representing a range in time </p><dl class="section warning"><dt>Warning</dt><dd>The start and end time ranges are unchecked, and may be swapped around </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>Make the time ranges swappable, and automatically sorted into their minimum and maximum values </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo</a></b></dt><dd>Make the time ranges swappable, and automatically sorted into their minimum and maximum values </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa8ef30f3934a98ffd08bb310d25f8223" name="aa8ef30f3934a98ffd08bb310d25f8223"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8ef30f3934a98ffd08bb310d25f8223">&#9670;&#160;</a></span>TimeRange()</h2>
@@ -165,8 +167,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae43b5e8a6376c804ba2fd5d3f73de1dd" name="ae43b5e8a6376c804ba2fd5d3f73de1dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae43b5e8a6376c804ba2fd5d3f73de1dd">&#9670;&#160;</a></span>fromString()</h2>
+<a id="ad6248978d77b962b5e4378253b7c0707" name="ad6248978d77b962b5e4378253b7c0707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6248978d77b962b5e4378253b7c0707">&#9670;&#160;</a></span>fromString()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +177,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> WEP::TimeRange::fromString </td>
+          <td class="memname">Option&lt; <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> &gt; WEP::TimeRange::fromString </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
@@ -194,7 +196,7 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The parsed <a class="el" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo</a></b></dt><dd>this does not have any error checking for time formating, so we may need to fix </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo</a></b></dt><dd>this does not have any error checking for time formating, so we may need to fix </dd></dl>
 
 </div>
 </div>
@@ -252,8 +254,27 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a id="ae0727d66fdaa03f5880dcf5bde88e054" name="ae0727d66fdaa03f5880dcf5bde88e054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0727d66fdaa03f5880dcf5bde88e054">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WEP::TimeRange::toString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>The time formatted as HH:MM-HH:MM </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>src/Utils/<a class="el" href="_time_range_8h_source.html">TimeRange.h</a></li>
+<li>src/Utils/<b>TimeRange.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

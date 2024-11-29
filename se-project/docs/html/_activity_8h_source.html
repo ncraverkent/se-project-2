@@ -97,51 +97,67 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Utils/TimeRange.h&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Rooms/Room.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Equipment.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>WEP</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html">   13</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_activity.html">Activity</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">   24</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">Activity</a>(std::string name, <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, <a class="code hl_class" href="class_room.html">Room</a>* room, <span class="keywordtype">float</span> registrationCost, std::vector&lt;Equipment&gt; equipment) :</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            name(name), time(time), room(room), registrationCost(registrationCost), equipment(equipment) {}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;Utils/UUID.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>WEP</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_activity.html">Activity</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html#acc7a7b8fdb13aab6704f1d8e2a9aacc1">   25</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_activity.html#acc7a7b8fdb13aab6704f1d8e2a9aacc1">Activity</a>(std::string name, <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, Arc&lt;Room&gt; room, <span class="keywordtype">float</span> registrationCost, std::vector&lt;Equipment&gt; equipment) :</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            name(name), time(time), room(room), registrationCost(registrationCost), </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            equipment(equipment), id(generateUUID())</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {}</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">        * @returns The name of this activity</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> std::string&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;name; }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        * @returns the time range of this activity</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">const</span> TimeRange&amp; getTime()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;time; }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        * @returns the room of this activity</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_room.html">Room</a>&amp; getRoom()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *this-&gt;room; }</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        * @returns the registration cost of this activity </span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">float</span> getRegistrationCost()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;registrationCost; }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        * @returns The equipment for this activity</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">const</span> std::vector&lt;Equipment&gt;&amp; getEquipment() { <span class="keywordflow">return</span> this-&gt;equipment; }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::string name;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        TimeRange time;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="class_room.html">Room</a>* room;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">float</span> registrationCost;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::vector&lt;Equipment&gt; equipment;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">        * @returns The name of this activity</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">const</span> std::string&amp; getName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;name; }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        * @returns the time range of this activity</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">const</span> TimeRange&amp; getTime()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;time; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">        * @returns the room of this activity</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> Room&amp; getRoom()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *this-&gt;room; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keyword">const</span> UUID&amp; getId()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;id; }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">        * @returns the registration cost of this activity </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">float</span> getRegistrationCost()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;registrationCost; }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        * @returns The equipment for this activity</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keyword">const</span> std::vector&lt;Equipment&gt;&amp; getEquipment()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> this-&gt;equipment; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">static</span> Option&lt;Activity&gt; <a class="code hl_function" href="class_w_e_p_1_1_activity.html#a5cee97bb5a8849158e91e1c416fb07da">promptCreateActivity</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">static</span> List&lt;Activity&gt; <a class="code hl_function" href="class_w_e_p_1_1_activity.html#ae5d708e8d776b086ff190975e808379e">promptCreateActivityList</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">static</span> String formatActivityList(<span class="keyword">const</span> List&lt;Activity&gt;&amp; activites);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        std::string name;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        UUID id;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        TimeRange time;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Arc&lt;Room&gt; room;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">float</span> registrationCost;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        std::vector&lt;Equipment&gt; equipment;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdef"><b>Definition</b> Room.h:8</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_activity_html"><div class="ttname"><a href="class_w_e_p_1_1_activity.html">WEP::Activity</a></div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
-<div class="ttc" id="aclass_w_e_p_1_1_activity_html_af82f0e0ab5358298956d48fc448192be"><div class="ttname"><a href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">WEP::Activity::Activity</a></div><div class="ttdeci">Activity(std::string name, TimeRange time, Room *room, float registrationCost, std::vector&lt; Equipment &gt; equipment)</div><div class="ttdef"><b>Definition</b> Activity.h:24</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_time_range_html"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html">WEP::TimeRange</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:25</div></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="ttc" id="aclass_w_e_p_1_1_activity_html"><div class="ttname"><a href="class_w_e_p_1_1_activity.html">WEP::Activity</a></div><div class="ttdef"><b>Definition</b> Activity.h:15</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_activity_html_a5cee97bb5a8849158e91e1c416fb07da"><div class="ttname"><a href="class_w_e_p_1_1_activity.html#a5cee97bb5a8849158e91e1c416fb07da">WEP::Activity::promptCreateActivity</a></div><div class="ttdeci">static Option&lt; Activity &gt; promptCreateActivity()</div><div class="ttdef"><b>Definition</b> Activity.cpp:13</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_activity_html_acc7a7b8fdb13aab6704f1d8e2a9aacc1"><div class="ttname"><a href="class_w_e_p_1_1_activity.html#acc7a7b8fdb13aab6704f1d8e2a9aacc1">WEP::Activity::Activity</a></div><div class="ttdeci">Activity(std::string name, TimeRange time, Arc&lt; Room &gt; room, float registrationCost, std::vector&lt; Equipment &gt; equipment)</div><div class="ttdef"><b>Definition</b> Activity.h:25</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_activity_html_ae5d708e8d776b086ff190975e808379e"><div class="ttname"><a href="class_w_e_p_1_1_activity.html#ae5d708e8d776b086ff190975e808379e">WEP::Activity::promptCreateActivityList</a></div><div class="ttdeci">static List&lt; Activity &gt; promptCreateActivityList()</div><div class="ttdef"><b>Definition</b> Activity.cpp:39</div></div>
+<div class="ttc" id="astruct_w_e_p_1_1_time_range_html"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html">WEP::TimeRange</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

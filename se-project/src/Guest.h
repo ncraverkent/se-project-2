@@ -17,8 +17,8 @@ namespace WEP
 		* @param name the name of the guest
 		* @param id The id of the guest
 		*/
-		Guest(String name, UUID id = generateUUID()) :
-			name(name), registrationId(id)
+		Guest(String name, List<UUID> activities, UUID id = generateUUID()) :
+			name(name), activites(activities), registrationId(id)
 		{}
 
 		/**
@@ -30,12 +30,7 @@ namespace WEP
 		*/
 		const UUID& getId() { return registrationId; }
 
-		/**
-		* Attempts to register a guest for an activity
-		* @todo implement
-		* @returns True if was successfully registered
-		*/
-		bool registerForActivity(Activity activity);
+		const List<UUID>& getActivities() const { return activites; }
 
 		/**
 		* Formats the guest information into a string
@@ -46,12 +41,12 @@ namespace WEP
 		/**
 		* Prompts the user to create a guest
 		*/
-		static Guest promptCreateGuest();
+		static Guest promptCreateGuest(const List<Activity>& activities);
 
 		/**
 		* Prompts the user to create a guest list
 		*/
-		static List<Guest> promptCreateGuestList();
+		static List<Guest> promptCreateGuestList(const List<Activity>& activities);
 
 		/**
 		* Formats the guest list
@@ -65,7 +60,11 @@ namespace WEP
 		static String formatGuestList(const List<Guest>& guests);
 
 	private:
+		static List<UUID> registerGuestForActivities(const List<Activity> activites);
+
+	private:
 		String name;
 		UUID registrationId;
+		List<UUID> activites;
 	};
 }

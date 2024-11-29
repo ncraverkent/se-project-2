@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "Defs.h"
 
 
 namespace WEP
@@ -12,8 +13,19 @@ namespace WEP
 	*/
 	struct Time
 	{
-		unsigned int hour;
-		unsigned int minute;
+		u32 hour;
+		u32 minute;
+
+		Time() : hour(0), minute(0) {}
+		Time(u32 hour, u32 minute) : hour(hour), minute(minute) {}
+
+		static Option<Time> fromString(const String& str);
+		bool isEarlierThan(const Time& other) const;
+		bool isLaterThan(const Time& other) const;
+		String toString() const;
+
+		bool operator==(const Time& other) const;
+		bool operator!=(const Time& other) const;
 	};
 
 	/**
@@ -48,12 +60,17 @@ namespace WEP
 		bool operator!=(const TimeRange& other) const;
 
 		/**
+		* @returns The time formatted as HH:MM-HH:MM
+		*/
+		String toString() const;
+
+		/**
 		* Parses a string into a TimeRange
 		* @param str the string to parse
 		* @returns The parsed TimeRange
 		* @todo this does not have any error checking for time formating, so we may need to fix
 		*/
-		static TimeRange fromString(const std::string& str);
+		static Option<TimeRange> fromString(const std::string& str);
 	};
 }
 

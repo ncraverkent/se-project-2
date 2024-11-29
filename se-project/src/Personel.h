@@ -1,28 +1,45 @@
 #pragma once
 #include <string>
+#include <vector>
+#include <memory>
 #include "Activity.h"
 #include "Problem.h"
 
 namespace WEP
 {
-	/**
-	* Personel who oversee activities
-	*/
-	class Personel
-	{
-	public:
-		/**
-		* @returns The name of this personel
-		*/
-		const std::string& getName() const { return this->name; }
-		/**
-		* Logs an issue from this personel
-		* @param issue The Problem that is to be logged
-		*/
-		void reportIssue(Problem issue);
+    /**
+    * @brief The Personel class
+    * A class that represents the WEP's personel who oversee activites
+    */
+    class Personel
+    {
+    public:
+        // Constructor
+        explicit Personel(const std::string& name);
 
-	private:
-		std::string name;
-		Activity* assignedActivity;
-	};
+        // Getters
+        const std::string& getName() const { return name; }
+        Option<const Activity*> getAssignedActivity() const {
+            return assignedActivity.has_value() ? assignedActivity->get() : Option<const Activity*> {};
+        }
+
+        // Core functionality
+        void reportIssue(Problem issue);
+        std::string getDetails() const;
+
+        // Static 
+        static Personel promptCreatePersonel();
+
+        // Activity assignment
+        void promptAssignActivity(List<Arc<Activity>>& availableActivities);
+
+    private:
+
+        void assignActivity(Arc<Activity> activity);
+
+        String name;
+        Option<Arc<Activity>> assignedActivity;
+        std::vector<Problem> reportedIssues;
+
+    };
 }

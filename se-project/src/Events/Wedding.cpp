@@ -7,7 +7,10 @@ namespace WEP
 	std::string Wedding::getDetails() const
 	{
 		std::stringstream ss;
-		ss << this->getName() << " on " << this->getDate().toString() << "\n" << Guest::formatGuestList(this->getGuests()) << "\n";
+		ss << this->getName() << " on " << this->getDate().toString() << "\n" 
+			<< Guest::formatGuestList(this->getGuests())
+			<< Activity::formatActivityList(this->getActivities())
+			<< "\n";
 		return ss.str();
 	}
 
@@ -16,18 +19,20 @@ namespace WEP
 		String partnerA = Console::promptName("Please enter partnerA name: ");
 		String partnerB = Console::promptName("Please enter partnerB name: ");
 		Date date = Console::promptDate("Please enter wedding date: ");
-		List<Guest> guestList = Guest::promptCreateGuestList();
+		List<Activity> activities = Activity::promptCreateActivityList();
+		List<Guest> guestList = Guest::promptCreateGuestList(activities);
 
 		std::stringstream ss;
 		ss << "Do you want to create a Wedding Event with:\n"
 			<< " - partnerA = " << partnerA << "\n"
 			<< " - partnerB = " << partnerB << "\n"
 			<< " - date = " << date.toString() << "\n"
+			<< Activity::formatActivityList(activities) << "\n"
 			<< Guest::formatGuestList(guestList) << "\n";
 
 		if (Console::promptConfirm(ss.str()))
 		{
-			return std::make_shared<Wedding>(partnerA, partnerB, date, List<Activity> {}, guestList, businessId);
+			return std::make_shared<Wedding>(partnerA, partnerB, date, activities, guestList, businessId);
 		}
 		else
 		{
