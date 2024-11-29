@@ -92,47 +92,46 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>DisplayMannager</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">enum</span> AppState</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;WeddingEventCenter.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>WEP</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_display_mannager.html">    9</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_w_e_p_1_1_display_mannager.html">DisplayMannager</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        Defualt</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    };</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_display_mannager_1_1_display_mannager.html">DisplayMannager</a></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a7a947d3955c52d5b2969c02fe2ae9e5c">   23</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a7a947d3955c52d5b2969c02fe2ae9e5c">getUserInput</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">/*</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">        * Displays the output to visualize</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> displayOutput();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a2bf1fe7c433a29db487d11b34f33eaed">   32</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a2bf1fe7c433a29db487d11b34f33eaed">requestEventType</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a9b72469a614906fd02b6630c1f971b41">   36</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a9b72469a614906fd02b6630c1f971b41">createWeddingEvent</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a14723e3c5544fe4e0ec05c6d59013c45">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a14723e3c5544fe4e0ec05c6d59013c45">createBirthdayEvent</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#acc6c71c1812b1505eef574e8b28b2a69">   44</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#acc6c71c1812b1505eef574e8b28b2a69">createFuneralEvent</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a5c613303ddc859de1ae2a609c8459dce">   49</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a5c613303ddc859de1ae2a609c8459dce">createActivity</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#a63d4b1b713f49f92cd0d6565e0e0dd15">   54</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#a63d4b1b713f49f92cd0d6565e0e0dd15">signInPersonel</a>();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_display_mannager_1_1_display_mannager.html#ad2752058798b65a5d711c37429ee9efa">   58</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_display_mannager_1_1_display_mannager.html#ad2752058798b65a5d711c37429ee9efa">reportIssue</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        AppState state;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">const</span> String QUIT_COMMAND = <span class="stringliteral">&quot;quit&quot;</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">const</span> String SIGN_IN_COMMAND = <span class="stringliteral">&quot;signin&quot;</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> String SIGN_OUT_COMMAND = <span class="stringliteral">&quot;signout&quot;</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keyword">const</span> String CREATE_COMMAND = <span class="stringliteral">&quot;create&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">const</span> String CREATE_BUSINESS_ARG = <span class="stringliteral">&quot;business&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">const</span> String CREATE_EVENT_ARG = <span class="stringliteral">&quot;event&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">const</span> String PRINT_COMMAND = <span class="stringliteral">&quot;print&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keyword">const</span> String PRINT_EVENTS_ARG = <span class="stringliteral">&quot;events&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">const</span> String PRINT_BUSINESSES_ARG = <span class="stringliteral">&quot;businesses&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">const</span> String PRINT_SIGN_IN_ARG = <span class="stringliteral">&quot;signin&quot;</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">const</span> String HELP_COMMAND = <span class="stringliteral">&quot;help&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <a class="code hl_class" href="class_w_e_p_1_1_display_mannager.html">DisplayMannager</a>(<a class="code hl_class" href="class_w_e_p_1_1_wedding_event_center.html">WeddingEventCenter</a> eventCenter) : eventCenter(eventCenter) {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">void</span> run();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">void</span> runPrintCommand(<span class="keyword">const</span> List&lt;String&gt;&amp; commands);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> runCreateCommand(<span class="keyword">const</span> List&lt;String&gt;&amp; commands);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">void</span> runSignInCommand(<span class="keyword">const</span> List&lt;String&gt;&amp; commands);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">void</span> printError(<span class="keyword">const</span> String&amp; msg);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> printHelpCommandList();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="class_w_e_p_1_1_wedding_event_center.html">WeddingEventCenter</a> eventCenter;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html">DisplayMannager::DisplayMannager</a></div><div class="ttdef"><b>Definition</b> DisplayMannager.h:18</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a14723e3c5544fe4e0ec05c6d59013c45"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a14723e3c5544fe4e0ec05c6d59013c45">DisplayMannager::DisplayMannager::createBirthdayEvent</a></div><div class="ttdeci">void createBirthdayEvent()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a2bf1fe7c433a29db487d11b34f33eaed"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a2bf1fe7c433a29db487d11b34f33eaed">DisplayMannager::DisplayMannager::requestEventType</a></div><div class="ttdeci">void requestEventType()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a5c613303ddc859de1ae2a609c8459dce"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a5c613303ddc859de1ae2a609c8459dce">DisplayMannager::DisplayMannager::createActivity</a></div><div class="ttdeci">void createActivity()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a63d4b1b713f49f92cd0d6565e0e0dd15"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a63d4b1b713f49f92cd0d6565e0e0dd15">DisplayMannager::DisplayMannager::signInPersonel</a></div><div class="ttdeci">void signInPersonel()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a7a947d3955c52d5b2969c02fe2ae9e5c"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a7a947d3955c52d5b2969c02fe2ae9e5c">DisplayMannager::DisplayMannager::getUserInput</a></div><div class="ttdeci">void getUserInput()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_a9b72469a614906fd02b6630c1f971b41"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#a9b72469a614906fd02b6630c1f971b41">DisplayMannager::DisplayMannager::createWeddingEvent</a></div><div class="ttdeci">void createWeddingEvent()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_acc6c71c1812b1505eef574e8b28b2a69"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#acc6c71c1812b1505eef574e8b28b2a69">DisplayMannager::DisplayMannager::createFuneralEvent</a></div><div class="ttdeci">void createFuneralEvent()</div></div>
-<div class="ttc" id="aclass_display_mannager_1_1_display_mannager_html_ad2752058798b65a5d711c37429ee9efa"><div class="ttname"><a href="class_display_mannager_1_1_display_mannager.html#ad2752058798b65a5d711c37429ee9efa">DisplayMannager::DisplayMannager::reportIssue</a></div><div class="ttdeci">void reportIssue()</div></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclass_w_e_p_1_1_display_mannager_html"><div class="ttname"><a href="class_w_e_p_1_1_display_mannager.html">WEP::DisplayMannager</a></div><div class="ttdef"><b>Definition</b> DisplayMannager.h:10</div></div>
+<div class="ttc" id="aclass_w_e_p_1_1_wedding_event_center_html"><div class="ttname"><a href="class_w_e_p_1_1_wedding_event_center.html">WEP::WeddingEventCenter</a></div><div class="ttdef"><b>Definition</b> WeddingEventCenter.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

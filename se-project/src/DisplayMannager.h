@@ -1,62 +1,40 @@
 #pragma once
+#include "WeddingEventCenter.h"
 
-namespace DisplayMannager
+namespace WEP
 {
-	/**
-	* @enum AppState
-	* The current state of the application
-	*/
-	enum AppState
-	{
-		Defualt
-	};
-
 	/**
 	* Manages the current display of the application, and is the main driver
 	*/
 	class DisplayMannager
 	{
 	public:
-		/**
-		* Gets the input from the user
-		*/
-		void getUserInput();
-		/*
-		* Displays the output to visualize
-		*/
-		void displayOutput();
+		const String QUIT_COMMAND = "quit";
+		const String SIGN_IN_COMMAND = "signin";
+		const String SIGN_OUT_COMMAND = "signout";
 
-		/**
-		* Requests what type of event the user wants to make
-		*/
-		void requestEventType();
-		/**
-		* Displays input for the Wedding event
-		*/
-		void createWeddingEvent();
-		/**
-		* Displays input for the Birthday event
-		*/
-		void createBirthdayEvent();
-		/**
-		* Displays input for the Funeral event
-		*/
-		void createFuneralEvent();
+		const String CREATE_COMMAND = "create";
+		const String CREATE_BUSINESS_ARG = "business";
+		const String CREATE_EVENT_ARG = "event";
 
-		/**
-		* Displays input for creating an activity
-		*/
-		void createActivity();
+		const String PRINT_COMMAND = "print";
+		const String PRINT_EVENTS_ARG = "events";
+		const String PRINT_BUSINESSES_ARG = "businesses";
+		const String PRINT_SIGN_IN_ARG = "signin";
 
-		/**
-		* Displays sign in for a personel
-		*/
-		void signInPersonel();
-		/**
-		* After a personel signs in shows input for displaying an issue
-		*/
-		void reportIssue();
+		const String HELP_COMMAND = "help";
+	public:
+		DisplayMannager(WeddingEventCenter eventCenter) : eventCenter(eventCenter) {}
+		void run();
+
 	private:
-		AppState state;
+		void runPrintCommand(const List<String>& commands);
+		void runCreateCommand(const List<String>& commands);
+		void runSignInCommand(const List<String>& commands);
+		void printError(const String& msg);
+		void printHelpCommandList();
+
+	private:
+		WeddingEventCenter eventCenter;
 	};
 }

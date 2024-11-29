@@ -1,82 +1,97 @@
-#pragma once
+#include <string>
+#include <iostream>
 
-namespace WEP
+/**
+* Base class for all rooms
+*/
+class Room
 {
-	/**
-	* @breif The base class for all the differen types of rooms
-	*/
-	struct Room
-	{
-		/**
-		* A virtual function for getting the room name
-		*/
-		virtual const char* getName() const = 0;
-		/**
-		* A virtual function for getting the room capacity
-		*/
-		virtual unsigned int getCapacity() const = 0;
-		/**
-		* A virtual function for getting the room cost
-		* @note This is cost per hour
-		*/
-		virtual float getCost() const = 0;
-	};
+private:
+    std::string name; // room name
+    float costPerHour; // room cost
 
-	struct ParisRoom : public Room
-	{
-		/**
-		* @returns the name of the Paris Room
-		* @todo implement
-		*/
-		const char* getName() const override;
-		/**
-		* @returns the capacity of the Paris Room
-		* @todo implement
-		*/
-		unsigned int getCapacity() const override;
-		/**
-		* @returns the cost of the Paris room per hour
-		* @todo implement
-		*/
-		float getCost() const override;
-	};
+public:
+    Room(std::string name, float costPerHour)
+    {
+        this->name = name;
+        this->costPerHour = costPerHour;
+    }
 
-	struct RomeRoom : public Room
-	{
-		/**
-		* @returns the name of the Rome Room
-		* @todo implement
-		*/
-		const char* getName() const override;
-		/**
-		* @returns the capacity of the Rome Room
-		* @todo implement
-		*/
-		unsigned int getCapacity() const override;
-		/**
-		* @returns the cost of the Rome Room per hour
-		* @todo implement
-		*/
-		float getCost() const override;
-	};
+    /*
+    * @returns the name of the room
+    */
+    std::string getName() const
+    {
+        return name;
+    }
 
-	struct LasVegasRoom : public Room
-	{
-		/**
-		* @returns the name of the Las Vegas Room
-		* @todo implement
-		*/
-		const char* getName() const override;
-		/**
-		* @returns the capacity of the Las Vegas Room
-		* @todo implement
-		*/
-		unsigned int getCapacity() const override;
-		/**
-		* @returns the cost of the Las Vegas Room per hour
-		* @todo implement
-		*/
-		float getCost() const override;
-	};
-}
+    /**
+    * @returns The capacity of the derived room
+    */
+    virtual size_t getCapacity() const = 0;
+    /**
+    * @returns If the derived room class has pool access
+    */
+    virtual bool hasPoolAccess() const = 0;
+};
+
+class RomeRoom : public Room
+{
+public:
+    RomeRoom() : Room("Rome Room", 300.0) {}
+    bool hasPoolAccess() const override
+    {
+        return false;
+    }
+
+    size_t getCapacity() const override
+    {
+        return 100;
+    }
+};
+
+/**
+* Paris room class
+*/
+class ParisRoom : public Room
+{
+public:
+    /**
+    * initialize paris room with values
+    */
+    ParisRoom() : Room("Paris Room ", 400.0) {}
+
+
+    bool hasPoolAccess() const override
+    {
+        return false;
+    }
+
+    size_t getCapacity() const override
+    {
+        return 200;
+    }
+};
+
+/**
+* Las Vegas room class
+*/
+class LasVegasRoom : public Room
+{
+public:
+    /**
+    * initialize Las Vegas Room with values
+    */
+    LasVegasRoom() : Room("Las Vegas Room ", 500.0) {}
+
+    bool hasPoolAccess() const
+    {
+        return true;
+    }
+
+    size_t getCapacity() const override
+    {
+        return 400;
+    }
+};
 
