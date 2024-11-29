@@ -1,16 +1,6 @@
 var searchData=
 [
-  ['parisroom_0',['ParisRoom',['../struct_w_e_p_1_1_paris_room.html',1,'WEP']]],
-  ['personel_1',['Personel',['../class_w_e_p_1_1_personel.html',1,'WEP']]],
-  ['problem_2',['Problem',['../class_w_e_p_1_1_problem.html',1,'WEP::Problem'],['../class_w_e_p_1_1_problem.html#a5b4f907a4c54e98d7c4d3f4ba190f41a',1,'WEP::Problem::Problem()']]],
-  ['prompt_3',['prompt',['../struct_w_e_p_1_1_console.html#a02f458eae141e64504f5bea87e7ac3cb',1,'WEP::Console']]],
-  ['promptcommands_4',['promptCommands',['../struct_w_e_p_1_1_console.html#aa0f18e273999726bec95c474cf3477ed',1,'WEP::Console']]],
-  ['promptconfirm_5',['promptConfirm',['../struct_w_e_p_1_1_console.html#ad60e0bab528a714c888aeb5758788267',1,'WEP::Console']]],
-  ['promptcreateguest_6',['promptCreateGuest',['../class_w_e_p_1_1_guest.html#a6cc3424faf6053015d65b34dd5ddb65f',1,'WEP::Guest']]],
-  ['promptcreateguestlist_7',['promptCreateGuestList',['../class_w_e_p_1_1_guest.html#aee14c8a0732dbcee58341316ef127194',1,'WEP::Guest']]],
-  ['promptdate_8',['promptDate',['../struct_w_e_p_1_1_console.html#a3bd384953f938be0d0249fcd15fca52a',1,'WEP::Console']]],
-  ['promptline_9',['promptLine',['../struct_w_e_p_1_1_console.html#af8c4652b4cde28a5d07096b51433c621',1,'WEP::Console']]],
-  ['promptname_10',['promptName',['../struct_w_e_p_1_1_console.html#a5148ca880d05bf3b5a769800eb2a582b',1,'WEP::Console']]],
-  ['promptnumber_11',['promptNumber',['../struct_w_e_p_1_1_console.html#ab50332645428898ae57d1cfdf88a77b4',1,'WEP::Console']]],
-  ['promptusernew_12',['promptUserNew',['../class_w_e_p_1_1_business.html#a0561743765d5dcee80494afcbc52e0c5',1,'WEP::Business']]]
+  ['operator_21_3d_0',['operator!=',['../struct_w_e_p_1_1_date.html#a51cfca9d37008438d5c30a141e61bf39',1,'WEP::Date::operator!=()'],['../struct_w_e_p_1_1_time_range.html#a5a542a76705ea41d7e1b9113075fd9c5',1,'WEP::TimeRange::operator!=()']]],
+  ['operator_3d_3d_1',['operator==',['../struct_w_e_p_1_1_date.html#aa59735fa1775e6947bea70a96932ee6e',1,'WEP::Date::operator==()'],['../struct_w_e_p_1_1_time_range.html#a673163ddc06ae4cb105f954d98be961e',1,'WEP::TimeRange::operator==(const TimeRange &amp;other) const']]],
+  ['overlaps_2',['overlaps',['../struct_w_e_p_1_1_time_range.html#ad554282998a74009bc31e41f77c5498d',1,'WEP::TimeRange']]]
 ];

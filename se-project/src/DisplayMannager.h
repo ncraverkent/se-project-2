@@ -13,8 +13,6 @@ namespace WEP
 		const String SIGN_IN_COMMAND = "signin";
 		const String SIGN_OUT_COMMAND = "signout";
 
-		const String PRINT_SIGN_IN_COMMAND = "psignin";
-
 		const String CREATE_COMMAND = "create";
 		const String CREATE_BUSINESS_ARG = "business";
 		const String CREATE_EVENT_ARG = "event";
@@ -22,6 +20,7 @@ namespace WEP
 		const String PRINT_COMMAND = "print";
 		const String PRINT_EVENTS_ARG = "events";
 		const String PRINT_BUSINESSES_ARG = "businesses";
+		const String PRINT_SIGN_IN_ARG = "signin";
 
 		const String HELP_COMMAND = "help";
 	public:
@@ -29,10 +28,9 @@ namespace WEP
 		void run();
 
 	private:
-		bool runPrintCommand(const List<String>& commands);
-		bool runCreateCommand(const List<String>& commands);
-		bool runSignInCommand(const List<String>& commands);
-		bool runSignOutCommand(const List<String>& commands);
+		void runPrintCommand(const List<String>& commands);
+		void runCreateCommand(const List<String>& commands);
+		void runSignInCommand(const List<String>& commands);
 		void printError(const String& msg);
 		void printHelpCommandList();
 

@@ -137,11 +137,7 @@
     <ClCompile Include="src\Events\Event.cpp" />
     <ClCompile Include="src\Events\Funeral.cpp" />
     <ClCompile Include="src\Events\Wedding.cpp" />
-<<<<<<< Updated upstream
     <ClCompile Include="src\Guest.cpp" />
-    <ClCompile Include="src\Rooms\Room.cpp" />
-=======
->>>>>>> Stashed changes
     <ClCompile Include="src\Utils\Date.cpp" />
     <ClCompile Include="src\Business.cpp" />
     <ClCompile Include="se-project.cpp" />

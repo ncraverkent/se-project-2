@@ -105,7 +105,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">   24</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">Activity</a>(std::string name, <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, <a class="code hl_struct" href="struct_w_e_p_1_1_room.html">Room</a>* room, <span class="keywordtype">float</span> registrationCost, std::vector&lt;Equipment&gt; equipment) :</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">   24</a></span>        <a class="code hl_function" href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">Activity</a>(std::string name, <a class="code hl_struct" href="struct_w_e_p_1_1_time_range.html">TimeRange</a> time, <a class="code hl_class" href="class_room.html">Room</a>* room, <span class="keywordtype">float</span> registrationCost, std::vector&lt;Equipment&gt; equipment) :</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            name(name), time(time), room(room), registrationCost(registrationCost), equipment(equipment) {}</div>
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
@@ -120,7 +120,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">/*</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">        * @returns the room of this activity</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">        */</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> Room&amp; getRoom()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *this-&gt;room; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> <a class="code hl_class" href="class_room.html">Room</a>&amp; getRoom()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> *this-&gt;room; }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">/*</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">        * @returns the registration cost of this activity </span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">        */</span></div>
@@ -132,15 +132,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::string name;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        TimeRange time;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        Room* room;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="class_room.html">Room</a>* room;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">float</span> registrationCost;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        std::vector&lt;Equipment&gt; equipment;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdef"><b>Definition</b> Room.h:8</div></div>
 <div class="ttc" id="aclass_w_e_p_1_1_activity_html"><div class="ttname"><a href="class_w_e_p_1_1_activity.html">WEP::Activity</a></div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
 <div class="ttc" id="aclass_w_e_p_1_1_activity_html_af82f0e0ab5358298956d48fc448192be"><div class="ttname"><a href="class_w_e_p_1_1_activity.html#af82f0e0ab5358298956d48fc448192be">WEP::Activity::Activity</a></div><div class="ttdeci">Activity(std::string name, TimeRange time, Room *room, float registrationCost, std::vector&lt; Equipment &gt; equipment)</div><div class="ttdef"><b>Definition</b> Activity.h:24</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_room_html"><div class="ttname"><a href="struct_w_e_p_1_1_room.html">WEP::Room</a></div><div class="ttdef"><b>Definition</b> Room.h:9</div></div>
 <div class="ttc" id="astruct_w_e_p_1_1_time_range_html"><div class="ttname"><a href="struct_w_e_p_1_1_time_range.html">WEP::TimeRange</a></div><div class="ttdef"><b>Definition</b> TimeRange.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -91,63 +91,116 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">Room.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>WEP</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_room.html">    8</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_room.html">Room</a></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_room.html#a4de1ae2fa2b7eb4d93c2a9ef4f65e49e">   13</a></span>        <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="struct_w_e_p_1_1_room.html#a4de1ae2fa2b7eb4d93c2a9ef4f65e49e">getName</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_room.html#ad94ff22d60289d52cf6e8b493e75d681">   17</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_w_e_p_1_1_room.html#ad94ff22d60289d52cf6e8b493e75d681">getCapacity</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_room.html#a2d2501126365c243bb339ef4cfaeb819">   22</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="struct_w_e_p_1_1_room.html#a2d2501126365c243bb339ef4cfaeb819">getCost</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    };</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_room.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="class_room.html">Room</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    std::string name; <span class="comment">// room name</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">float</span> costPerHour; <span class="comment">// room cost</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_room.html">Room</a>(std::string name, <span class="keywordtype">float</span> costPerHour)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        this-&gt;name = name;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        this-&gt;costPerHour = costPerHour;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    * @returns the name of the room</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string getName()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">return</span> name;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_room.html#ad83acde57214617a90e2df9649fc68b8">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_room.html#ad83acde57214617a90e2df9649fc68b8">getCapacity</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_room.html#a99ac909db055213e993fb8318efae7a0">   35</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_room.html#a99ac909db055213e993fb8318efae7a0">hasPoolAccess</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_paris_room.html">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_paris_room.html">ParisRoom</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_w_e_p_1_1_room.html">Room</a></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_paris_room.html#ac11aae19de16d5ea540e716818809743">   31</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="struct_w_e_p_1_1_paris_room.html#ac11aae19de16d5ea540e716818809743">getName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_paris_room.html#aa6e445f1475dfb6d5b0622d1c1cbbab8">   36</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_w_e_p_1_1_paris_room.html#aa6e445f1475dfb6d5b0622d1c1cbbab8">getCapacity</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_paris_room.html#a3b6efb6c6db2d062bca5678431f5cfb2">   41</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="struct_w_e_p_1_1_paris_room.html#a3b6efb6c6db2d062bca5678431f5cfb2">getCost</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_rome_room.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_rome_room.html">RomeRoom</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_room.html">Room</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="class_rome_room.html">RomeRoom</a>() : <a class="code hl_class" href="class_room.html">Room</a>(<span class="stringliteral">&quot;Rome Room&quot;</span>, 300.0) {}</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_rome_room.html#affd9cb02da13964ddbc2a8670a69ef27">   42</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_rome_room.html#affd9cb02da13964ddbc2a8670a69ef27">hasPoolAccess</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_rome_room.html">   44</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_rome_room.html">RomeRoom</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_w_e_p_1_1_room.html">Room</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_rome_room.html#a7b284f1834fef34b267493e4aae24f01">   50</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="struct_w_e_p_1_1_rome_room.html#a7b284f1834fef34b267493e4aae24f01">getName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_rome_room.html#aa356e2cd211e2a90225ba4239fe8224b">   55</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_w_e_p_1_1_rome_room.html#aa356e2cd211e2a90225ba4239fe8224b">getCapacity</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_rome_room.html#a148345d77cb187c3d8f09f92ee950cc8">   60</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="struct_w_e_p_1_1_rome_room.html#a148345d77cb187c3d8f09f92ee950cc8">getCost</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_rome_room.html#a7abf8e1d3f1c09207ea3e07b5378de37">   47</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_rome_room.html#a7abf8e1d3f1c09207ea3e07b5378de37">getCapacity</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">return</span> 100;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_las_vegas_room.html">   63</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_w_e_p_1_1_las_vegas_room.html">LasVegasRoom</a> : <span class="keyword">public</span> <a class="code hl_struct" href="struct_w_e_p_1_1_room.html">Room</a></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_las_vegas_room.html#a56e25c53d2467401fc22bf77e0c3c820">   69</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="struct_w_e_p_1_1_las_vegas_room.html#a56e25c53d2467401fc22bf77e0c3c820">getName</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_las_vegas_room.html#a05fba7720185379c659c92c6745ba11d">   74</a></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="struct_w_e_p_1_1_las_vegas_room.html#a05fba7720185379c659c92c6745ba11d">getCapacity</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_w_e_p_1_1_las_vegas_room.html#a6586a21cbd8d1d84e008ed7a05e1273e">   79</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="struct_w_e_p_1_1_las_vegas_room.html#a6586a21cbd8d1d84e008ed7a05e1273e">getCost</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="ttc" id="astruct_w_e_p_1_1_las_vegas_room_html"><div class="ttname"><a href="struct_w_e_p_1_1_las_vegas_room.html">WEP::LasVegasRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:64</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_las_vegas_room_html_a05fba7720185379c659c92c6745ba11d"><div class="ttname"><a href="struct_w_e_p_1_1_las_vegas_room.html#a05fba7720185379c659c92c6745ba11d">WEP::LasVegasRoom::getCapacity</a></div><div class="ttdeci">unsigned int getCapacity() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_las_vegas_room_html_a56e25c53d2467401fc22bf77e0c3c820"><div class="ttname"><a href="struct_w_e_p_1_1_las_vegas_room.html#a56e25c53d2467401fc22bf77e0c3c820">WEP::LasVegasRoom::getName</a></div><div class="ttdeci">const char * getName() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_las_vegas_room_html_a6586a21cbd8d1d84e008ed7a05e1273e"><div class="ttname"><a href="struct_w_e_p_1_1_las_vegas_room.html#a6586a21cbd8d1d84e008ed7a05e1273e">WEP::LasVegasRoom::getCost</a></div><div class="ttdeci">float getCost() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_paris_room_html"><div class="ttname"><a href="struct_w_e_p_1_1_paris_room.html">WEP::ParisRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:26</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_paris_room_html_a3b6efb6c6db2d062bca5678431f5cfb2"><div class="ttname"><a href="struct_w_e_p_1_1_paris_room.html#a3b6efb6c6db2d062bca5678431f5cfb2">WEP::ParisRoom::getCost</a></div><div class="ttdeci">float getCost() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_paris_room_html_aa6e445f1475dfb6d5b0622d1c1cbbab8"><div class="ttname"><a href="struct_w_e_p_1_1_paris_room.html#aa6e445f1475dfb6d5b0622d1c1cbbab8">WEP::ParisRoom::getCapacity</a></div><div class="ttdeci">unsigned int getCapacity() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_paris_room_html_ac11aae19de16d5ea540e716818809743"><div class="ttname"><a href="struct_w_e_p_1_1_paris_room.html#ac11aae19de16d5ea540e716818809743">WEP::ParisRoom::getName</a></div><div class="ttdeci">const char * getName() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_rome_room_html"><div class="ttname"><a href="struct_w_e_p_1_1_rome_room.html">WEP::RomeRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:45</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_rome_room_html_a148345d77cb187c3d8f09f92ee950cc8"><div class="ttname"><a href="struct_w_e_p_1_1_rome_room.html#a148345d77cb187c3d8f09f92ee950cc8">WEP::RomeRoom::getCost</a></div><div class="ttdeci">float getCost() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_rome_room_html_a7b284f1834fef34b267493e4aae24f01"><div class="ttname"><a href="struct_w_e_p_1_1_rome_room.html#a7b284f1834fef34b267493e4aae24f01">WEP::RomeRoom::getName</a></div><div class="ttdeci">const char * getName() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_rome_room_html_aa356e2cd211e2a90225ba4239fe8224b"><div class="ttname"><a href="struct_w_e_p_1_1_rome_room.html#aa356e2cd211e2a90225ba4239fe8224b">WEP::RomeRoom::getCapacity</a></div><div class="ttdeci">unsigned int getCapacity() const override</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_room_html"><div class="ttname"><a href="struct_w_e_p_1_1_room.html">WEP::Room</a></div><div class="ttdef"><b>Definition</b> Room.h:9</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_room_html_a2d2501126365c243bb339ef4cfaeb819"><div class="ttname"><a href="struct_w_e_p_1_1_room.html#a2d2501126365c243bb339ef4cfaeb819">WEP::Room::getCost</a></div><div class="ttdeci">virtual float getCost() const =0</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_room_html_a4de1ae2fa2b7eb4d93c2a9ef4f65e49e"><div class="ttname"><a href="struct_w_e_p_1_1_room.html#a4de1ae2fa2b7eb4d93c2a9ef4f65e49e">WEP::Room::getName</a></div><div class="ttdeci">virtual const char * getName() const =0</div></div>
-<div class="ttc" id="astruct_w_e_p_1_1_room_html_ad94ff22d60289d52cf6e8b493e75d681"><div class="ttname"><a href="struct_w_e_p_1_1_room.html#ad94ff22d60289d52cf6e8b493e75d681">WEP::Room::getCapacity</a></div><div class="ttdeci">virtual unsigned int getCapacity() const =0</div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_paris_room.html">   56</a></span><span class="keyword">class </span><a class="code hl_class" href="class_paris_room.html">ParisRoom</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_room.html">Room</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_paris_room.html#a020269f2a9d26ad964aa78b794fb586d">   62</a></span>    <a class="code hl_function" href="class_paris_room.html#a020269f2a9d26ad964aa78b794fb586d">ParisRoom</a>() : <a class="code hl_class" href="class_room.html">Room</a>(<span class="stringliteral">&quot;Paris Room &quot;</span>, 400.0) {}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_paris_room.html#a5684aa31d407f0be5eef112593ced03b">   65</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_paris_room.html#a5684aa31d407f0be5eef112593ced03b">hasPoolAccess</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_paris_room.html#afb57ec46e0190b9026fae04e5a523038">   70</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_paris_room.html#afb57ec46e0190b9026fae04e5a523038">getCapacity</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> 200;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="};">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_las_vegas_room.html">   79</a></span><span class="keyword">class </span><a class="code hl_class" href="class_las_vegas_room.html">LasVegasRoom</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_room.html">Room</a></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_las_vegas_room.html#af5cda3a5a9139a617f9bed1c95c3fa93">   85</a></span>    <a class="code hl_function" href="class_las_vegas_room.html#af5cda3a5a9139a617f9bed1c95c3fa93">LasVegasRoom</a>() : <a class="code hl_class" href="class_room.html">Room</a>(<span class="stringliteral">&quot;Las Vegas Room &quot;</span>, 500.0) {}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_las_vegas_room.html#a681ec16b1207428f66ffdf038b63c86b">   87</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_las_vegas_room.html#a681ec16b1207428f66ffdf038b63c86b">hasPoolAccess</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_las_vegas_room.html#a260ae98c79c411906fcf375f2de5f422">   92</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_las_vegas_room.html#a260ae98c79c411906fcf375f2de5f422">getCapacity</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">return</span> 400;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="ttc" id="aclass_las_vegas_room_html"><div class="ttname"><a href="class_las_vegas_room.html">LasVegasRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:80</div></div>
+<div class="ttc" id="aclass_las_vegas_room_html_a260ae98c79c411906fcf375f2de5f422"><div class="ttname"><a href="class_las_vegas_room.html#a260ae98c79c411906fcf375f2de5f422">LasVegasRoom::getCapacity</a></div><div class="ttdeci">size_t getCapacity() const override</div><div class="ttdef"><b>Definition</b> Room.h:92</div></div>
+<div class="ttc" id="aclass_las_vegas_room_html_a681ec16b1207428f66ffdf038b63c86b"><div class="ttname"><a href="class_las_vegas_room.html#a681ec16b1207428f66ffdf038b63c86b">LasVegasRoom::hasPoolAccess</a></div><div class="ttdeci">bool hasPoolAccess() const</div><div class="ttdef"><b>Definition</b> Room.h:87</div></div>
+<div class="ttc" id="aclass_las_vegas_room_html_af5cda3a5a9139a617f9bed1c95c3fa93"><div class="ttname"><a href="class_las_vegas_room.html#af5cda3a5a9139a617f9bed1c95c3fa93">LasVegasRoom::LasVegasRoom</a></div><div class="ttdeci">LasVegasRoom()</div><div class="ttdef"><b>Definition</b> Room.h:85</div></div>
+<div class="ttc" id="aclass_paris_room_html"><div class="ttname"><a href="class_paris_room.html">ParisRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:57</div></div>
+<div class="ttc" id="aclass_paris_room_html_a020269f2a9d26ad964aa78b794fb586d"><div class="ttname"><a href="class_paris_room.html#a020269f2a9d26ad964aa78b794fb586d">ParisRoom::ParisRoom</a></div><div class="ttdeci">ParisRoom()</div><div class="ttdef"><b>Definition</b> Room.h:62</div></div>
+<div class="ttc" id="aclass_paris_room_html_a5684aa31d407f0be5eef112593ced03b"><div class="ttname"><a href="class_paris_room.html#a5684aa31d407f0be5eef112593ced03b">ParisRoom::hasPoolAccess</a></div><div class="ttdeci">bool hasPoolAccess() const override</div><div class="ttdef"><b>Definition</b> Room.h:65</div></div>
+<div class="ttc" id="aclass_paris_room_html_afb57ec46e0190b9026fae04e5a523038"><div class="ttname"><a href="class_paris_room.html#afb57ec46e0190b9026fae04e5a523038">ParisRoom::getCapacity</a></div><div class="ttdeci">size_t getCapacity() const override</div><div class="ttdef"><b>Definition</b> Room.h:70</div></div>
+<div class="ttc" id="aclass_rome_room_html"><div class="ttname"><a href="class_rome_room.html">RomeRoom</a></div><div class="ttdef"><b>Definition</b> Room.h:39</div></div>
+<div class="ttc" id="aclass_rome_room_html_a7abf8e1d3f1c09207ea3e07b5378de37"><div class="ttname"><a href="class_rome_room.html#a7abf8e1d3f1c09207ea3e07b5378de37">RomeRoom::getCapacity</a></div><div class="ttdeci">size_t getCapacity() const override</div><div class="ttdef"><b>Definition</b> Room.h:47</div></div>
+<div class="ttc" id="aclass_rome_room_html_affd9cb02da13964ddbc2a8670a69ef27"><div class="ttname"><a href="class_rome_room.html#affd9cb02da13964ddbc2a8670a69ef27">RomeRoom::hasPoolAccess</a></div><div class="ttdeci">bool hasPoolAccess() const override</div><div class="ttdef"><b>Definition</b> Room.h:42</div></div>
+<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdef"><b>Definition</b> Room.h:8</div></div>
+<div class="ttc" id="aclass_room_html_a99ac909db055213e993fb8318efae7a0"><div class="ttname"><a href="class_room.html#a99ac909db055213e993fb8318efae7a0">Room::hasPoolAccess</a></div><div class="ttdeci">virtual bool hasPoolAccess() const =0</div></div>
+<div class="ttc" id="aclass_room_html_ad83acde57214617a90e2df9649fc68b8"><div class="ttname"><a href="class_room.html#ad83acde57214617a90e2df9649fc68b8">Room::getCapacity</a></div><div class="ttdeci">virtual size_t getCapacity() const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
