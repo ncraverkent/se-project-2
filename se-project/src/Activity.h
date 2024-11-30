@@ -5,6 +5,7 @@
 #include "Rooms/Room.h"
 #include "Equipment.h"
 #include "Utils/UUID.h"
+#include "CateringRequest.h"
 
 namespace WEP
 {
@@ -18,19 +19,19 @@ namespace WEP
 		* Constructs an activity
 		* @param name The name of the activity
 		* @param time the range of time that the activity covers
-		* @param room The room that the activity is held in. It MUST live as long as this Activity
+		* @param room The room that the activity is held in
 		* @param registrationCost the cost of registration for this activity
 		* @param equipment All of the different equipment required for the activity
 		*/
-		Activity(std::string name, TimeRange time, Arc<Room> room, float registrationCost, std::vector<Equipment> equipment) :
+		Activity(std::string name, TimeRange time, Arc<Room> room, float registrationCost, std::vector<Equipment> equipment, Option<CateringRequest> catering) :
 			name(name), time(time), room(room), registrationCost(registrationCost), 
-			equipment(equipment), id(generateUUID())
+			equipment(equipment), id(generateUUID()), catering(catering)
 		{}
 
 		/*
 		* @returns The name of this activity
 		*/
-		const std::string& getName() const { return this->name; }
+		const std::string& getName() const { return this->name; } 
 		/*
 		* @returns the time range of this activity
 		*/
@@ -40,12 +41,20 @@ namespace WEP
 		*/
 		const Room& getRoom() const { return *this->room; }
 
+		/**
+		* @returns The id of this activity
+		*/
 		const UUID& getId() const { return this->id; }
 
 		/*
 		* @returns the registration cost of this activity 
 		*/
 		float getRegistrationCost() const { return this->registrationCost; }
+
+		/**
+		* @returns The catering request for this activity, if it has one
+		*/
+		const Option<CateringRequest>& getCateringRequest() { return this->catering; }
 
 		/*
 		* @returns The equipment for this activity
@@ -74,5 +83,6 @@ namespace WEP
 		Arc<Room> room;
 		float registrationCost;
 		std::vector<Equipment> equipment;
+		Option<CateringRequest> catering;
 	};
 }

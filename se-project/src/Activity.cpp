@@ -17,6 +17,7 @@ namespace WEP
 		Arc<Room> room = Room::promptSelectRoom();
 		float registrationCost = Console::promptFloat("Please enter the registration cost for the Activity: ");
 		List<Equipment> equipment = Equipment::promptEquipmentList();
+		Option<CateringRequest> catering = CateringRequest::promptCreateCateringRequest();
 
 		std::stringstream ss;
 		ss << "Do you want to create a Activity with:\n"
@@ -24,11 +25,12 @@ namespace WEP
 			<< " - time range = " << timeRange.toString() << "\n"
 			<< " - room = " << room->getName() << "\n"
 			<< " - registration cost = $" << std::to_string(registrationCost) << "\n"
-			<< Equipment::formatEquipmentList(equipment) << "\n";
+			<< Equipment::formatEquipmentList(equipment) << "\n"
+			<< " - catering request = " << (catering.has_value() ? catering.value().getDetails() : "None") << "\n";
 
 		if (Console::promptConfirm(ss.str()))
 		{
-			return Activity(name, timeRange, std::move(room), registrationCost, equipment);
+			return Activity(name, timeRange, std::move(room), registrationCost, equipment, catering);
 		}
 		else
 		{
@@ -88,7 +90,8 @@ namespace WEP
 			   << "\t\t - time range = " << activity.time.toString() << "\n"
 			   << "\t\t - room = " << activity.room->getName() << "\n"
 			   << "\t\t - registration cost = $" << std::to_string(activity.registrationCost) << "\n"
-			   << Equipment::formatEquipmentList(activity.equipment, "\t\t\t") << "\n";
+			   << Equipment::formatEquipmentList(activity.equipment, "\t\t\t") << "\n"
+			   << "\t\t - catering request = " << (activity.catering.has_value() ? activity.catering.value().getDetails() : "None") << "\n";
 		}
 
 		return ss.str();
