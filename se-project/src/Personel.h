@@ -17,20 +17,37 @@ namespace WEP
         // Constructor
         explicit Personnel(const std::string& name);
 
-        // Getters
+        
+        /**
+        * @returns The name of this Personnel
+        */
         const std::string& getName() const { return name; }
+
+        /**
+        * @returns The reference of the assigned activity that this personell is overseeing, if they are overseeing any
+        */
         Option<const Arc<Activity>> getAssignedActivity() const {
             return assignedActivity.has_value() ? assignedActivity : Option<Arc<Activity>> {};
         }
 
-        // Core functionality
+        /**
+        * Reports an issue
+        */
         void reportIssue(Problem issue);
+
+        /**
+        * @returns A formatted string of the data of this personnel
+        */
         std::string getDetails() const;
 
-        // Static 
+        /**
+        * Prompts the user to create a new personnel
+        */
         static Personnel promptCreatePersonel();
 
-        // Activity assignment
+        /*
+        * Promptes the user to be assigned an activity
+        */
         void promptAssignActivity(List<Arc<Activity>>& availableActivities);
 
     private:
