@@ -99,4 +99,33 @@ namespace WEP
 
 		return false;
 	}
+
+	bool WeddingEventCenter::addPersonnel(Personnel p)
+	{
+		const auto& name = p.getName();
+		if (personnel.find(name) != personnel.end())
+		{
+			return false;
+		}
+
+		personnel.insert({ name, std::make_shared<Personnel>(p) });
+		return true;
+	}
+
+	Option<Arc<Personnel>> WeddingEventCenter::getPersonnel(const String& name)
+	{
+		if (personnel.find(name) != personnel.end())
+			return personnel[name];
+
+		return {};
+	}
+
+	List<Arc<Personnel>> WeddingEventCenter::getAllPersonnel()
+	{
+		List<Arc<Personnel>> ps = {};
+		for (auto& p : this->personnel)
+			ps.push_back(p.second);
+
+		return ps;
+	}
 }

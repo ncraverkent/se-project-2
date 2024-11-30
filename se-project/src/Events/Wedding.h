@@ -14,7 +14,7 @@ namespace WEP
 	class Wedding : public Event
 	{
 	public:
-		Wedding(String partnerA, String partnerB, Date date, List<Activity> activities, List<Guest> guests, UUID businessId) :
+		Wedding(String partnerA, String partnerB, Date date, List<Arc<Activity>> activities, List<Guest> guests, UUID businessId) :
 			partnerA(partnerA), partnerB(partnerB), 
 			Event(("Marrage between " + partnerA + " and " + partnerB), date, activities, guests, businessId)
 		{}

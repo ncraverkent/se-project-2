@@ -69,12 +69,12 @@ namespace WEP
 		/**
 		* Prompts the user to create a list of activities
 		*/
-		static List<Activity> promptCreateActivityList();
+		static List<Arc<Activity>> promptCreateActivityList();
 
 		/*
 		* Formats an activity list
 		*/
-		static String formatActivityList(const List<Activity>& activites);
+		static String formatActivityList(const List<Arc<Activity>>& activites);
 
 	private:
 		std::string name;

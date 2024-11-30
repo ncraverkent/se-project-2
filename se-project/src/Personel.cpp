@@ -6,49 +6,49 @@
 
 namespace WEP
 {
-    Personel::Personel(const std::string& name)
-        : name(name), assignedActivity(nullptr) {
+    Personnel::Personnel(const std::string& name)
+        : name(name), assignedActivity({}) {
     }
 
-    void Personel::reportIssue(Problem issue)
+    void Personnel::reportIssue(Problem issue)
     {
         reportedIssues.push_back(issue);
         std::cout << "Issue reported by " << name << ": " << issue.getDescription() << "\n";
     }
 
-    void Personel::assignActivity(Arc<Activity> activity)
+    void Personnel::assignActivity(Arc<Activity> activity)
     {
         assignedActivity = std::move(activity);
         std::cout << "Assigned activity \"" << assignedActivity.value()->getName() << "\" to " << name << ".\n";
     }
 
-    std::string Personel::getDetails() const
+    std::string Personnel::getDetails() const
     {
         std::stringstream details;
         details << "Personnel Name: " << name << "\n";
 
         if (assignedActivity)
-            details << "Assigned Activity: " << assignedActivity.value()->getName() << "\n";
+            details << " - Assigned Activity: " << assignedActivity.value()->getName() << "\n";
         else
-            details << "Assigned Activity: None\n";
+            details << " - Assigned Activity: None\n";
 
-        details << "Reported Issues:\n";
+        details << " - Reported Issues:\n";
         for (const auto& issue : reportedIssues)
         {
-            details << " - " << issue.getDescription() << "\n";
+            details << "\t - " << issue.getDescription() << "\n";
         }
         return details.str();
     }
 
-    Personel Personel::promptCreatePersonel()
+    Personnel Personnel::promptCreatePersonel()
     {
         std::string name;
         std::cout << "Enter personnel name: ";
         std::getline(std::cin >> std::ws, name);  // std::ws skips leading whitespace
-        return Personel(name);
+        return Personnel(name);
     }
 
-    void Personel::promptAssignActivity(List<Arc<Activity>>& availableActivities)
+    void Personnel::promptAssignActivity(List<Arc<Activity>>& availableActivities)
     {
         if (availableActivities.empty())
         {

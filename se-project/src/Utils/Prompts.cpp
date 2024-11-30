@@ -101,7 +101,7 @@ namespace WEP
         std::cout << message << " [y/n]: ";
         char c;
         std::cin >> c;
-        return c == 'y' || c == 'n';
+        return c == 'y';
     }
 
     List<String> Console::promptCommands(String message)

@@ -21,7 +21,7 @@ namespace WEP
 		/**
 		*	Constructs an instance of the event class
 		*/
-		Event(String name, Date date, List<Activity> activities, List<Guest> guests, UUID businessId) : 
+		Event(String name, Date date, List<Arc<Activity>> activities, List<Guest> guests, UUID businessId) :
 			name(name), date(date), activities(activities), businessId(businessId),
 			eventId(generateUUID()), guests(guests)
 		{}
@@ -51,7 +51,7 @@ namespace WEP
 		/**
 		* @returns The activities of the event
 		*/
-		const List<Activity> getActivities() const { return this->activities; }
+		List<Arc<Activity>> getActivities() const { return this->activities; }
 
 		/**
 		* @returns The id of the business that this event is organized by
@@ -90,7 +90,7 @@ namespace WEP
 	private:
 		String name;
 		Date date;
-		List<Activity> activities;
+		List<Arc<Activity>> activities;
 		List<Guest> guests;
 		UUID businessId;
 		UUID eventId;

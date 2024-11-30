@@ -46,7 +46,7 @@ namespace WEP
     class RomeRoom : public Room
     {
     public:
-        RomeRoom() : Room("Rome Room", 300.0) {}
+        RomeRoom() : Room("Rome", 300.0) {}
         bool hasPoolAccess() const override
         {
             return false;
@@ -67,7 +67,7 @@ namespace WEP
         /**
         * initialize paris room with values
         */
-        ParisRoom() : Room("Paris Room ", 400.0) {}
+        ParisRoom() : Room("Paris", 400.0) {}
 
 
         bool hasPoolAccess() const override
@@ -90,7 +90,7 @@ namespace WEP
         /**
         * initialize Las Vegas Room with values
         */
-        LasVegasRoom() : Room("Las Vegas Room ", 500.0) {}
+        LasVegasRoom() : Room("Las Vegas", 500.0) {}
 
         bool hasPoolAccess() const
         {

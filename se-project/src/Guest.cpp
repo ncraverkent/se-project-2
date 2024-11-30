@@ -25,14 +25,14 @@ namespace WEP
 		return details;
 	}
 
-	Guest Guest::promptCreateGuest(const List<Activity>& activities)
+	Guest Guest::promptCreateGuest(const List<Arc<Activity>>& activities)
 	{
 		String name = Console::promptName("Please enter the guests name: ");
 		List<UUID> registered = registerGuestForActivities(activities);
 		return Guest(name, registered);
 	}
 
-	List<Guest> Guest::promptCreateGuestList(const List<Activity>& activities)
+	List<Guest> Guest::promptCreateGuestList(const List<Arc<Activity>>& activities)
 	{
 		List<Guest> guests = {};
 		while (true)
@@ -83,12 +83,12 @@ namespace WEP
 		return ss.str();
 	}
 
-	List<UUID> Guest::registerGuestForActivities(const List<Activity> activites)
+	List<UUID> Guest::registerGuestForActivities(const List<Arc<Activity>>& activites)
 	{
 		Map<UUID, const Activity*> activityMap = {}; // DONT DO THIS
 		for (const auto& activity : activites)
 		{
-			activityMap.insert({ activity.getId(), &activity });
+			activityMap.insert({ activity->getId(), activity.get()});
 		}
 
 		List<UUID> registeredActivities = {};
@@ -110,9 +110,9 @@ namespace WEP
 						break;
 					}
 
-					if (activites[i].getName() == activityName)
+					if (activites[i]->getName() == activityName)
 					{
-						if (std::find(registeredActivities.begin(), registeredActivities.end(), activites[i].getId()) != registeredActivities.end())
+						if (std::find(registeredActivities.begin(), registeredActivities.end(), activites[i]->getId()) != registeredActivities.end())
 						{
 							std::cout << "Already registered for activity '" << activityName << "'\n";
 							break;
@@ -123,7 +123,7 @@ namespace WEP
 						for (const auto& id : registeredActivities)
 						{
 							const auto& registered = activityMap[id];
-							if (registered->getTime().overlaps(registeringActivity.getTime()))
+							if (registered->getTime().overlaps(registeringActivity->getTime()))
 							{
 								overlaps = true;
 							}
@@ -137,7 +137,7 @@ namespace WEP
 						else
 						{
 							std::cout << "Registered guest for activity '" << activityName << "'\n";
-							registeredActivities.push_back(registeringActivity.getId());
+							registeredActivities.push_back(registeringActivity->getId());
 							break;
 						}
 					}

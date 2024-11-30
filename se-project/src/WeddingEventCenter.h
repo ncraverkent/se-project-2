@@ -4,6 +4,7 @@
 #include "Events/Event.h"
 #include "Utils/UUID.h"
 #include "Business.h"
+#include "Personel.h"
 
 namespace WEP
 {
@@ -41,25 +42,24 @@ namespace WEP
 		*/
 		Option<Arc<Business>> getBusiness(const UUID& uuid);
 
-		bool addBusiness(Business name);
-
-		/**
-		* @returns All the available days that events can take place in
-		*/
-		std::vector<Date> getAvailableSlots();
-		/**
-		* Allocates resources for an event
-		* @returns False not enouph resources were allocated
-		*/
-		bool allocateResources(const Event& event);
 		/*
-		* @returns The aproximate cost of the event
+		* Adds a Business to the WeddingEventCenter
+		* @returns True if the business was successfully added
 		*/
-		float calculateCost(const Event& event);
-		/**
-		* Confirms the booking of the event
+		bool addBusiness(Business business);
+
+		/*
+		* Adds a Business to the WeddingEventCenter
+		* @returns True if the Personnel was successfully added
 		*/
-		void confirmBooking(const Event& event);
+		bool addPersonnel(Personnel personnel);
+
+		/*
+		* @returns The created Personnel with the given name
+		*/
+		Option<Arc<Personnel>> getPersonnel(const String& name);
+		
+		List<Arc<Personnel>> getAllPersonnel();
 
 		/**
 		* Signs out the current business
@@ -86,6 +86,7 @@ namespace WEP
 		Option<UUID> signedInId;
 		Map<UUID, Arc<Business>> businesses;
 		Map<UUID, Arc<Event>> events;
+		Map<String, Arc<Personnel>> personnel;
 
 		static const int MAX_PARALLEL_EVENTS = 3;
 	};
