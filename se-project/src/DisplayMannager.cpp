@@ -53,10 +53,32 @@ namespace WEP
         }
         else if (commands[1] == PRINT_EVENTS_ARG)
         {
-            auto events = eventCenter.getEvents();
-            for (const auto& event : events)
+            if (commands.size() >= 3 && commands[2] == PRINT_EVENTS_IDS_ARG_ARG)
             {
-                std::cout << event->getDetails() << "\n";
+                auto events = eventCenter.getEvents();
+                for (const auto& event : events)
+                {
+                    if (commands.size() >= 4 && event->getBusinessId() != commands[3])
+                        continue;
+
+                    std::cout << event->getName() << ": [" << event->getId() << "]\n";
+                }
+            }
+            else
+            {
+                auto events = eventCenter.getEvents();
+                for (const auto& event : events)
+                {
+                    std::cout << event->getDetails() << "\n";
+                }
+            }
+        }
+        else if (commands[1] == PRINT_EVENT_ARG)
+        {
+            if (commands.size() < 3)
+            {
+                std::cout << "This command requires a event id argument\n";
+                return;
             }
         }
         else if (commands[1] == PRINT_BUSINESSES_ARG)
@@ -163,6 +185,7 @@ namespace WEP
             { PRINT_COMMAND + " " + PRINT_BUSINESSES_ARG, "Prints all the registered businesses" },
             { PRINT_COMMAND + " " + PRINT_EVENTS_ARG, "Prints all the created events" },
             { PRINT_COMMAND + " " + PRINT_SIGN_IN_ARG, "Prints the currently signed in business" },
+            { PRINT_COMMAND + " " + PRINT_EVENTS_ARG + " " + PRINT_EVENTS_IDS_ARG_ARG + "?(business id)", "Prints all events with just their names and ids, with an optional business id arg that will print out only the events with the given id"},
             { CREATE_COMMAND + " " + CREATE_BUSINESS_ARG, "Creates/registers a new business" },
             { CREATE_COMMAND + " " + CREATE_EVENT_ARG, "Creates a new event. A business needs to be signed in to do this" }
         });

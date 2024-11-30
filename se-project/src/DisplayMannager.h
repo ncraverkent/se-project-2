@@ -19,8 +19,10 @@ namespace WEP
 
 		const String PRINT_COMMAND = "print";
 		const String PRINT_EVENTS_ARG = "events";
+		const String PRINT_EVENT_ARG = "event";
 		const String PRINT_BUSINESSES_ARG = "businesses";
 		const String PRINT_SIGN_IN_ARG = "signin";
+		const String PRINT_EVENTS_IDS_ARG_ARG = "ids";
 
 		const String HELP_COMMAND = "help";
 	public:
