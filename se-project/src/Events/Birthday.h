@@ -16,7 +16,7 @@ namespace WEP
 		* Constructs the birthday class
 		* @todo Implement
 		*/
-		Birthday(std::string name, unsigned int age, Date date, std::vector<Activity> activities, List<Guest> guests, UUID businessId) :
+		Birthday(std::string name, unsigned int age, Date date, List<Arc<Activity>> activities, List<Guest> guests, UUID businessId) :
 			subjectName(name), subjectAge(age), 
 			Event("Birthday for " + name, date, activities, guests, businessId)
 		{}

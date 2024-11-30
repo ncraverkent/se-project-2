@@ -52,8 +52,8 @@ namespace WEP
 		const Date& getTimestamp() const { return this->timestamp; }
 	
 	private:
-		std::string description;
-		std::string personelReportedName;
+		String description;
+		String personelReportedName;
 		ProblemStatus status;
 		Date timestamp;
 	};

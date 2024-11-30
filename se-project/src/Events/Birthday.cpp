@@ -20,7 +20,7 @@ namespace WEP
 		String name = Console::promptName("Enter the birthday girl/boys name: ");
 		size_t age = Console::promptNumber("Please enter the age of the birthday boy/girl: ");
 		Date date = Console::promptDate("Enter the party birthday date: ");
-		List<Activity> activities = Activity::promptCreateActivityList();
+		List<Arc<Activity>> activities = Activity::promptCreateActivityList();
 		List<Guest> guestList = Guest::promptCreateGuestList(activities);
 
 		std::stringstream ss;

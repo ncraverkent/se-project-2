@@ -21,7 +21,7 @@ namespace WEP
 		Date birthDate = Console::promptDate("Please enter their date of birth: ");
 		Date deathDate = Console::promptDate("Please enter their date of death: ");
 		Date date = Console::promptDate("Please enter the date of the funeral: ");
-		List<Activity> activities = Activity::promptCreateActivityList();
+		List<Arc<Activity>> activities = Activity::promptCreateActivityList();
 		List<Guest> guestList = Guest::promptCreateGuestList(activities);
 
 		std::stringstream ss;

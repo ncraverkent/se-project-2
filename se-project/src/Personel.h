@@ -11,16 +11,16 @@ namespace WEP
     * @brief The Personel class
     * A class that represents the WEP's personel who oversee activites
     */
-    class Personel
+    class Personnel
     {
     public:
         // Constructor
-        explicit Personel(const std::string& name);
+        explicit Personnel(const std::string& name);
 
         // Getters
         const std::string& getName() const { return name; }
-        Option<const Activity*> getAssignedActivity() const {
-            return assignedActivity.has_value() ? assignedActivity->get() : Option<const Activity*> {};
+        Option<const Arc<Activity>> getAssignedActivity() const {
+            return assignedActivity.has_value() ? assignedActivity : Option<Arc<Activity>> {};
         }
 
         // Core functionality
@@ -28,7 +28,7 @@ namespace WEP
         std::string getDetails() const;
 
         // Static 
-        static Personel promptCreatePersonel();
+        static Personnel promptCreatePersonel();
 
         // Activity assignment
         void promptAssignActivity(List<Arc<Activity>>& availableActivities);

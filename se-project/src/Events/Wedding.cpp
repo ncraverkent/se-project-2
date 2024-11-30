@@ -19,7 +19,7 @@ namespace WEP
 		String partnerA = Console::promptName("Please enter partnerA name: ");
 		String partnerB = Console::promptName("Please enter partnerB name: ");
 		Date date = Console::promptDate("Please enter wedding date: ");
-		List<Activity> activities = Activity::promptCreateActivityList();
+		List<Arc<Activity>> activities = Activity::promptCreateActivityList();
 		List<Guest> guestList = Guest::promptCreateGuestList(activities);
 
 		std::stringstream ss;

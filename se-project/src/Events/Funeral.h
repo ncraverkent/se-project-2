@@ -11,7 +11,7 @@ namespace WEP
 	class Funeral : public Event
 	{
 	public:
-		Funeral(String name, Date birth, Date death, Date date, List<Activity> activites, List<Guest> guests, UUID businessId): 
+		Funeral(String name, Date birth, Date death, Date date, List<Arc<Activity>> activites, List<Guest> guests, UUID businessId):
 			deceasedName(name), birthDate(birth), deathDate(death), 
 			Event(("Funeral for " + name + ": " + birth.toString() + " - " + death.toString()), date, activites, guests, businessId)
 		{}

@@ -38,9 +38,9 @@ namespace WEP
 		}
 	}
 
-	List<Activity> Activity::promptCreateActivityList()
+	List<Arc<Activity>> Activity::promptCreateActivityList()
 	{
-		List<Activity> activities = {};
+		List<Arc<Activity>> activities = {};
 		while (true)
 		{
 			List<String> commands = Console::promptCommands("Please enter a activity command: ");
@@ -52,7 +52,7 @@ namespace WEP
 			{
 				auto activity = Activity::promptCreateActivity();
 				if (activity.has_value())
-					activities.push_back(activity.value());
+					activities.push_back(std::make_shared<Activity>(activity.value()));
 			}
 			else if (commands[0] == END_COMMAND)
 			{
@@ -79,19 +79,20 @@ namespace WEP
 		}
 	}
 
-	String Activity::formatActivityList(const List<Activity>& activites)
+	String Activity::formatActivityList(const List<Arc<Activity>>& activites)
 	{
 		std::stringstream ss = {};
 		ss << " - Activity List:\n";
 		for (const auto& activity : activites)
 		{
 			ss << "\t - Activity:\n"
-			   << "\t\t - name = " << activity.name << "\n"
-			   << "\t\t - time range = " << activity.time.toString() << "\n"
-			   << "\t\t - room = " << activity.room->getName() << "\n"
-			   << "\t\t - registration cost = $" << std::to_string(activity.registrationCost) << "\n"
-			   << Equipment::formatEquipmentList(activity.equipment, "\t\t\t") << "\n"
-			   << "\t\t - catering request = " << (activity.catering.has_value() ? activity.catering.value().getDetails() : "None") << "\n";
+			   << "\t\t - name = " << activity->name << "\n"
+			   << "\t\t - id = " << activity->id << "\n"
+			   << "\t\t - time range = " << activity->time.toString() << "\n"
+			   << "\t\t - room = " << activity->room->getName() << "\n"
+			   << "\t\t - registration cost = $" << std::to_string(activity->registrationCost) << "\n"
+			   << Equipment::formatEquipmentList(activity->equipment, "\t\t\t") << "\n"
+			   << "\t\t - catering request = " << (activity->catering.has_value() ? activity->catering.value().getDetails() : "None") << "\n";
 		}
 
 		return ss.str();

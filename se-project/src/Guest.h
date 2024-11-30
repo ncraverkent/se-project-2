@@ -41,12 +41,12 @@ namespace WEP
 		/**
 		* Prompts the user to create a guest
 		*/
-		static Guest promptCreateGuest(const List<Activity>& activities);
+		static Guest promptCreateGuest(const List<Arc<Activity>>& activities);
 
 		/**
 		* Prompts the user to create a guest list
 		*/
-		static List<Guest> promptCreateGuestList(const List<Activity>& activities);
+		static List<Guest> promptCreateGuestList(const List<Arc<Activity>>& activities);
 
 		/**
 		* Formats the guest list
@@ -63,7 +63,7 @@ namespace WEP
 		/*
 		* Prompts the user to register a guest for a list of activites
 		*/
-		static List<UUID> registerGuestForActivities(const List<Activity> activites);
+		static List<UUID> registerGuestForActivities(const List<Arc<Activity>>& activites);
 
 	private:
 		String name;
