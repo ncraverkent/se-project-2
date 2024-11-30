@@ -133,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Activity.cpp" />
+    <ClCompile Include="src\CateringRequest.cpp" />
     <ClCompile Include="src\DisplayMannager.cpp" />
     <ClCompile Include="src\Equipment.cpp" />
     <ClCompile Include="src\Events\Birthday.cpp" />
