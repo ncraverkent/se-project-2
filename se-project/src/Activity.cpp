@@ -97,4 +97,22 @@ namespace WEP
 
 		return ss.str();
 	}
+
+	Cost Activity::getCost() const
+	{
+		Cost cost = {};
+		for (const auto& e : equipment)
+		{
+			cost.addCost(e.getName(), e.getCost());
+		}
+
+		cost.addCost("Room: " + room->getName(), room->getCost());
+
+		if (catering.has_value())
+		{
+			cost.addCost("Catering: " + catering->getCompany(), catering->getCost());
+		}
+
+		return cost;
+	}
 }

@@ -6,6 +6,7 @@
 #include "Equipment.h"
 #include "Utils/UUID.h"
 #include "CateringRequest.h"
+#include "Utils/Cost.h"
 
 namespace WEP
 {
@@ -75,6 +76,11 @@ namespace WEP
 		* Formats an activity list
 		*/
 		static String formatActivityList(const List<Arc<Activity>>& activites);
+
+		/**
+		* Returns all costs of an activity
+		*/
+		Cost getCost() const;
 
 	private:
 		std::string name;

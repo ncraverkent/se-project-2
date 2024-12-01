@@ -67,7 +67,7 @@ namespace WEP
 		* Calculates the cost of the event
 		* @returns The cost of the event
 		*/
-		float getCost() const;
+		List<Pair<String, Cost>> getCosts() const;
 
 		/**
 		*	Logs if the event was successfully booked?

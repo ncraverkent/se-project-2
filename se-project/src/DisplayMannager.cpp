@@ -129,6 +129,36 @@ namespace WEP
                 std::cout << "No business signed in\n";
             }
         }
+        else if (commands[1] == PRINT_COST_ARG)
+        {
+            if (commands.size() < 3)
+            {
+                std::cout << "This command requires a event id argument\n";
+                return;
+            }
+
+            auto event = eventCenter.getEvent(commands[2]);
+            if (event.has_value())
+            {
+                auto costs = event.value()->getCosts();
+                float total = 0.0;
+                for (const auto& c : costs)
+                {
+                    total += c.second.getTotalCost();
+                }
+
+                std::cout << "Printing cost for '" << event.value()->getName() << "'\n";
+                std::cout << "Total: $" << total << "\n";
+                for (const auto& c : costs)
+                {
+                    std::cout << "Cost of '" << c.first << "':\n" << c.second.formatCostBreakdown() << "\n";
+                }
+            }
+            else
+            {
+                std::cout << "No event with id '" << commands[2] << "'\n";
+            }
+        }
         else
         {
             std::cout << "Unknown print command `" << commands[1] << "`\n";
@@ -273,6 +303,7 @@ namespace WEP
             { PRINT_COMMAND + " " + PRINT_EVENTS_ARG + " " + PRINT_EVENTS_IDS_ARG_ARG + " ?(business id)", "Prints all events with just their names and ids, with an optional business id arg that will print out only the events with the given id"},
             { PRINT_COMMAND + " " + PRINT_SIGN_IN_ARG, "Prints the currently signed in business" },
             { PRINT_COMMAND + " " + PRINT_PERSONNEL_ARG, "Prints the list of all registered personnel" },
+            { PRINT_COMMAND + " " + PRINT_COST_ARG + " (event id)", "Prints the cost details of an event with the given id argument."},
             { CREATE_COMMAND + " " + CREATE_BUSINESS_ARG, "Creates/registers a new business" },
             { CREATE_COMMAND + " " + CREATE_EVENT_ARG, "Creates a new event. A business needs to be signed in to do this" },
             { CREATE_COMMAND + " " + CREATE_PERSONNEL_ARG, "Creates a new personnel." },

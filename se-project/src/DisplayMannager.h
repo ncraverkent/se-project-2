@@ -26,6 +26,7 @@ namespace WEP
 		const String PRINT_EVENTS_IDS_ARG_ARG = "ids";
 		const String PRINT_PERSONNEL_ARG = "personnel";
 		const String PRINT_ISSUES_ARG = "issues";
+		const String PRINT_COST_ARG = "cost";
 
 		const String ASSIGN_COMMAND = "assign";
 		const String REPORT_COMMAND = "report";
