@@ -12,9 +12,15 @@ namespace WEP
         return false;
     }
 
-    float Event::getCost() const
+    List<Pair<String, Cost>> Event::getCosts() const
     {
-        return 0.0f;
+        List<Pair<String, Cost>> costs = {};
+        for (const auto& activity : getActivities())
+        {
+            costs.push_back({ activity->getName(), activity->getCost() });
+        }
+
+        return costs;
     }
 
     void Event::confirmBooking() const

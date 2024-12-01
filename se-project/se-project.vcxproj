@@ -143,6 +143,7 @@
     <ClCompile Include="src\Guest.cpp" />
     <ClCompile Include="src\Personel.cpp" />
     <ClCompile Include="src\Rooms\Room.cpp" />
+    <ClCompile Include="src\Utils\Cost.cpp" />
     <ClCompile Include="src\Utils\Date.cpp" />
     <ClCompile Include="src\Business.cpp" />
     <ClCompile Include="se-project.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="src\Events\Funeral.h" />
     <ClInclude Include="src\Events\Wedding.h" />
     <ClInclude Include="src\Schedule.h" />
+    <ClInclude Include="src\Utils\Cost.h" />
     <ClInclude Include="src\Utils\Date.h" />
     <ClInclude Include="src\Business.h" />
     <ClInclude Include="src\Equipment.h" />
