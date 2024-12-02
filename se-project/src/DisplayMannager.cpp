@@ -147,6 +147,8 @@ namespace WEP
                     total += c.second.getTotalCost();
                 }
 
+                total *= 1.01;
+
                 std::cout << "Printing cost for '" << event.value()->getName() << "'\n";
                 std::cout << "Total: $" << total << "\n";
                 for (const auto& c : costs)
